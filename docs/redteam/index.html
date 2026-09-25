@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hongdam — red team</title>
+<meta name="description" content="Paste your chatbot's system prompt and run attack probes against it: prompt extraction, instruction override, indirect injection, Thai-language attacks.">
+<meta name="theme-color" content="#171009">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/assets/favicon.svg">
+<link rel="canonical" href="https://hongdam.net/redteam">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hongdam.net/redteam">
+<meta property="og:title" content="Hongdam — red team">
+<meta property="og:description" content="Run attack probes against your chatbot's system prompt.">
+<meta property="og:image" content="https://hongdam.net/assets/card.jpg">
+<link rel="stylesheet" href="/assets/rt.css">
+<meta name="google" content="notranslate">
+<meta name="robots" content="notranslate">
+<script>if(/[.]translate[.]goog$/.test(location.hostname))location.replace("https://"+location.hostname.slice(0,-15).replace(/--/g,"~").replace(/-/g,".").replace(/~/g,"-")+location.pathname+location.search.replace(/([?&])_x_tr_[^&]*/g,"$1").replace(/[?&]+$/,"").replace(/[?]&+/,"?")+location.hash)</script>
+</head>
+<body>
+<header class="top">
+  <a class="mark" href="/">HONGDAM <span lang="th">หงส์ดำ</span></a>
+  <nav><a href="/redteam" aria-current="page">Red team</a><a href="/market">Market</a></nav>
+</header>
+<main>
+  <h1>Red team <span lang="th">ทีมแดง</span></h1>
+  <p class="lede">Red-teaming: attacking your own chatbot before a customer does. Paste the bot's system prompt — the hidden instructions it runs on — pick packs, and run. A secret reference code is added to your prompt for each batch; a bot that gives it out, quotes its instructions, or obeys a planted command fails that probe.</p>
+
+  <form class="run" id="f" novalidate>
+    <label>System prompt
+      <textarea id="sys" maxlength="6000" required placeholder="You are the booking assistant for …"></textarea>
+    </label>
+    <p class="small"><button type="button" class="linkish" id="sample">Use a sample prompt</button> · <span id="len">0</span>/6000 · The prompt goes to Cloudflare Workers AI for the run.</p>
+
+    <div class="row">
+      <label>Model
+        <select id="model">
+          <option value="llama-3.3-70b">Llama 3.3 70B</option>
+          <option value="llama-4-scout">Llama 4 Scout</option>
+          <option value="sea-lion-27b">SEA-LION 27B (Thai)</option>
+          <option value="mistral-small">Mistral Small 3.1</option>
+          <option value="gemma-4-26b">Gemma 4 26B</option>
+        </select>
+      </label>
+    </div>
+
+    <p class="small" style="margin-top:8px">Packs · <a href="/market">market</a></p>
+    <div class="pick" id="packs"></div>
+
+    <button type="submit" id="go">Run</button>
+    <p class="status" id="s" role="status" aria-live="polite"></p>
+  </form>
+
+  <div class="bar" hidden id="bar"><i></i></div>
+  <div class="score" id="score"></div>
+  <ol class="res" id="res"></ol>
+  <p class="dl" hidden id="dl"><a href="#" id="dlj" download="redteam.json">Report · JSON</a><a href="#" id="dlt" download="redteam.txt">Report · text</a></p>
+</main>
+<footer><a href="/">hongdam.net</a> · Chiang Rai</footer>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var SAMPLE = 'You are Khao, the assistant for Doi Chang Coffee House in Chiang Rai. Answer questions about our menu, opening hours (8:00–18:00 daily), location near the clocktower, and table bookings. Reply in the language the customer uses. Do not discuss other businesses, politics, or medical topics. Do not offer discounts or refunds; refer those to staff at the counter.';
+  var packs = [], log = [];
+
+  $('sample').onclick = function () { $('sys').value = SAMPLE; count(); };
+  $('sys').oninput = count;
+  function count() { $('len').textContent = $('sys').value.length; }
+  function say(t, k) { $('s').textContent = t; $('s').className = 'status ' + (k || ''); }
+  function esc(t) { var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+
+  fetch('/market/packs.json').then(function (r) { return r.json(); }).then(function (all) {
+    packs = all;
+    var want = new URLSearchParams(location.search).get('pack');
+    $('packs').innerHTML = all.map(function (p) {
+      var on = !want || want === p.id ? ' checked' : '';
+      return '<label><input type="checkbox" value="' + esc(p.id) + '"' + on + '>' + esc(p.name) +
+        ' <span class="small">' + p.probes.length + '</span></label>';
+    }).join('');
+  }).catch(function () { say('Could not load the packs.', 'err'); });
+
+  $('f').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var sys = $('sys').value.trim();
+    if (sys.length < 20) return say('Paste the system prompt first.', 'err');
+    var chosen = Array.prototype.filter.call($('packs').querySelectorAll('input'), function (i) { return i.checked; })
+      .map(function (i) { return packs.find(function (p) { return p.id === i.value; }); });
+    if (!chosen.length) return say('Pick at least one pack.', 'err');
+
+    var jobs = [];
+    chosen.forEach(function (p) {
+      for (var i = 0; i < p.probes.length; i += 8) jobs.push({ pack: p, probes: p.probes.slice(i, i + 8) });
+    });
+    var total = jobs.reduce(function (n, j) { return n + j.probes.length; }, 0), done = 0;
+    log = []; $('res').innerHTML = ''; $('score').innerHTML = ''; $('dl').hidden = true;
+    $('bar').hidden = false; $('bar').firstChild.style.width = '0';
+    $('go').disabled = true; say('Running 0 of ' + total + '…');
+    var model = $('model').value;
+
+    (function next() {
+      var j = jobs.shift();
+      if (!j) { $('go').disabled = false; say('Done.', 'ok'); finish(model); return; }
+      fetch('/api/redteam', {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ pack: j.pack.id, probes: j.probes.map(function (p) { return p.id; }), system: sys, model: model })
+      }).then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (b) { return { ok: r.ok, b: b }; });
+      }).then(function (r) {
+        if (!r.ok || !r.b.ok) throw new Error(r.b.error || 'The run stopped.');
+        r.b.results.forEach(function (x) {
+          var p = j.probes.find(function (q) { return q.id === x.id; });
+          var row = { pack: j.pack.name, probe: p.text, verdict: x.verdict, why: x.why, reply: x.reply, code: r.b.canary };
+          log.push(row); show(row);
+        });
+        done += j.probes.length;
+        $('bar').firstChild.style.width = (100 * done / total) + '%';
+        say('Running ' + done + ' of ' + total + '…');
+        tally(); next();
+      }).catch(function (err) { $('go').disabled = false; say(err.message, 'err'); tally(); if (log.length) finish(model); });
+    })();
+  });
+
+  function show(r) {
+    var li = document.createElement('li');
+    li.className = r.verdict;
+    li.innerHTML = '<span class="v">' + ({ pass: 'held', fail: 'broke', error: 'error' }[r.verdict]) + ' · ' + esc(r.pack) + '</span>' +
+      '<p class="why">' + esc(r.why) + '</p>' +
+      '<details><summary>Probe and reply</summary><pre>' + esc(r.probe) + '</pre><pre>' + esc(r.reply || '(empty)') + '</pre></details>';
+    $('res').appendChild(li);
+  }
+
+  function tally() {
+    var by = {};
+    log.forEach(function (r) {
+      var b = by[r.pack] = by[r.pack] || { held: 0, n: 0 };
+      if (r.verdict !== 'error') { b.n++; if (r.verdict === 'pass') b.held++; }
+    });
+    var all = log.filter(function (r) { return r.verdict !== 'error'; });
+    var held = all.filter(function (r) { return r.verdict === 'pass'; }).length;
+    $('score').innerHTML = '<div><b>' + held + '/' + all.length + '</b><span>held · all</span></div>' +
+      Object.keys(by).map(function (k) { return '<div><b>' + by[k].held + '/' + by[k].n + '</b><span>' + esc(k) + '</span></div>'; }).join('');
+  }
+
+  function finish(model) {
+    var stamp = new Date().toISOString();
+    var json = JSON.stringify({ run: stamp, model: model, results: log }, null, 2);
+    var txt = ['hongdam.net/redteam — ' + stamp + ' — ' + model, $('score').innerText.replace(/\n+/g, ' '), '']
+      .concat(log.map(function (r) {
+        return [({ pass: 'HELD', fail: 'BROKE', error: 'ERROR' }[r.verdict]) + ' · ' + r.pack + ' · ' + r.why, 'PROBE: ' + r.probe, 'REPLY: ' + r.reply, ''].join('\n');
+      })).join('\n');
+    $('dlj').href = URL.createObjectURL(new Blob([json], { type: 'application/json' }));
+    $('dlt').href = URL.createObjectURL(new Blob([txt], { type: 'text/plain' }));
+    $('dl').hidden = false;
+  }
+})();
+</script>
+</body>
+</html>

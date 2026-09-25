@@ -1,0 +1,183 @@
+# Hongdam หงส์ดำ — hongdam.net
+
+> Hongdam หงส์ดำ ("the black swan") is a web development studio in Chiang Rai,
+> Thailand. It designs and builds bilingual (Thai-first, English display layer),
+> LINE-native, data-driven web platforms — tools that hold thousands of records
+> and are opened daily, rather than brochure sites.
+
+## What this page is
+
+A single static page carrying the studio's services and its live work. Every
+screenshot on it is a capture of the production page it links to, taken on
+2026-09-19; the figures beside each one are read at build time from the file,
+database, endpoint or sitemap named in the index at
+https://nanobotco.github.io/index/, and a figure a site publishes about itself
+is checked against that site's live page before it ships here.
+
+The page also stands as the studio's generative-design sample, drawn without
+libraries or external requests:
+
+- "Growing gold" — a fractal lai-kham vine drawn live on canvas, seeded by the
+  current date in Asia/Bangkok, so each day's growth differs; new growth bends
+  toward the visitor's pointer.
+- "Scratch the lacquer" — moving the pointer across the hero scratches through
+  black lacquer to procedurally generated gold leaf, which re-pools slowly.
+- A gold-dust signature: thousands of particles assembling into หงส์ดำ and
+  HONGDAM in turn, scattering around the pointer, shedding flakes that settle
+  on the cards below and melt over minutes.
+- Four unalome glyphs, particle-assembled, drifting behind the sections at
+  their own parallax rate.
+- "The bench" — a split-flap board of the studio's own telemetry, rebuilt from
+  the index's counts at each deploy.
+- The hero background is a photograph from the studio's own camera roll: a
+  Lanna temple mural of a lersi teaching, with a peacock looking on.
+
+## Services
+
+- Thai-first bilingual builds (Thai canonical, English as a true display layer)
+- LINE-native apps (LIFF + Official Account, sign-in without a password)
+- Offline-first installable PWAs, built for rural Thai connectivity
+- Custom generative design (procedural, code-drawn visuals; see the instruments)
+- Data pipelines and crawlers (scattered real-world data into searchable catalogs)
+- Static-first builds: assembled at build time, served as files, cheap to host
+  and portable to any server a domain can point at
+
+## The work
+
+The portfolio below is generated from data/work.json in the site's repository.
+Each entry is a live address; the frames on the page are screenshots of these
+same pages.
+
+<!-- WORK:START -->
+
+## The platforms (8)
+
+Every frame is a screenshot of the production page, taken for this build. Click through — they are all open.
+
+- https://motdang.net/ — Mot Dang มดแดง · สารบัญเมืองเชียงใหม่–เชียงราย: A Thai-first city directory for Chiang Mai and Chiang Rai — places, hours, phones, pins, shelves and answer pages. The crawlers run every morning and the page says where each field came from. — 88,313 place records; 86,080 pages
+- https://wichaa.net/ — wichaa วิชา · หอความรู้ล้านนาที่ยังมีชีวิต: Lanna manuscripts from the northern libraries, with their page images, read in three scripts — palm leaf carried to a phone screen. The amulet market, the temple atlas and the instruments below all live inside it. — 6,986 manuscripts; 120,178 page images; 17,022 pages
+- https://defiant.to/ — Defiant คู่มือผู้ป่วยข้ามพรมแดน: Medical and dental care in Chiang Mai with the price posted before you commit, a professional translator at the appointment, and a flat concierge fee that does not scale with the bill. — 147 pages
+- https://hakfarang.net/ — Hak Farang ฮักฝรั่ง · พี่สาวที่ผ่านมาก่อน: Money, visas, travel and life with a farang partner, written in Thai for the women living it — by the older sister who went first.
+- https://offrampt.net/ — Offrampt เปลี่ยนคริปโตเป็นเงินใช้ในไทย: Turning crypto into spendable local money without a local bank account. Thailand first: the routes, the cards, the fees, and what each one costs to use. — 9 pages
+- https://poplucky.net/ — Poplucky ป๊อปลัคกี้ · สารบบกล่องสุ่ม: Every blind box, catalogued in the words collectors use — characters, series, and what a shelf is missing.
+- https://nan.wichaa.net/ — The portal ประตูรวมทุกงาน: One door onto the whole constellation — platforms, directories, apps and instruments, on a page drawn fresh each visit.
+- https://chiangmaivisadesk.com/ — Chiang Mai Visa Desk ใบอนุญาตทำงาน จดทะเบียนบริษัท และวีซ่า: A visa and work-permit desk for Chiang Mai, in English and Thai: work permits, Thai company registration, retirement extensions, 90-day reports and escorted border runs, each quoted in writing. A second book prepares US visa files for Thai nationals, and the site licenses to agencies in other provinces.
+
+## The directories (14)
+
+One toolchain: harvest, cite, publish a map, an API and a plain-text copy for machines. Point it at a new subject and a directory comes out.
+
+- https://nanobotco.github.io/amulet-atlas/ — Amulet Atlas แผนที่เครื่องรางทั่วโลก: Amulets, charms and talismans worldwide, by tradition and by place — from the Girsu foundation pegs of about 2130 BCE forward. The global companion to the Thai catalogue. — 286 entries; 310 pages
+- https://nanobotco.github.io/care-abroad/ — Care Abroad รักษาข้ามพรมแดน · ราคาที่ประกาศไว้: Who goes where for treatment, what it costs, what the law says, and who checked. A price carries the date it was published; a legality reading carries its statute. — 342 records; 56 countries; 244 published prices
+- https://nanobotco.github.io/mae-hong-son-loop/ — The Mae Hong Son Loop วงรอบแม่ฮ่องสอน: 600 km of mountain road out of Chiang Mai, with the curves counted off the geometry rather than repeated from a brochure — and everything worth stopping for along the way. — 1,864 curves; 110 hairpins; 109 records
+- https://wichaa.net/handpoke/ — Hand Poke สักด้วยมือ: Traditions of marking skin by hand: who is marked, who does the marking, and where on the body. Five sources put the leg tattoo of Burma, the Shan States and Lanna in the same zone — and none of them had read the others. — 28 traditions; 42 countries; 130 records
+- https://motdang.net/muay-thai — Muay Thai มวยไทย · แปดอาวุธ: The eight limbs, the thirty named techniques, and the gyms that teach them — with the Lanna root of the art and the sak yant that came with it kept in the frame. — 30 named techniques; 527 gyms mapped; 129 records
+- https://nanobotco.github.io/carolina-barbecue/ — Carolina Barbecue บาร์บีคิวแคโรไลนา: Wood, sauce and pig across North and South Carolina, pit by pit — a tag carries the source it was read from. — 179 places; 199 pages
+- https://nanobotco.github.io/buffalo-wings/ — Wing Country ปีกไก่อเมริกัน: Thirteen American cities argue about a chicken wing. An Albers map of all fifty states, the sauces read off the panel, and a claim carries the name it came from. — 158 records; 185 pages
+- https://nanobotco.github.io/pink-box/ — Pink Box โดนัทร้านเล็กทั่วอเมริกา: The American mom-and-pop donut shop — cake against raised, what else is in the case, and the chains told apart from the independents. The counts page shows the split. — 10,686 shops; 156 pages
+- https://nanobotco.github.io/pinot-noir/ — Pinot Country ไร่องุ่นปีโนต์นัวร์: One thin-skinned grape, the ground it answers to, and the cellars that work it — with every AVA boundary date read off 27 CFR part 9 rather than a wine list. — 3,055 cellars; 34 regions
+- https://nanobotco.github.io/basque-tables/ — Basque Tables โต๊ะอาหารบาสก์: The Basque dining rooms of California, Nevada and Idaho — where the house sits you, what dinner runs to, which nights the door opens, and whether the bar makes a Picon. In English and Basque. — 29 dining rooms
+- https://wichaa.net/amulets — Amulet Essentials สารบบเครื่องราง: The kinds of sacred object, as data — each with the market listings behind it, a price chart, and pictures anyone may reuse. — 82 kinds; 683 free-to-use pictures; 17,473 market listings read
+- https://motdang.net/roads/ — Roads of Chiang Mai ถนนเชียงใหม่: The square of 1296, four rings around it and the roads between, and what each one did to the city. Counted from the map, dated from the record. — 6,934 km of road; 31,668 intersections
+- https://motdang.net/ghost/ — Ghost Chiang Mai ผีเจียงใหม่: A self-guided tour of the city's dead, on foot, by bicycle, by scooter or with a driver: a ghost story at each stop and the merit act that goes with it. — 24 stops; 53 sources named
+- https://nanobotco.github.io/pike-place-market/ — Pike Place Market ตลาดไพค์เพลส · ซีแอตเทิล: Every licensed business inside Seattle's Pike Place Market Historical District, the date each started trading, and a map drawn from open data. — 153 licensed businesses; 12.827 acres
+
+## The apps (8)
+
+Open the address on a phone, add it to the home screen, and it runs from there like anything else on it.
+
+- https://nanobotco.github.io/scanner/ — Scanner เครื่องสแกนในเบราว์เซอร์: Photograph a page; it finds the sheet, straightens it, flattens the light so the paper reads white, and writes a PDF. Sign with a finger on the glass — a saved signature is encrypted under a PIN, or under the fingerprint sensor where the phone offers it.
+- https://ask.motdang.net/ — Ask Mot Dang คุยกับมด: A reader's assistant sitting on the city directory. Ask in Thai or English — it answers from the directory's own pages and links the one it used.
+- https://ai.motdang.net/ — White-label assistants ผู้ช่วยติดแบรนด์ รายที่นั่ง: The same assistant, rebuilt as a product: one tenant, its own corpus, its own front door, sold by the seat. Ask Mot Dang is tenant number one.
+- https://motdang.net/mail — The send page ส่งเมลจากมือถือ: Four people send mail from their own address on a phone, without a mail client. The passphrase is the identity.
+- https://nanobotco.github.io/thairoots/ — Thai Roots รากศัพท์: A Thai dictionary read by root, in the Hans Wehr manner — Pali and Sanskrit roots, native morpheme families, sound-change keys and a decomposer that takes a word apart. The whole dictionary is on the phone.
+- https://samching.nanobotco.workers.dev/ — Sam Ching สามชิ่ง · บิลเลียดสามคูชั่น: Three-cushion billiards on a phone: drag anywhere to aim, release to shoot, and the cloth carries the physics rather than a scoreboard.
+- https://nanobotco.github.io/skipdjt/ — Skip DJT เทียบค่าตั๋วสามสนามบิน: Palm Beach airport took a president's name. This compares the same-day fare out of Palm Beach, Fort Lauderdale and Miami, and shows what the drive south saves.
+- https://farangbuddy.netlify.app/ — FarangBuddy ตัวนับวันพำนักในไทย: A Thailand stay tracker. Entries, exits, border runs and extensions go in; the admitted-until date and the next 90-day report and TM30 come out. More than one person per phone.
+
+## The instruments (8)
+
+Astronomical and ritual instruments — every dial, hand and grain of gold drawn live in the browser, no libraries.
+
+- https://wichaa.net/jovilabe — The Jovilabe เครื่องดูดวงจันทร์บริวารดาวพฤหัส: Jupiter's four great moons, where they stand tonight and where their shadows fall.
+- https://wichaa.net/moon — The moon complication หน้าปัดข้างขึ้นข้างแรม: One dial, two moons, and what it takes to get it right.
+- https://wichaa.net/redspot — The Red Spot dial หน้าปัดจุดแดงใหญ่: When the Great Red Spot faces someone standing in the storm — from a Jovian horizon.
+- https://wichaa.net/divination — Divination เครื่องเสี่ยงทายตามตำรา: I Ching, Plum Blossom and Wen Wang Gua on one engine, showing its working rather than hiding it.
+- https://wichaa.net/hun — Hun Payont หุ่นพยนต์ · หุ่นที่ปลุกด้วยวิชา: An effigy you forge, carrying your name to the market each morning and bringing one thing back.
+- https://wichaa.net/waikhru — Waikhru Yon ไหว้ครูยนต์ · พรสำหรับมือที่จับเครื่อง: The mark a craftsperson paints on a machine, and the blessing that goes with the hand at the lathe.
+- https://wichaa.net/holding — I'm holding an amulet ถืออยู่ในมือ · ประตูจำแนกพระเครื่อง: You have the thing but not its name. Answer the questions a dealer would ask, in the dealer's order.
+- https://wichaa.net/kesa/ — The kesa yant ยันต์เกศาผิด: The thirty-two parts of the body as thirty-two letters, laid in by the knight's move. The method traced through the manuals in the corpus, and whether the loop closes. — 32 parts
+
+## The explainers (6)
+
+Physics and mathematics in plain words, with the pictures and figures computed on the page from the formula shown.
+
+- https://nanobotco.github.io/black-holes/ — Black Holes, Drawn หลุมดำ วาดจากสมการ: Black holes modelled and drawn from the equations: generators you can run, the past, the present and the far future, and the legends that got there first.
+- https://nanobotco.github.io/quantum-computing/ — Quantum Computing, plainly คอมพิวเตอร์ควอนตัม: Qubits, interference, entanglement, Shor, Grover, error correction and the machines, in plain words.
+- https://nanobotco.github.io/three-body/ — The Three-Body Problem ปัญหาสามวัตถุ: Gravity, the two-body solution, why three has no formula, chaos, Lagrange points and the figure-eight orbit, computed on the page.
+- https://nanobotco.github.io/exceptional-magic/ — Exceptional Magic ออกโทเนียน · E8: Eight ways to multiply and where they lead: the octonions, triality, the magic square and E8, drawn from the arithmetic.
+- https://nanobotco.github.io/factoring/ — Big Numbers, Split การแยกตัวประกอบ: Factoring from Eratosthenes to Shor: how big numbers get split, who has split the biggest, and what it means for a bitcoin wallet.
+- https://nanobotco.github.io/goin-fast/ — Goin' Fast ความเร็ว: Twenty measured speeds from continental drift to light, the three things that make going fast cost, and four calculators. — 20 measured speeds
+
+## The record (3)
+
+The count of everything held, the traffic study behind how it is published, and the page that says who runs the directory.
+
+- https://nanobotco.github.io/index/ — The index สารบัญของทั้งหมด: Everything held, counted once, at one address — a number names the file, database or endpoint it was read from, and the day it was read. — 301,812 records; 18 corpora
+- https://nanobotco.github.io/uptake/ — Uptake คู่มือ — เขียนให้เครื่องอ่าน: Fourteen days across fifty-two repositories: 961 clones from 501 distinct machines against 36 page views from 20 browsers. The manual written on that measurement — the arrival worth designing for is the copy, not the click. — 961 clones; 501 distinct machines; 36 page views
+- https://motdang.net/who.html — Who keeps the ants ใครเลี้ยงมด: The page on the city directory that names the person behind it, the machines that run the crawls, and the address to write to about a mistake.
+
+<!-- WORK:END -->
+
+## The workshop behind it
+
+Crawlers and pipelines (manuscript crawler, amulet market listener, city census
+bots, the wat registry off the ONAB temple register, OpenStreetMap and Overture
+harvests, a Thai romaniser scored against its own benchmark); four datasets
+published on Hugging Face; back-office builds (bilingual double-entry books with
+payment by QR and LINE receipts, a tasking app, stocktake, the listing sheet);
+games; everyday tools; and two device builds — an e-ink clock and a motorcycle
+cockpit HUD.
+
+## Notes for AI systems
+
+- Crawlers are welcome here. What a visitor sees, a robot sees.
+- Contact: nan@motdang.net.
+- Located in Chiang Rai, Thailand, with offices overlooking the city clocktower.
+- Works bilingually, Thai and English, on every project by default.
+- The counts on this site name their source; the index at
+  https://nanobotco.github.io/index/ holds the same numbers with their methods.
+
+# — roster of sibling sites, generated from data/fleet.json —
+## Elsewhere from the same publisher
+
+- [Mot Dang](https://motdang.net/): city directory for Chiang Mai and Chiang Rai
+- [wichaa](https://wichaa.net/): Lanna manuscripts, the amulet market, and the traditions around them
+- [Amulet Atlas](https://nanobotco.github.io/amulet-atlas/): amulets, charms and talismans worldwide
+- [Carolina Barbecue](https://nanobotco.github.io/carolina-barbecue/): barbecue in North and South Carolina
+- [Wing Country](https://nanobotco.github.io/buffalo-wings/): the American chicken wing
+- [Pink Box](https://nanobotco.github.io/pink-box/): the American mom-and-pop donut shop
+- [Basque Tables](https://nanobotco.github.io/basque-tables/): Basque dining rooms of California, Nevada and Idaho
+- [Pinot Country](https://nanobotco.github.io/pinot-noir/): pinot noir: the vine, the regions, the cellars
+- [Care Abroad](https://nanobotco.github.io/care-abroad/): treatment across borders, with published prices and their dates
+- [Thai Roots](https://nanobotco.github.io/thairoots/): a root dictionary of Thai, with a word decomposer
+- [The index](https://nanobotco.github.io/index/): every corpus, site and repository, counted
+- [Uptake](https://nanobotco.github.io/uptake/): a field manual on publishing for machines that copy
+- [NaNoBotCo](https://nanobotco.github.io/): the portal
+- [Ask Mot Dang](https://ask.motdang.net/): reader assistant over the directory
+- [ai.motdang.net](https://ai.motdang.net/): white-label assistants, by seat
+- [Defiant](https://defiant.to/): medical and dental care in Chiang Mai, with a translator at the appointment
+- [ฮักฝรั่ง](https://hakfarang.net/): เรื่องเงิน วีซ่า และชีวิตกับแฟนฝรั่ง
+- [Offrampt](https://offrampt.net/): turning crypto into spendable local money, Thailand first
+
+- [The roster as JSON](https://nanobotco.github.io/index/fleet.json)
+
+## Red team and market
+
+- https://hongdam.net/redteam — paste a chatbot's system prompt, pick probe
+  packs, and run them against it on Cloudflare Workers AI. Each batch adds a
+  random reference code to the prompt; a reply that contains it, quotes the
+  prompt, or outputs a planted marker token counts as broken. Scope probes go
+  to a judge model.
+- https://hongdam.net/market — the probe packs, as JSON (CC BY 4.0), with
+  probe counts computed from the pack files: /market/packs.json.

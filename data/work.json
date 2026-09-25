@@ -1,0 +1,1136 @@
+{
+  "read": "2026-09-23",
+  "note": "The portfolio. tools/build_work.py renders this into docs/index.html between the WORK markers. Counts are fetched at build time; stated numbers are verified against the live page before they ship.",
+  "lanes": [
+    {
+      "id": "platforms",
+      "name": "The platforms",
+      "th": "แพลตฟอร์ม",
+      "kick": "Live right now",
+      "head": "Eight platforms, each at its own address",
+      "sub": "Every frame is a screenshot of the production page, taken for this build. Click through — they are all open."
+    },
+    {
+      "id": "directories",
+      "name": "The directories",
+      "th": "สารบัญ",
+      "kick": "One subject, counted",
+      "head": "Directories built on the same bench",
+      "sub": "One toolchain: harvest, cite, publish a map, an API and a plain-text copy for machines. Point it at a new subject and a directory comes out."
+    },
+    {
+      "id": "apps",
+      "name": "The apps",
+      "th": "แอป",
+      "kick": "Things you use",
+      "head": "Apps that install from a link",
+      "sub": "Open the address on a phone, add it to the home screen, and it runs from there like anything else on it."
+    },
+    {
+      "id": "instruments",
+      "name": "The instruments",
+      "th": "เครื่องมือ",
+      "kick": "Drawn in code",
+      "head": "Working instruments, procedurally drawn",
+      "sub": "Astronomical and ritual instruments — every dial, hand and grain of gold drawn live in the browser, no libraries."
+    },
+    {
+      "id": "explainers",
+      "name": "The explainers",
+      "th": "คำอธิบาย",
+      "kick": "Hard subjects, plainly",
+      "head": "Six explainers, drawn from the equations",
+      "sub": "Physics and mathematics in plain words, with the pictures and figures computed on the page from the formula shown."
+    },
+    {
+      "id": "record",
+      "name": "The record",
+      "th": "บันทึก",
+      "kick": "Our own numbers",
+      "head": "What the work is measured against",
+      "sub": "The count of everything held, the traffic study behind how it is published, and the page that says who runs the directory."
+    }
+  ],
+  "cards": [
+    {
+      "lane": "platforms",
+      "id": "motdang",
+      "feat": true,
+      "name": "Mot Dang",
+      "th": "มดแดง · สารบัญเมืองเชียงใหม่–เชียงราย",
+      "url": "https://motdang.net/",
+      "shot": "md_all",
+      "chrome": "motdang.net/all.html",
+      "body": "A Thai-first city directory for Chiang Mai and Chiang Rai — places, hours, phones, pins, shelves and answer pages. The crawlers run every morning and the page says where each field came from.",
+      "facts": [
+        {
+          "count": "index:motdang#0",
+          "label": "place records"
+        },
+        {
+          "count": "index:site:motdang.net",
+          "label": "pages"
+        },
+        {
+          "text": "ไทย + EN"
+        }
+      ],
+      "also": [
+        {
+          "text": "every shelf, every category",
+          "url": "https://motdang.net/all.html"
+        },
+        {
+          "text": "the send page",
+          "url": "https://motdang.net/mail"
+        },
+        {
+          "text": "who keeps the ants",
+          "url": "https://motdang.net/who.html"
+        }
+      ]
+    },
+    {
+      "lane": "platforms",
+      "id": "wichaa",
+      "feat": true,
+      "name": "wichaa",
+      "th": "วิชา · หอความรู้ล้านนาที่ยังมีชีวิต",
+      "url": "https://wichaa.net/",
+      "shot": "wichaa",
+      "chrome": "wichaa.net",
+      "body": "Lanna manuscripts from the northern libraries, with their page images, read in three scripts — palm leaf carried to a phone screen. The amulet market, the temple atlas and the instruments below all live inside it.",
+      "facts": [
+        {
+          "count": "index:lanna-manuscripts#0",
+          "label": "manuscripts"
+        },
+        {
+          "count": "index:lanna-manuscripts#1",
+          "label": "page images"
+        },
+        {
+          "count": "index:site:wichaa.net",
+          "label": "pages"
+        }
+      ],
+      "also": [
+        {
+          "text": "the temple atlas of the Lanna north",
+          "url": "https://wichaa.net/wats"
+        },
+        {
+          "text": "amulet essentials",
+          "url": "https://wichaa.net/amulets"
+        }
+      ]
+    },
+    {
+      "lane": "platforms",
+      "id": "defiant",
+      "name": "Defiant",
+      "th": "คู่มือผู้ป่วยข้ามพรมแดน",
+      "url": "https://defiant.to/",
+      "shot": "defiant",
+      "chrome": "defiant.to",
+      "body": "Medical and dental care in Chiang Mai with the price posted before you commit, a professional translator at the appointment, and a flat concierge fee that does not scale with the bill.",
+      "facts": [
+        {
+          "count": "index:site:defiant.to",
+          "label": "pages"
+        },
+        {
+          "text": "EN + ไทย"
+        }
+      ]
+    },
+    {
+      "lane": "platforms",
+      "id": "hakfarang",
+      "name": "Hak Farang",
+      "th": "ฮักฝรั่ง · พี่สาวที่ผ่านมาก่อน",
+      "url": "https://hakfarang.net/",
+      "shot": "hakfarang",
+      "chrome": "hakfarang.net",
+      "body": "Money, visas, travel and life with a farang partner, written in Thai for the women living it — by the older sister who went first.",
+      "facts": [
+        {
+          "text": "ไทย"
+        }
+      ]
+    },
+    {
+      "lane": "platforms",
+      "id": "offramp",
+      "name": "Offrampt",
+      "th": "เปลี่ยนคริปโตเป็นเงินใช้ในไทย",
+      "url": "https://offrampt.net/",
+      "shot": "offramp",
+      "chrome": "offrampt.net",
+      "body": "Turning crypto into spendable local money without a local bank account. Thailand first: the routes, the cards, the fees, and what each one costs to use.",
+      "facts": [
+        {
+          "count": "index:site:offrampt.net",
+          "label": "pages"
+        }
+      ]
+    },
+    {
+      "lane": "platforms",
+      "id": "poplucky",
+      "name": "Poplucky",
+      "th": "ป๊อปลัคกี้ · สารบบกล่องสุ่ม",
+      "url": "https://poplucky.net/",
+      "shot": "poplucky",
+      "chrome": "poplucky.net",
+      "body": "Every blind box, catalogued in the words collectors use — characters, series, and what a shelf is missing.",
+      "facts": [
+        {
+          "text": "EN · ไทย · 中文"
+        }
+      ]
+    },
+    {
+      "lane": "platforms",
+      "id": "nanportal",
+      "name": "The portal",
+      "th": "ประตูรวมทุกงาน",
+      "url": "https://nan.wichaa.net/",
+      "shot": "nanportal",
+      "chrome": "nan.wichaa.net",
+      "body": "One door onto the whole constellation — platforms, directories, apps and instruments, on a page drawn fresh each visit.",
+      "facts": [
+        {
+          "text": "generative"
+        }
+      ]
+    },
+    {
+      "lane": "platforms",
+      "id": "visadesk",
+      "name": "Chiang Mai Visa Desk",
+      "th": "ใบอนุญาตทำงาน จดทะเบียนบริษัท และวีซ่า",
+      "url": "https://chiangmaivisadesk.com/",
+      "shot": "visadesk",
+      "chrome": "chiangmaivisadesk.com",
+      "body": "A visa and work-permit desk for Chiang Mai, in English and Thai: work permits, Thai company registration, retirement extensions, 90-day reports and escorted border runs, each quoted in writing. A second book prepares US visa files for Thai nationals, and the site licenses to agencies in other provinces.",
+      "facts": [
+        {
+          "text": "EN + ไทย"
+        },
+        {
+          "text": "LINE"
+        },
+        {
+          "text": "partner codes"
+        }
+      ],
+      "also": [
+        {
+          "text": "US visas for Thai nationals",
+          "url": "https://chiangmaivisadesk.com/us-visas/"
+        },
+        {
+          "text": "licensing",
+          "url": "https://chiangmaivisadesk.com/white-label/"
+        },
+        {
+          "text": "partners",
+          "url": "https://chiangmaivisadesk.com/partners/"
+        }
+      ]
+    },
+    {
+      "lane": "directories",
+      "id": "atlas",
+      "name": "Amulet Atlas",
+      "th": "แผนที่เครื่องรางทั่วโลก",
+      "url": "https://nanobotco.github.io/amulet-atlas/",
+      "shot": "atlas",
+      "chrome": "nanobotco.github.io/amulet-atlas",
+      "body": "Amulets, charms and talismans worldwide, by tradition and by place — from the Girsu foundation pegs of about 2130 BCE forward. The global companion to the Thai catalogue.",
+      "facts": [
+        {
+          "count": "api:https://nanobotco.github.io/amulet-atlas/api/nodes.json:count",
+          "label": "entries"
+        },
+        {
+          "count": "index:site:amulet-atlas",
+          "label": "pages"
+        }
+      ]
+    },
+    {
+      "lane": "directories",
+      "id": "careabroad",
+      "name": "Care Abroad",
+      "th": "รักษาข้ามพรมแดน · ราคาที่ประกาศไว้",
+      "url": "https://nanobotco.github.io/care-abroad/",
+      "shot": "careabroad",
+      "chrome": "nanobotco.github.io/care-abroad",
+      "body": "Who goes where for treatment, what it costs, what the law says, and who checked. A price carries the date it was published; a legality reading carries its statute.",
+      "facts": [
+        {
+          "stated": "342",
+          "label": "records",
+          "verify": "342"
+        },
+        {
+          "stated": "56",
+          "label": "countries",
+          "verify": "56"
+        },
+        {
+          "stated": "244",
+          "label": "published prices",
+          "verify": "244"
+        }
+      ]
+    },
+    {
+      "lane": "directories",
+      "id": "mhsloop",
+      "name": "The Mae Hong Son Loop",
+      "th": "วงรอบแม่ฮ่องสอน",
+      "url": "https://nanobotco.github.io/mae-hong-son-loop/",
+      "shot": "mhsloop",
+      "chrome": "nanobotco.github.io/mae-hong-son-loop",
+      "body": "600 km of mountain road out of Chiang Mai, with the curves counted off the geometry rather than repeated from a brochure — and everything worth stopping for along the way.",
+      "facts": [
+        {
+          "stated": "1,864",
+          "label": "curves",
+          "verify": "1,864 curves"
+        },
+        {
+          "stated": "110",
+          "label": "hairpins",
+          "verify": "110"
+        },
+        {
+          "count": "api:https://nanobotco.github.io/mae-hong-son-loop/api/nodes.json:count",
+          "label": "records"
+        }
+      ],
+      "also": [
+        {
+          "text": "the same guide, in Thai, on Mot Dang",
+          "url": "https://motdang.net/loop"
+        }
+      ]
+    },
+    {
+      "lane": "directories",
+      "id": "handpoke",
+      "name": "Hand Poke",
+      "th": "สักด้วยมือ",
+      "url": "https://wichaa.net/handpoke/",
+      "shot": "handpoke",
+      "chrome": "wichaa.net/handpoke",
+      "body": "Traditions of marking skin by hand: who is marked, who does the marking, and where on the body. Five sources put the leg tattoo of Burma, the Shan States and Lanna in the same zone — and none of them had read the others.",
+      "facts": [
+        {
+          "stated": "28",
+          "label": "traditions",
+          "verify": "28 traditions"
+        },
+        {
+          "stated": "42",
+          "label": "countries",
+          "verify": "42"
+        },
+        {
+          "count": "api:https://wichaa.net/handpoke/api/nodes.json:count",
+          "label": "records"
+        }
+      ],
+      "also": [
+        {
+          "text": "the leg-tattoo zone, counted, on wichaa",
+          "url": "https://wichaa.net/handpoke"
+        }
+      ]
+    },
+    {
+      "lane": "directories",
+      "id": "muaythai",
+      "name": "Muay Thai",
+      "th": "มวยไทย · แปดอาวุธ",
+      "url": "https://motdang.net/muay-thai",
+      "shot": "muaythai",
+      "chrome": "motdang.net/muay-thai",
+      "body": "The eight limbs, the thirty named techniques, and the gyms that teach them — with the Lanna root of the art and the sak yant that came with it kept in the frame.",
+      "facts": [
+        {
+          "stated": "30",
+          "label": "named techniques",
+          "verify": "thirty named techniques"
+        },
+        {
+          "stated": "527",
+          "label": "gyms mapped",
+          "verify": "527 places"
+        },
+        {
+          "count": "api:https://nanobotco.github.io/muay-thai/api/nodes.json:count",
+          "label": "records"
+        }
+      ]
+    },
+    {
+      "lane": "directories",
+      "id": "carolina",
+      "name": "Carolina Barbecue",
+      "th": "บาร์บีคิวแคโรไลนา",
+      "url": "https://nanobotco.github.io/carolina-barbecue/",
+      "shot": "carolina",
+      "chrome": "nanobotco.github.io/carolina-barbecue",
+      "body": "Wood, sauce and pig across North and South Carolina, pit by pit — a tag carries the source it was read from.",
+      "facts": [
+        {
+          "count": "api:https://nanobotco.github.io/carolina-barbecue/api/nodes.json:count",
+          "label": "places"
+        },
+        {
+          "count": "index:site:carolina-barbecue",
+          "label": "pages"
+        }
+      ]
+    },
+    {
+      "lane": "directories",
+      "id": "wings",
+      "name": "Wing Country",
+      "th": "ปีกไก่อเมริกัน",
+      "url": "https://nanobotco.github.io/buffalo-wings/",
+      "shot": "wings",
+      "chrome": "nanobotco.github.io/buffalo-wings",
+      "body": "Thirteen American cities argue about a chicken wing. An Albers map of all fifty states, the sauces read off the panel, and a claim carries the name it came from.",
+      "facts": [
+        {
+          "count": "api:https://nanobotco.github.io/buffalo-wings/api/nodes.json:count",
+          "label": "records"
+        },
+        {
+          "count": "index:site:buffalo-wings",
+          "label": "pages"
+        }
+      ],
+      "also": [
+        {
+          "text": "build a sauce, a rub or a dip from a cited recipe",
+          "url": "https://nanobotco.github.io/buffalo-wings/make/"
+        }
+      ]
+    },
+    {
+      "lane": "directories",
+      "id": "pinkbox",
+      "name": "Pink Box",
+      "th": "โดนัทร้านเล็กทั่วอเมริกา",
+      "url": "https://nanobotco.github.io/pink-box/",
+      "shot": "pinkbox",
+      "chrome": "nanobotco.github.io/pink-box",
+      "body": "The American mom-and-pop donut shop — cake against raised, what else is in the case, and the chains told apart from the independents. The counts page shows the split.",
+      "facts": [
+        {
+          "count": "api:https://nanobotco.github.io/pink-box/api/places.json:count",
+          "label": "shops"
+        },
+        {
+          "count": "index:site:pink-box",
+          "label": "pages"
+        }
+      ]
+    },
+    {
+      "lane": "directories",
+      "id": "pinot",
+      "name": "Pinot Country",
+      "th": "ไร่องุ่นปีโนต์นัวร์",
+      "url": "https://nanobotco.github.io/pinot-noir/",
+      "shot": "pinot",
+      "chrome": "nanobotco.github.io/pinot-noir",
+      "body": "One thin-skinned grape, the ground it answers to, and the cellars that work it — with every AVA boundary date read off 27 CFR part 9 rather than a wine list.",
+      "facts": [
+        {
+          "count": "api:https://nanobotco.github.io/pinot-noir/api/cellars.json:count",
+          "label": "cellars"
+        },
+        {
+          "stated": "34",
+          "label": "regions",
+          "verify": "34"
+        }
+      ]
+    },
+    {
+      "lane": "directories",
+      "id": "basque",
+      "name": "Basque Tables",
+      "th": "โต๊ะอาหารบาสก์",
+      "url": "https://nanobotco.github.io/basque-tables/",
+      "shot": "basque",
+      "chrome": "nanobotco.github.io/basque-tables",
+      "body": "The Basque dining rooms of California, Nevada and Idaho — where the house sits you, what dinner runs to, which nights the door opens, and whether the bar makes a Picon. In English and Basque.",
+      "facts": [
+        {
+          "count": "api:https://nanobotco.github.io/basque-tables/api/places.json:len",
+          "label": "dining rooms"
+        },
+        {
+          "text": "English + Euskara"
+        }
+      ]
+    },
+    {
+      "lane": "directories",
+      "id": "amulets",
+      "name": "Amulet Essentials",
+      "th": "สารบบเครื่องราง",
+      "url": "https://wichaa.net/amulets",
+      "shot": "amulets",
+      "chrome": "wichaa.net/amulets",
+      "body": "The kinds of sacred object, as data — each with the market listings behind it, a price chart, and pictures anyone may reuse.",
+      "facts": [
+        {
+          "stated": "82",
+          "label": "kinds",
+          "verify": "82 kinds"
+        },
+        {
+          "stated": "683",
+          "label": "free-to-use pictures",
+          "verify": "683"
+        },
+        {
+          "count": "index:amulet-market#0",
+          "label": "market listings read"
+        }
+      ]
+    },
+    {
+      "lane": "directories",
+      "id": "roads",
+      "name": "Roads of Chiang Mai",
+      "th": "ถนนเชียงใหม่",
+      "url": "https://motdang.net/roads/",
+      "shot": "roads",
+      "chrome": "motdang.net/roads",
+      "body": "The square of 1296, four rings around it and the roads between, and what each one did to the city. Counted from the map, dated from the record.",
+      "facts": [
+        {
+          "stated": "6,934",
+          "label": "km of road",
+          "verify": "6,934 km"
+        },
+        {
+          "stated": "31,668",
+          "label": "intersections",
+          "verify": "31,668"
+        },
+        {
+          "text": "EN + ไทย"
+        }
+      ]
+    },
+    {
+      "lane": "directories",
+      "id": "ghost",
+      "name": "Ghost Chiang Mai",
+      "th": "ผีเจียงใหม่",
+      "url": "https://motdang.net/ghost/",
+      "shot": "ghost",
+      "chrome": "motdang.net/ghost",
+      "body": "A self-guided tour of the city's dead, on foot, by bicycle, by scooter or with a driver: a ghost story at each stop and the merit act that goes with it.",
+      "facts": [
+        {
+          "stated": "24",
+          "label": "stops",
+          "verify": "24"
+        },
+        {
+          "stated": "53",
+          "label": "sources named",
+          "verify": "53"
+        },
+        {
+          "text": "5 routes"
+        }
+      ]
+    },
+    {
+      "lane": "directories",
+      "id": "pike",
+      "name": "Pike Place Market",
+      "th": "ตลาดไพค์เพลส · ซีแอตเทิล",
+      "url": "https://nanobotco.github.io/pike-place-market/",
+      "shot": "pike",
+      "chrome": "nanobotco.github.io/pike-place-market",
+      "body": "Every licensed business inside Seattle's Pike Place Market Historical District, the date each started trading, and a map drawn from open data.",
+      "facts": [
+        {
+          "stated": "153",
+          "label": "licensed businesses",
+          "verify": "153"
+        },
+        {
+          "stated": "12.827",
+          "label": "acres",
+          "verify": "12.827"
+        }
+      ],
+      "also": [
+        {
+          "text": "ask the Market",
+          "url": "https://pike.motdang.net/"
+        }
+      ]
+    },
+    {
+      "lane": "apps",
+      "id": "scanner",
+      "name": "Scanner",
+      "th": "เครื่องสแกนในเบราว์เซอร์",
+      "url": "https://nanobotco.github.io/scanner/",
+      "shot": "scanner",
+      "chrome": "nanobotco.github.io/scanner",
+      "body": "Photograph a page; it finds the sheet, straightens it, flattens the light so the paper reads white, and writes a PDF. Sign with a finger on the glass — a saved signature is encrypted under a PIN, or under the fingerprint sensor where the phone offers it.",
+      "facts": [
+        {
+          "text": "installs to the home screen"
+        },
+        {
+          "text": "opens without a connection"
+        },
+        {
+          "text": "PDF · A4 · Letter · Legal"
+        }
+      ]
+    },
+    {
+      "lane": "apps",
+      "id": "askmotdang",
+      "name": "Ask Mot Dang",
+      "th": "คุยกับมด",
+      "url": "https://ask.motdang.net/",
+      "shot": "askmotdang",
+      "chrome": "ask.motdang.net",
+      "body": "A reader's assistant sitting on the city directory. Ask in Thai or English — it answers from the directory's own pages and links the one it used.",
+      "facts": [
+        {
+          "text": "ไทย + EN"
+        },
+        {
+          "text": "links the page it answered from"
+        }
+      ]
+    },
+    {
+      "lane": "apps",
+      "id": "aimotdang",
+      "name": "White-label assistants",
+      "th": "ผู้ช่วยติดแบรนด์ รายที่นั่ง",
+      "url": "https://ai.motdang.net/",
+      "shot": "aimotdang",
+      "chrome": "ai.motdang.net",
+      "body": "The same assistant, rebuilt as a product: one tenant, its own corpus, its own front door, sold by the seat. Ask Mot Dang is tenant number one.",
+      "facts": [
+        {
+          "text": "per-tenant corpus"
+        },
+        {
+          "text": "by seat"
+        }
+      ]
+    },
+    {
+      "lane": "apps",
+      "id": "sendmail",
+      "name": "The send page",
+      "th": "ส่งเมลจากมือถือ",
+      "url": "https://motdang.net/mail",
+      "shot": "sendmail",
+      "chrome": "motdang.net/mail",
+      "body": "Four people send mail from their own address on a phone, without a mail client. The passphrase is the identity.",
+      "facts": [
+        {
+          "text": "phone-first"
+        },
+        {
+          "text": "four senders"
+        }
+      ]
+    },
+    {
+      "lane": "apps",
+      "id": "thairoots",
+      "name": "Thai Roots",
+      "th": "รากศัพท์",
+      "url": "https://nanobotco.github.io/thairoots/",
+      "shot": "thairoots",
+      "chrome": "nanobotco.github.io/thairoots",
+      "body": "A Thai dictionary read by root, in the Hans Wehr manner — Pali and Sanskrit roots, native morpheme families, sound-change keys and a decomposer that takes a word apart. The whole dictionary is on the phone.",
+      "facts": [
+        {
+          "text": "runs offline"
+        },
+        {
+          "text": "RTGS toggle"
+        },
+        {
+          "text": "flashcards"
+        }
+      ]
+    },
+    {
+      "lane": "apps",
+      "id": "samching",
+      "name": "Sam Ching",
+      "th": "สามชิ่ง · บิลเลียดสามคูชั่น",
+      "url": "https://samching.nanobotco.workers.dev/",
+      "shot": "samching",
+      "chrome": "samching.nanobotco.workers.dev",
+      "body": "Three-cushion billiards on a phone: drag anywhere to aim, release to shoot, and the cloth carries the physics rather than a scoreboard.",
+      "facts": [
+        {
+          "text": "ไทย + EN"
+        },
+        {
+          "text": "touch physics"
+        }
+      ]
+    },
+    {
+      "lane": "apps",
+      "id": "skipdjt",
+      "name": "Skip DJT",
+      "th": "เทียบค่าตั๋วสามสนามบิน",
+      "url": "https://nanobotco.github.io/skipdjt/",
+      "shot": "skipdjt",
+      "chrome": "nanobotco.github.io/skipdjt",
+      "body": "Palm Beach airport took a president's name. This compares the same-day fare out of Palm Beach, Fort Lauderdale and Miami, and shows what the drive south saves.",
+      "facts": [
+        {
+          "text": "live fares"
+        },
+        {
+          "text": "3 airports"
+        }
+      ]
+    },
+    {
+      "lane": "apps",
+      "id": "farangbuddy",
+      "name": "FarangBuddy",
+      "th": "ตัวนับวันพำนักในไทย",
+      "url": "https://farangbuddy.netlify.app/",
+      "shot": "farangbuddy",
+      "chrome": "farangbuddy.netlify.app",
+      "body": "A Thailand stay tracker. Entries, exits, border runs and extensions go in; the admitted-until date and the next 90-day report and TM30 come out. More than one person per phone.",
+      "facts": [
+        {
+          "text": "installs to the home screen"
+        },
+        {
+          "text": "works offline"
+        },
+        {
+          "text": "free"
+        }
+      ],
+      "also": [
+        {
+          "text": "how to install it",
+          "url": "https://chiangmaivisadesk.com/farang-buddy/"
+        }
+      ]
+    },
+    {
+      "lane": "instruments",
+      "id": "jovilabe",
+      "small": true,
+      "name": "The Jovilabe",
+      "th": "เครื่องดูดวงจันทร์บริวารดาวพฤหัส",
+      "url": "https://wichaa.net/jovilabe",
+      "shot": "jovilabe",
+      "chrome": "wichaa.net/jovilabe",
+      "body": "Jupiter's four great moons, where they stand tonight and where their shadows fall."
+    },
+    {
+      "lane": "instruments",
+      "id": "moon",
+      "small": true,
+      "name": "The moon complication",
+      "th": "หน้าปัดข้างขึ้นข้างแรม",
+      "url": "https://wichaa.net/moon",
+      "shot": "moon",
+      "chrome": "wichaa.net/moon",
+      "body": "One dial, two moons, and what it takes to get it right."
+    },
+    {
+      "lane": "instruments",
+      "id": "redspot",
+      "small": true,
+      "name": "The Red Spot dial",
+      "th": "หน้าปัดจุดแดงใหญ่",
+      "url": "https://wichaa.net/redspot",
+      "shot": "redspot",
+      "chrome": "wichaa.net/redspot",
+      "body": "When the Great Red Spot faces someone standing in the storm — from a Jovian horizon."
+    },
+    {
+      "lane": "instruments",
+      "id": "divination",
+      "small": true,
+      "name": "Divination",
+      "th": "เครื่องเสี่ยงทายตามตำรา",
+      "url": "https://wichaa.net/divination",
+      "shot": "divination",
+      "chrome": "wichaa.net/divination",
+      "body": "I Ching, Plum Blossom and Wen Wang Gua on one engine, showing its working rather than hiding it."
+    },
+    {
+      "lane": "instruments",
+      "id": "hun",
+      "small": true,
+      "name": "Hun Payont",
+      "th": "หุ่นพยนต์ · หุ่นที่ปลุกด้วยวิชา",
+      "url": "https://wichaa.net/hun",
+      "shot": "hun",
+      "chrome": "wichaa.net/hun",
+      "body": "An effigy you forge, carrying your name to the market each morning and bringing one thing back."
+    },
+    {
+      "lane": "instruments",
+      "id": "waikhru",
+      "small": true,
+      "name": "Waikhru Yon",
+      "th": "ไหว้ครูยนต์ · พรสำหรับมือที่จับเครื่อง",
+      "url": "https://wichaa.net/waikhru",
+      "shot": "waikhru",
+      "chrome": "wichaa.net/waikhru",
+      "body": "The mark a craftsperson paints on a machine, and the blessing that goes with the hand at the lathe."
+    },
+    {
+      "lane": "instruments",
+      "id": "holding",
+      "small": true,
+      "name": "I'm holding an amulet",
+      "th": "ถืออยู่ในมือ · ประตูจำแนกพระเครื่อง",
+      "url": "https://wichaa.net/holding",
+      "shot": "holding",
+      "chrome": "wichaa.net/holding",
+      "body": "You have the thing but not its name. Answer the questions a dealer would ask, in the dealer's order."
+    },
+    {
+      "lane": "instruments",
+      "id": "kesa",
+      "name": "The kesa yant",
+      "th": "ยันต์เกศาผิด",
+      "url": "https://wichaa.net/kesa/",
+      "shot": "kesa",
+      "chrome": "wichaa.net/kesa",
+      "body": "The thirty-two parts of the body as thirty-two letters, laid in by the knight's move. The method traced through the manuals in the corpus, and whether the loop closes.",
+      "facts": [
+        {
+          "stated": "32",
+          "label": "parts",
+          "verify": "thirty-two"
+        }
+      ]
+    },
+    {
+      "lane": "explainers",
+      "id": "blackholes",
+      "name": "Black Holes, Drawn",
+      "th": "หลุมดำ วาดจากสมการ",
+      "url": "https://nanobotco.github.io/black-holes/",
+      "shot": "blackholes",
+      "chrome": "nanobotco.github.io/black-holes",
+      "body": "Black holes modelled and drawn from the equations: generators you can run, the past, the present and the far future, and the legends that got there first.",
+      "facts": [
+        {
+          "text": "drawn in the browser"
+        }
+      ]
+    },
+    {
+      "lane": "explainers",
+      "id": "quantum",
+      "name": "Quantum Computing, plainly",
+      "th": "คอมพิวเตอร์ควอนตัม",
+      "url": "https://nanobotco.github.io/quantum-computing/",
+      "shot": "quantum",
+      "chrome": "nanobotco.github.io/quantum-computing",
+      "body": "Qubits, interference, entanglement, Shor, Grover, error correction and the machines, in plain words.",
+      "facts": [
+        {
+          "text": "history + theory"
+        }
+      ]
+    },
+    {
+      "lane": "explainers",
+      "id": "threebody",
+      "name": "The Three-Body Problem",
+      "th": "ปัญหาสามวัตถุ",
+      "url": "https://nanobotco.github.io/three-body/",
+      "shot": "threebody",
+      "chrome": "nanobotco.github.io/three-body",
+      "body": "Gravity, the two-body solution, why three has no formula, chaos, Lagrange points and the figure-eight orbit, computed on the page.",
+      "facts": [
+        {
+          "text": "orbits computed live"
+        }
+      ]
+    },
+    {
+      "lane": "explainers",
+      "id": "magic",
+      "name": "Exceptional Magic",
+      "th": "ออกโทเนียน · E8",
+      "url": "https://nanobotco.github.io/exceptional-magic/",
+      "shot": "magic",
+      "chrome": "nanobotco.github.io/exceptional-magic",
+      "body": "Eight ways to multiply and where they lead: the octonions, triality, the magic square and E8, drawn from the arithmetic.",
+      "facts": [
+        {
+          "text": "octonions · E8"
+        }
+      ]
+    },
+    {
+      "lane": "explainers",
+      "id": "factoring",
+      "name": "Big Numbers, Split",
+      "th": "การแยกตัวประกอบ",
+      "url": "https://nanobotco.github.io/factoring/",
+      "shot": "factoring",
+      "chrome": "nanobotco.github.io/factoring",
+      "body": "Factoring from Eratosthenes to Shor: how big numbers get split, who has split the biggest, and what it means for a bitcoin wallet.",
+      "facts": [
+        {
+          "text": "Eratosthenes → Shor"
+        }
+      ]
+    },
+    {
+      "lane": "explainers",
+      "id": "goinfast",
+      "name": "Goin' Fast",
+      "th": "ความเร็ว",
+      "url": "https://nanobotco.github.io/goin-fast/",
+      "shot": "goinfast",
+      "chrome": "nanobotco.github.io/goin-fast",
+      "body": "Twenty measured speeds from continental drift to light, the three things that make going fast cost, and four calculators.",
+      "facts": [
+        {
+          "stated": "20",
+          "label": "measured speeds",
+          "verify": "twenty measured speeds"
+        },
+        {
+          "text": "4 calculators"
+        }
+      ]
+    },
+    {
+      "lane": "record",
+      "id": "theindex",
+      "name": "The index",
+      "th": "สารบัญของทั้งหมด",
+      "url": "https://nanobotco.github.io/index/",
+      "shot": "theindex",
+      "chrome": "nanobotco.github.io/index",
+      "body": "Everything held, counted once, at one address — a number names the file, database or endpoint it was read from, and the day it was read.",
+      "facts": [
+        {
+          "stated": "301,812",
+          "label": "records",
+          "verify": "301,812"
+        },
+        {
+          "stated": "18",
+          "label": "corpora",
+          "verify": "18 corpora"
+        }
+      ]
+    },
+    {
+      "lane": "record",
+      "id": "uptake",
+      "name": "Uptake",
+      "th": "คู่มือ — เขียนให้เครื่องอ่าน",
+      "url": "https://nanobotco.github.io/uptake/",
+      "shot": "uptake",
+      "chrome": "nanobotco.github.io/uptake",
+      "body": "Fourteen days across fifty-two repositories: 961 clones from 501 distinct machines against 36 page views from 20 browsers. The manual written on that measurement — the arrival worth designing for is the copy, not the click.",
+      "facts": [
+        {
+          "stated": "961",
+          "label": "clones",
+          "verify": "961 clones"
+        },
+        {
+          "stated": "501",
+          "label": "distinct machines",
+          "verify": "501 distinct machines"
+        },
+        {
+          "stated": "36",
+          "label": "page views",
+          "verify": "36 page views"
+        }
+      ]
+    },
+    {
+      "lane": "record",
+      "id": "who",
+      "name": "Who keeps the ants",
+      "th": "ใครเลี้ยงมด",
+      "url": "https://motdang.net/who.html",
+      "shot": "who",
+      "chrome": "motdang.net/who.html",
+      "body": "The page on the city directory that names the person behind it, the machines that run the crawls, and the address to write to about a mistake.",
+      "facts": [
+        {
+          "text": "ไทย + EN"
+        }
+      ]
+    }
+  ],
+  "workshop": {
+    "kick": "Behind the storefront",
+    "head": "And the workshop behind it",
+    "th": "และโรงงานเบื้องหลัง",
+    "sub": "The addresses above stand on a bench of smaller tools — written, used daily, and kept running. A sampling:",
+    "note": "Source code moves between forges as platforms come and go. Ask for the current mirror of anything here; the live addresses above are the ones to bookmark.",
+    "groups": [
+      {
+        "title": "Crawlers & pipelines",
+        "th": "ตัวเก็บข้อมูล",
+        "chips": [
+          {
+            "text": "manuscript crawler",
+            "count": "index:lanna-manuscripts#0",
+            "unit": "manuscripts"
+          },
+          {
+            "text": "amulet market listener",
+            "count": "index:amulet-market#0",
+            "unit": "listings"
+          },
+          {
+            "text": "city census bots — Chiang Mai and Chiang Rai"
+          },
+          {
+            "text": "wat registry, off the ONAB temple register"
+          },
+          {
+            "text": "OpenStreetMap and Overture harvests"
+          },
+          {
+            "text": "Thai romaniser, scored against its own benchmark"
+          }
+        ]
+      },
+      {
+        "title": "Datasets, published",
+        "th": "ชุดข้อมูลที่เผยแพร่",
+        "chips": [
+          {
+            "text": "Thai place-name romanisation benchmark",
+            "count": "index:hf-romanisation-benchmark#0",
+            "unit": "rows"
+          },
+          {
+            "text": "Thai trade words, Chiang Mai",
+            "count": "index:hf-trade-words#0",
+            "unit": "rows"
+          },
+          {
+            "text": "RTGS romanisation lexicon",
+            "count": "index:hf-rtgs-lexicon#0",
+            "unit": "rows"
+          },
+          {
+            "text": "the Mot Dang export, with per-field provenance"
+          }
+        ]
+      },
+      {
+        "title": "Back office",
+        "th": "งานหลังร้าน",
+        "chips": [
+          {
+            "text": "BOOKS — bilingual double-entry books, payment by QR, LINE receipts"
+          },
+          {
+            "text": "a tasking app for four people and four doors"
+          },
+          {
+            "text": "stocktake"
+          },
+          {
+            "text": "the listing sheet"
+          }
+        ]
+      },
+      {
+        "title": "Games & play",
+        "th": "เกม",
+        "chips": [
+          {
+            "text": "Moat — an interactive novel of Chiang Mai 2076"
+          },
+          {
+            "text": "Sam Ching"
+          },
+          {
+            "text": "blinky1200 — 11 levels"
+          },
+          {
+            "text": "a Stardew Valley mod"
+          }
+        ]
+      },
+      {
+        "title": "Everyday tools",
+        "th": "เครื่องมือประจำวัน",
+        "chips": [
+          {
+            "text": "Scanner"
+          },
+          {
+            "text": "PDF pleading generator"
+          },
+          {
+            "text": "prediction keyboard"
+          },
+          {
+            "text": "flight helper"
+          },
+          {
+            "text": "medication tracker"
+          },
+          {
+            "text": "a mail sender that fits on a phone"
+          }
+        ]
+      },
+      {
+        "title": "Physical & devices",
+        "th": "อุปกรณ์",
+        "chips": [
+          {
+            "text": "Coucal — an e-ink clock built to last 70 years"
+          },
+          {
+            "text": "motorcycle cockpit HUD"
+          }
+        ]
+      }
+    ]
+  }
+}

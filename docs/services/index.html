@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hongdam — business services</title>
+<meta name="description" content="Hongdam หงส์ดำ — บริการแปลภาษามืออาชีพ · business services.">
+<meta name="theme-color" content="#171009">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/assets/favicon.svg">
+<link rel="canonical" href="https://hongdam.net/services">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hongdam.net/services">
+<meta property="og:title" content="Hongdam — business services">
+<meta property="og:description" content="Hongdam หงส์ดำ — บริการแปลภาษามืออาชีพ · business services.">
+<meta property="og:image" content="https://hongdam.net/assets/card.jpg">
+<style>
+  :root{
+    --lacquer:#171009; --lacquer-2:#211710;
+    --cream:#f2e7d3; --cream-dim:#cdbfa4;
+    --gold:#e7be6a; --gold-deep:#c89a45;
+    --verm:#ff6a45;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:var(--lacquer); color:var(--cream);
+    font-family:"Avenir Next","Segoe UI",system-ui,-apple-system,"Thonburi","Noto Sans Thai",sans-serif;
+    font-size:18px; line-height:1.65; -webkit-font-smoothing:antialiased;
+    min-height:100vh; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; padding:8vh 24px;
+  }
+  a{color:var(--gold); text-decoration:none}
+  a:hover{color:var(--cream)}
+  main{max-width:560px; width:100%; text-align:center}
+  .mark{
+    font-size:clamp(28px,6vw,40px); font-weight:700; letter-spacing:.14em;
+    color:var(--gold); line-height:1.2;
+  }
+  .mark .th{display:block; letter-spacing:.04em; font-size:.8em; color:var(--gold-deep); margin-top:.25em}
+  .rule{
+    width:70px; height:1px; margin:36px auto;
+    background:linear-gradient(90deg,transparent,var(--gold-deep),transparent);
+  }
+  .statement{font-size:clamp(20px,3.4vw,26px); line-height:1.5; color:var(--cream)}
+  .statement.en{margin-top:.5em; font-size:clamp(17px,2.6vw,20px); color:var(--cream-dim)}
+  figure{
+    margin:44px auto 0; width:min(300px,72vw); aspect-ratio:1;
+    background:#f6efe1; border-radius:50%;
+    box-shadow:0 18px 44px -18px rgba(0,0,0,.7);
+    display:grid; place-items:center;
+  }
+  figure img{width:94%; height:auto; display:block}
+
+  .contact{margin-top:52px; text-align:left}
+  .contact p{
+    font-size:17px; color:var(--cream-dim); text-align:center;
+    max-width:34ch; margin:0 auto 22px;
+  }
+  .field{margin-bottom:12px}
+  .field label{
+    display:block; font-size:13px; letter-spacing:.11em; text-transform:uppercase;
+    color:var(--gold-deep); margin-bottom:5px;
+  }
+  .field input, .field textarea{
+    width:100%; font:inherit; font-size:16px; color:var(--cream);
+    background:var(--lacquer-2); border:1px solid rgba(231,190,106,.22);
+    border-radius:8px; padding:11px 13px;
+  }
+  .field textarea{min-height:104px; resize:vertical}
+  .field input:focus, .field textarea:focus{
+    outline:none; border-color:var(--gold-deep);
+    box-shadow:0 0 0 3px rgba(231,190,106,.12);
+  }
+  .hp{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden}
+  button{
+    width:100%; margin-top:6px; font:inherit; font-size:16px; font-weight:600;
+    letter-spacing:.06em; color:var(--lacquer); background:var(--gold);
+    border:0; border-radius:8px; padding:12px; cursor:pointer;
+  }
+  button:hover{background:var(--cream)}
+  button[disabled]{opacity:.55; cursor:default}
+  .status{margin-top:12px; font-size:15px; text-align:center; min-height:1.4em}
+  .status.err{color:var(--verm)}
+  .status.ok{color:var(--gold)}
+
+  footer{margin-top:48px; font-size:15px; letter-spacing:.1em; color:var(--cream-dim); text-align:center}
+</style>
+<meta name="google" content="notranslate">
+<meta name="robots" content="notranslate">
+<script>if(/[.]translate[.]goog$/.test(location.hostname))location.replace("https://"+location.hostname.slice(0,-15).replace(/--/g,"~").replace(/-/g,".").replace(/~/g,"-")+location.pathname+location.search.replace(/([?&])_x_tr_[^&]*/g,"$1").replace(/[?&]+$/,"").replace(/[?]&+/,"?")+location.hash)</script>
+</head>
+<body>
+<main>
+  <p class="mark">HONGDAM<span class="th" lang="th">หงส์ดำ</span></p>
+
+  <div class="rule"></div>
+
+  <p class="statement" lang="th">บริการแปลภาษามืออาชีพ</p>
+  <p class="statement en">Business services</p>
+
+  <figure>
+    <img src="/assets/stamp/hongdam-translation-stamp-red.svg"
+         alt="Round Hongdam stamp reading “บริการแปลภาษามืออาชีพ · business services · หงส์ดำ · hongdam.net”, with blanks for วันที่ (date) and ชื่อผู้แปล (translator’s name) and a QR code linking to this page."
+         width="300" height="300">
+  </figure>
+
+  <section class="contact">
+    <p>We don’t notarize. Ask and we’ll confirm a translation is ours.</p>
+
+    <form id="f" action="/api/contact" method="post" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" maxlength="120">
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" maxlength="200" required>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" maxlength="4000" required></textarea>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label for="website">Leave this empty</label>
+        <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <button type="submit">Send</button>
+      <p class="status" id="s" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <footer><a href="/">hongdam.net</a></footer>
+</main>
+
+<script>
+  (function () {
+    var f = document.getElementById('f'),
+        s = document.getElementById('s'),
+        b = f.querySelector('button');
+
+    function say(text, kind) { s.textContent = text; s.className = 'status ' + (kind || ''); }
+
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var data = Object.fromEntries(new FormData(f));
+      if (!data.email || !data.message.trim()) {
+        say('Email and message, please.', 'err');
+        return;
+      }
+      b.disabled = true;
+      say('Sending…');
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+        .then(function (r) {
+          // A non-JSON body means the endpoint is missing or broken — never show
+          // the parser's complaint to a visitor.
+          return r.json().catch(function () { return {}; })
+            .then(function (j) { return { ok: r.ok, j: j }; });
+        })
+        .then(function (r) {
+          if (!r.ok || !r.j.ok) throw new Error(r.j.error || '');
+          f.reset();
+          say('Sent. We’ll reply to that address.', 'ok');
+        })
+        .catch(function (err) {
+          say(err.message || 'Could not send that just now.', 'err');
+        })
+        .then(function () { b.disabled = false; });
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+{
+ "read": "2026-09-23",
+ "values": {
+  "index:motdang#0": {
+   "value": 88313,
+   "source": "/Users/annikapeacock/Developer/claude code projects/mot-dang/data/canonical/cm.json, /Users/annikapeacock/Developer/claude code projects/mot-dang/data/canonical/cr.json",
+   "method": "local_json_len",
+   "read": "2026-09-23"
+  },
+  "index:site:motdang.net": {
+   "value": 86080,
+   "source": "https://motdang.net/sitemap.xml",
+   "method": "sitemap",
+   "read": "2026-09-23"
+  },
+  "index:lanna-manuscripts#0": {
+   "value": 6986,
+   "source": "/Users/annikapeacock/Developer/claude code projects/manuscript-crawler/crawler/catalog.db",
+   "method": "sqlite",
+   "read": "2026-09-23"
+  },
+  "index:lanna-manuscripts#1": {
+   "value": 120178,
+   "source": "/Users/annikapeacock/Developer/claude code projects/manuscript-crawler/crawler/catalog.db",
+   "method": "sqlite",
+   "read": "2026-09-23"
+  },
+  "index:site:wichaa.net": {
+   "value": 17022,
+   "source": "https://wichaa.net/sitemap.xml",
+   "method": "sitemap",
+   "read": "2026-09-23"
+  },
+  "index:site:defiant.to": {
+   "value": 147,
+   "source": "https://defiant.to/sitemap.xml",
+   "method": "sitemap",
+   "read": "2026-09-23"
+  },
+  "index:site:offrampt.net": {
+   "value": 9,
+   "source": "https://offrampt.net/sitemap.xml",
+   "method": "sitemap",
+   "read": "2026-09-23"
+  },
+  "api:https://nanobotco.github.io/amulet-atlas/api/nodes.json:count": {
+   "value": 286,
+   "source": "https://nanobotco.github.io/amulet-atlas/api/nodes.json",
+   "method": "json",
+   "read": "2026-09-23"
+  },
+  "index:site:amulet-atlas": {
+   "value": 310,
+   "source": "https://nanobotco.github.io/amulet-atlas/sitemap.xml",
+   "method": "sitemap",
+   "read": "2026-09-23"
+  },
+  "api:https://nanobotco.github.io/mae-hong-son-loop/api/nodes.json:count": {
+   "value": 109,
+   "source": "https://nanobotco.github.io/mae-hong-son-loop/api/nodes.json",
+   "method": "json",
+   "read": "2026-09-23"
+  },
+  "api:https://nanobotco.github.io/hand-poke/api/nodes.json:count": {
+   "value": 130,
+   "source": "https://nanobotco.github.io/hand-poke/api/nodes.json",
+   "method": "json",
+   "read": "2026-09-19"
+  },
+  "api:https://nanobotco.github.io/muay-thai/api/nodes.json:count": {
+   "value": 129,
+   "source": "https://nanobotco.github.io/muay-thai/api/nodes.json",
+   "method": "json",
+   "read": "2026-09-23"
+  },
+  "api:https://nanobotco.github.io/carolina-barbecue/api/nodes.json:count": {
+   "value": 179,
+   "source": "https://nanobotco.github.io/carolina-barbecue/api/nodes.json",
+   "method": "json",
+   "read": "2026-09-23"
+  },
+  "index:site:carolina-barbecue": {
+   "value": 199,
+   "source": "https://nanobotco.github.io/carolina-barbecue/sitemap.xml",
+   "method": "sitemap",
+   "read": "2026-09-23"
+  },
+  "api:https://nanobotco.github.io/buffalo-wings/api/nodes.json:count": {
+   "value": 158,
+   "source": "https://nanobotco.github.io/buffalo-wings/api/nodes.json",
+   "method": "json",
+   "read": "2026-09-23"
+  },
+  "index:site:buffalo-wings": {
+   "value": 185,
+   "source": "https://nanobotco.github.io/buffalo-wings/sitemap.xml",
+   "method": "sitemap",
+   "read": "2026-09-23"
+  },
+  "api:https://nanobotco.github.io/pink-box/api/places.json:count": {
+   "value": 10686,
+   "source": "https://nanobotco.github.io/pink-box/api/places.json",
+   "method": "json",
+   "read": "2026-09-23"
+  },
+  "index:site:pink-box": {
+   "value": 156,
+   "source": "https://nanobotco.github.io/pink-box/sitemap.xml",
+   "method": "sitemap",
+   "read": "2026-09-23"
+  },
+  "api:https://nanobotco.github.io/pinot-noir/api/cellars.json:count": {
+   "value": 3055,
+   "source": "https://nanobotco.github.io/pinot-noir/api/cellars.json",
+   "method": "json",
+   "read": "2026-09-23"
+  },
+  "api:https://nanobotco.github.io/basque-tables/api/places.json:len": {
+   "value": 29,
+   "source": "https://nanobotco.github.io/basque-tables/api/places.json",
+   "method": "json",
+   "read": "2026-09-23"
+  },
+  "index:amulet-market#0": {
+   "value": 17473,
+   "source": "/Users/annikapeacock/Developer/claude code projects/manuscript-crawler/crawler/catalog.db",
+   "method": "sqlite",
+   "read": "2026-09-23"
+  },
+  "index:hf-romanisation-benchmark#0": {
+   "value": 153948,
+   "source": "NaNoBotCo/thai-place-name-romanisation-benchmark",
+   "method": "hf_rows",
+   "read": "2026-09-23"
+  },
+  "index:hf-trade-words#0": {
+   "value": 2185,
+   "source": "NaNoBotCo/thai-trade-words-chiang-mai",
+   "method": "hf_rows",
+   "read": "2026-09-23"
+  },
+  "index:hf-rtgs-lexicon#0": {
+   "value": 694,
+   "source": "NaNoBotCo/thai-rtgs-romanisation-lexicon",
+   "method": "hf_rows",
+   "read": "2026-09-23"
+  },
+  "api:https://wichaa.net/handpoke/api/nodes.json:count": {
+   "value": 130,
+   "source": "https://wichaa.net/handpoke/api/nodes.json",
+   "method": "json",
+   "read": "2026-09-23"
+  }
+ }
+}

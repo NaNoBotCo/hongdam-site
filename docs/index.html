@@ -1,0 +1,1990 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js notranslate" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hongdam หงส์ดำ — เว็บดีไซน์เชียงราย · Web Development, Chiang Rai</title>
+<meta name="description" content="Hongdam หงส์ดำ builds bilingual, LINE-native, data-driven web platforms from offices overlooking the Chiang Rai clocktower. สตูดิโอพัฒนาเว็บสองภาษา เชียงราย — แพลตฟอร์มจริง ไม่ใช่เทมเพลต">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://hongdam.net/">
+<meta property="og:title" content="Hongdam หงส์ดำ — Web Development, Chiang Rai">
+<meta property="og:description" content="Real platforms, not templates. Bilingual, LINE-native, data-driven — from Hongdam หงส์ดำ, the black swan of Chiang Rai.">
+<meta property="og:url" content="https://hongdam.net/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://hongdam.net/assets/card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#171009">
+<meta name="color-scheme" content="dark">
+<style>
+/* ============ หงส์ดำ · the black swan · v6 ============
+   Lanna lacquerware: lacquer black, vermillion ชาด, gold leaf, cream.
+   v6: growing-gold fractal lai kham · scratch-the-lacquer · gold-dust
+   signature · split-flap bench · full-bleed mural from Nan's own camera. */
+:root{
+  --lacquer:#171009;
+  --lacquer-2:#211710;
+  --lacquer-3:#2c1e13;
+  --cream:#f2e7d3;
+  --cream-dim:#cdbfa4;
+  --gold:#e7be6a;
+  --gold-deep:#c89a45;
+  --verm:#ff6a45;
+  --verm-deep:#c8371e;
+  --glass:rgba(44,30,19,.55);
+  --glass-edge:rgba(231,190,106,.22);
+  --shadow:0 24px 60px -24px rgba(0,0,0,.65);
+  --r-lg:22px; --r-md:16px; --r-sm:10px;
+  --ease-spring:cubic-bezier(.3,1.1,.4,1);
+  --ease-out:cubic-bezier(.22,.61,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  background:var(--lacquer);
+  color:var(--cream);
+  font-family:"Avenir Next","Segoe UI",system-ui,-apple-system,"Thonburi","Noto Sans Thai",sans-serif;
+  font-size:18px;line-height:1.65;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--verm-deep);color:var(--cream)}
+a{color:var(--gold);text-decoration:none}
+a:hover{color:var(--verm)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+.gilt{position:fixed;top:0;left:0;right:0;height:3px;z-index:60;
+  background:linear-gradient(90deg,var(--gold-deep),var(--gold) 40%,#f6e3b4 50%,var(--gold) 60%,var(--gold-deep));opacity:.5}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:61;
+  background:linear-gradient(90deg,var(--verm-deep),var(--verm));box-shadow:0 0 12px rgba(255,106,69,.7)}
+#dustfield{position:fixed;inset:0;z-index:45;pointer-events:none}
+.grain{position:fixed;inset:0;z-index:55;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E")}
+.skip{position:absolute;left:-9999px;top:0;background:var(--gold);color:var(--lacquer);
+  padding:.7em 1.2em;z-index:100;font-weight:700;border-radius:0 0 var(--r-sm) 0}
+.skip:focus{left:0}
+
+/* ============ nav ============ */
+nav{
+  position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:50;
+  display:flex;align-items:center;gap:.35rem;
+  padding:.5rem .75rem;border-radius:999px;
+  background:var(--glass);border:1px solid var(--glass-edge);
+  backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);
+  box-shadow:var(--shadow);
+  max-width:min(94vw,860px);white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+.nav-mark{display:flex;align-items:center;gap:.55rem;padding:.15rem .6rem .15rem .2rem;font-weight:800;letter-spacing:.02em}
+.nav-mark .seal{width:34px;height:34px;border-radius:10px;flex:none;
+  background:linear-gradient(135deg,var(--verm-deep),#8f2312);
+  display:grid;place-items:center;color:var(--gold);font-size:19px;
+  border:1px solid rgba(231,190,106,.4)}
+nav a.link{padding:.45rem .85rem;border-radius:999px;color:var(--cream-dim);font-size:.92rem;font-weight:600;
+  transition:color .35s,background .35s}
+nav a.link:hover{color:var(--gold);background:rgba(231,190,106,.08)}
+nav a.link b{color:var(--cream);font-weight:600}
+
+/* ============ hero ============ */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;
+  background:linear-gradient(175deg,#1c120a 0%,var(--lacquer) 60%,var(--lacquer) 100%)}
+.hero-photo{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.hero-photo img{position:absolute;left:0;top:-12%;width:100%;height:124%;
+  object-fit:cover;object-position:50% 72%;
+  opacity:.62;filter:sepia(.3) saturate(1.12) brightness(.72) contrast(1.06);will-change:transform}
+/* two independent scrims — tune each without touching the other */
+.scrim{position:absolute;inset:0;pointer-events:none;z-index:2}
+.scrim-frame{background:            /* edges only: settles the composition, leaves the mural open */
+    linear-gradient(0deg,rgba(23,16,9,.86) 0%,transparent 26%,transparent 74%,rgba(23,16,9,.68) 100%),
+    radial-gradient(120% 90% at 85% -10%,rgba(200,55,30,.16),transparent 55%)}
+.scrim-text{background:             /* readability wash under the text column, fades off to the right */
+    linear-gradient(90deg,rgba(23,16,9,.84) 0%,rgba(23,16,9,.62) 38%,rgba(23,16,9,.16) 68%,rgba(23,16,9,.06) 100%)}
+@media(max-width:720px){
+  .scrim-text{background:linear-gradient(90deg,rgba(23,16,9,.86) 0%,rgba(23,16,9,.6) 100%)}
+}
+#laikham{position:absolute;inset:0;pointer-events:none;z-index:1}
+  /* z1: under the scrims — the vines never outshine the words */
+#scratch{position:absolute;left:0;top:0;width:100%;pointer-events:none;
+  height:calc(100% + clamp(230px,46vw,360px));   /* overhangs the seam into the signature */
+  z-index:3;mix-blend-mode:screen}
+.hero-inner{position:relative;z-index:4;max-width:1080px;padding:7.5rem 1.4rem 5rem;text-align:left;width:100%}
+.kicker{display:inline-flex;align-items:center;gap:.6rem;
+  font-size:.82rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
+  border:1px solid var(--glass-edge);border-radius:999px;padding:.5rem 1.1rem;
+  background:rgba(23,16,9,.55);backdrop-filter:blur(8px)}
+.kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--verm);
+  box-shadow:0 0 10px var(--verm);animation:pulse 4.2s infinite}
+@keyframes pulse{50%{opacity:.35}}
+h1{font-size:clamp(2.6rem,7.2vw,5.4rem);line-height:1.04;font-weight:800;letter-spacing:-.02em;
+  margin:1.6rem 0 0;font-family:Georgia,"Times New Roman","Thonburi","Noto Serif Thai",serif;
+  text-shadow:0 2px 30px rgba(0,0,0,.8),0 1px 4px rgba(0,0,0,.5)}
+h1 .verm{color:transparent;background:linear-gradient(100deg,var(--verm) 20%,#ffa06a 50%,var(--verm) 80%);
+  -webkit-background-clip:text;background-clip:text}
+h1 .goldline{position:relative;white-space:nowrap}
+h1 .goldline::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.1em;
+  background:linear-gradient(90deg,var(--gold-deep),var(--gold),transparent);border-radius:3px;opacity:.85}
+.hero-th{margin-top:1.1rem;font-size:clamp(1.05rem,2.2vw,1.35rem);color:var(--gold);font-weight:600;
+  text-shadow:0 1px 16px rgba(0,0,0,.8)}
+.hero-sub{margin-top:1.2rem;max-width:46rem;font-size:clamp(1rem,1.6vw,1.18rem);color:var(--cream-dim);
+  text-shadow:0 1px 14px rgba(0,0,0,.75)}
+.hero-sub b{color:var(--cream);font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.4rem;align-items:center}
+.btn{position:relative;display:inline-flex;align-items:center;gap:.6rem;
+  padding:1.05rem 1.9rem;border-radius:16px;font-weight:800;font-size:1.02rem;
+  transition:transform .38s var(--ease-spring),box-shadow .45s;cursor:pointer;border:0}
+.btn:active{transform:scale(.965)!important}
+.btn-gold{background:linear-gradient(135deg,#f2d491,var(--gold) 45%,var(--gold-deep));color:#2a1a08;
+  box-shadow:0 14px 40px -12px rgba(231,190,106,.55)}
+.btn-gold:hover{color:#1c1005;box-shadow:0 18px 50px -12px rgba(231,190,106,.75)}
+.btn-glass{background:var(--glass);border:1px solid var(--glass-edge);color:var(--cream);
+  backdrop-filter:blur(10px)}
+.btn-glass:hover{color:var(--gold);border-color:rgba(231,190,106,.5)}
+.hero-note{margin-top:2.6rem;font-size:.9rem;color:var(--cream-dim);display:flex;align-items:center;gap:.55rem}
+.hero-note .dot{width:7px;height:7px;border-radius:50%;background:#7ed491;box-shadow:0 0 8px #7ed491;flex:none}
+.hero-credit{position:absolute;right:1.1rem;bottom:.85rem;z-index:4;font-size:.72rem;color:rgba(205,191,164,.55);
+  letter-spacing:.04em}
+
+/* ============ signature — gold dust ============ */
+.sig{position:relative;padding:0;background:
+  radial-gradient(90% 130% at 50% -30%,rgba(200,55,30,.10),transparent 60%)}
+  /* no borders, no tone step — the page is one continuous surface */
+.sig-stage{position:relative;height:min(46vw,360px);min-height:230px}
+#dust{position:absolute;inset:0;width:100%;height:100%}
+.sig-fallback{position:absolute;inset:0;display:grid;place-items:center;margin:0;
+  font-family:Georgia,"Thonburi","Noto Serif Thai",serif;font-weight:800;
+  font-size:clamp(3rem,10vw,7rem);letter-spacing:.02em;
+  color:transparent;background:linear-gradient(160deg,#f6e3b4,var(--gold) 45%,var(--gold-deep));
+  -webkit-background-clip:text;background-clip:text}
+html.js-dust .sig-fallback{visibility:hidden}
+.sig-cap{position:absolute;left:0;right:0;bottom:.7rem;text-align:center;font-size:.78rem;
+  color:rgba(205,191,164,.6);letter-spacing:.06em;
+  text-shadow:0 1px 6px rgba(23,16,9,.9),0 0 14px rgba(23,16,9,.7)}
+
+/* ============ sections ============ */
+section{position:relative;padding:6.5rem 1.4rem}
+.wrap{max-width:1160px;margin:0 auto}
+.sec-kick{font-size:.8rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--verm)}
+h2{font-size:clamp(1.9rem,4.4vw,3rem);font-weight:800;letter-spacing:-.01em;margin:.6rem 0 .4rem;
+  font-family:Georgia,"Times New Roman","Thonburi","Noto Serif Thai",serif}
+.sec-th{color:var(--gold);font-weight:600;font-size:1.06rem}
+.sec-sub{color:var(--cream-dim);max-width:44rem;margin-top:.7rem}
+.khomut{text-align:center;color:var(--gold-deep);font-size:1.5rem;opacity:.6;padding:1rem 0;user-select:none}
+
+/* ============ unalome dividers — the khomut, risen ============ */
+.unalome{position:absolute;width:min(44vw,430px);height:min(78vh,640px);z-index:0;
+  pointer-events:none;user-select:none;opacity:.55;will-change:transform}
+.unalome canvas{position:absolute;inset:0;width:100%;height:100%}
+section>.wrap{position:relative;z-index:1}   /* content always rides above the decorations */
+.unalome .static-glyph{position:absolute;inset:0;display:grid;place-items:center;margin:0;
+  color:var(--gold-deep);opacity:.5;font-size:clamp(7rem,30vh,15rem);
+  transform:rotate(-90deg);line-height:1}
+
+/* ============ the bench — split-flap telemetry ============ */
+.bench{margin-top:2.6rem;border-radius:var(--r-lg);overflow:hidden;
+  border:1px solid var(--glass-edge);box-shadow:var(--shadow);
+  background:linear-gradient(180deg,#241811,#1a110a)}
+.bench-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;
+  padding:1rem 1.4rem;border-bottom:1px solid rgba(231,190,106,.15);background:rgba(0,0,0,.25)}
+.bench-head .t{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;color:var(--gold)}
+.bench-head .d{font-size:.78rem;color:var(--cream-dim)}
+.bench-rows{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr))}
+.brow{display:flex;align-items:center;justify-content:space-between;gap:1rem;transition:background .5s;
+  padding:1.25rem 1.4rem;border-bottom:1px solid rgba(231,190,106,.08);border-right:1px solid rgba(231,190,106,.08)}
+.brow .lbl{min-width:0}
+.brow .lbl b{display:block;color:var(--cream);font-size:.98rem;font-weight:700}
+.brow .lbl span{display:block;color:var(--cream-dim);font-size:.82rem}
+.brow:hover{background:rgba(231,190,106,.045)}
+.flap{display:flex;gap:3px}
+.cell{position:relative;width:1.18em;height:1.7em;border-radius:5px;overflow:hidden;flex:none;
+  background:linear-gradient(180deg,#0e0905 0%,#1c130b 46%,#0a0603 54%,#140d07 100%);
+  border:1px solid rgba(231,190,106,.22);
+  font-family:Georgia,serif;font-weight:700;font-size:1.35rem;color:var(--gold);
+  box-shadow:inset 0 2px 6px rgba(0,0,0,.7)}
+.cell::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.75)}
+.cell .reel{position:absolute;left:0;right:0;top:0;text-align:center;line-height:1.7em;
+  transition:transform .95s cubic-bezier(.25,1.04,.35,1);will-change:transform}
+.cell .reel i{display:block;font-style:normal;height:1.7em}
+.cell.sep{width:.55em;background:none;border:0;box-shadow:none;color:var(--gold-deep)}
+.cell.sep::after{display:none}
+.cell.sep .reel{transition:none}
+
+/* service cards */
+.grid6{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem;margin-top:2.8rem}
+.card{position:relative;overflow:hidden;padding:1.9rem 1.7rem;border-radius:var(--r-lg);
+  background:var(--glass);border:1px solid var(--glass-edge);backdrop-filter:blur(10px);
+  box-shadow:var(--shadow);transition:transform .5s var(--ease-out),border-color .5s}
+.card:hover{transform:translateY(-5px);border-color:rgba(231,190,106,.45)}
+.card::before{content:"";position:absolute;top:0;left:-80%;width:60%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(231,190,106,.13),transparent);
+  transform:skewX(-18deg);transition:left 1.1s var(--ease-out);pointer-events:none}
+.card:hover::before{left:120%}
+.card .glyph{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;
+  background:linear-gradient(135deg,rgba(200,55,30,.35),rgba(143,35,18,.25));
+  border:1px solid rgba(255,106,69,.35);color:var(--gold);margin-bottom:1.1rem}
+.card h3{font-size:1.22rem;font-weight:700;margin-bottom:.2rem}
+.card .th{color:var(--gold);font-size:.92rem;font-weight:600;margin-bottom:.7rem}
+.card p{color:var(--cream-dim);font-size:.97rem}
+
+/* showcase frames */
+.works{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(480px,100%),1fr));gap:2rem;margin-top:3rem}
+.work{border-radius:var(--r-lg);overflow:hidden;background:var(--lacquer-2);
+  border:1px solid var(--glass-edge);box-shadow:var(--shadow);
+  transition:transform .55s var(--ease-out),border-color .55s}
+.work:hover{transform:translateY(-6px);border-color:rgba(231,190,106,.5)}
+.chrome{display:flex;align-items:center;gap:.6rem;padding:.75rem 1rem;background:rgba(0,0,0,.35);
+  border-bottom:1px solid rgba(231,190,106,.12)}
+.chrome .dots{display:flex;gap:.38rem}
+.chrome .dots i{width:11px;height:11px;border-radius:50%;background:#5c4a33}
+.chrome .dots i:first-child{background:var(--verm-deep)}
+.chrome .dots i:nth-child(2){background:var(--gold-deep)}
+.chrome .url{flex:1;font-size:.8rem;color:var(--cream-dim);background:rgba(23,16,9,.6);
+  border-radius:7px;padding:.32rem .8rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  border:1px solid rgba(231,190,106,.1)}
+/* ---- linked images
+   A picture that leads somewhere is built in four layers, bottom to top: the screenshot
+   as a background; a scrim, heaviest where the words sit; a spacer, which gives the box
+   its height because a background has none of its own; and the text over both. The whole
+   box is the link. The drift moves the background layer, which stands taller than the
+   spacer, so the frame pans down the page as the reader scrolls. */
+.shot-h{margin:0;font-size:inherit;font-weight:inherit;line-height:1.15}
+.shot{position:relative;display:block;overflow:hidden;background:#0d0906;text-decoration:none}
+.shot .bg{position:absolute;top:0;left:0;width:100%;background-size:cover;
+  background-position:top center;will-change:transform;transform:translateY(0)}
+.shot .scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,
+  rgba(13,9,6,.04) 0%,rgba(13,9,6,.12) 46%,rgba(13,9,6,.62) 78%,rgba(13,9,6,.93) 100%)}
+.shot .sp{display:block;padding-top:59.375%}
+.shot .tx{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:.9rem 1.15rem;
+  font-weight:800;font-size:1.3rem;color:var(--cream);text-shadow:0 2px 18px rgba(0,0,0,.85)}
+.shot .tx .d{display:block;font-weight:600;font-size:.85rem;color:var(--gold);
+  margin-top:.18rem;text-shadow:0 2px 12px rgba(0,0,0,.9)}
+.shot:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+.work-body{padding:1.4rem 1.5rem 1.6rem}
+.work-body .th{color:var(--gold);font-size:.95rem;font-weight:600}
+.work-body p{color:var(--cream-dim);font-size:.96rem;margin-top:.55rem}
+.work-body .go{display:inline-flex;align-items:center;gap:.45rem;margin-top:1rem;font-weight:700;
+  color:var(--gold);transition:gap .35s var(--ease-out)}
+.work-body .go:hover{gap:.8rem;color:var(--verm)}
+.work-body .also{margin-top:.5rem;font-size:.87rem;color:var(--cream-dim)}
+.works.small{grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:1.4rem}
+.works.small .work-body{padding:1.1rem 1.2rem 1.3rem}
+
+/* workshop chips */
+.shop{margin-top:2.6rem;display:grid;gap:1.6rem}
+.shop-group .g-title{font-weight:800;color:var(--cream);margin-bottom:.7rem;font-size:1.05rem}
+.shop-group .g-title span{color:var(--gold);font-weight:600;font-size:.92rem;margin-left:.5rem}
+.chips{display:flex;flex-wrap:wrap;gap:.55rem}
+.chip{padding:.5rem 1rem;border-radius:999px;background:rgba(44,30,19,.5);
+  border:1px solid rgba(231,190,106,.16);color:var(--cream-dim);font-size:.9rem;
+  cursor:default;transition:border-color .35s,color .35s,transform .35s var(--ease-spring)}
+.chip:hover{border-color:rgba(231,190,106,.45);color:var(--gold);transform:translateY(-2px)}
+.shop-note{margin-top:1.6rem;color:var(--cream-dim);font-size:.93rem;max-width:44rem;
+  border-left:3px solid var(--gold-deep);padding-left:1rem}
+
+/* visit */
+#visit{overflow:hidden}
+.visit-bg{position:absolute;inset:-14% 0;z-index:0;pointer-events:none}
+.visit-bg img{width:100%;height:100%;object-fit:cover;opacity:.22;
+  filter:saturate(1.1) brightness(.75);will-change:transform}
+.visit-bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(0deg,var(--lacquer) 2%,transparent 40%,transparent 65%,var(--lacquer) 98%)}
+#visit .wrap{position:relative;z-index:1}
+.visit-card{display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center;
+  padding:2.4rem;border-radius:var(--r-lg);background:rgba(23,16,9,.66);border:1px solid var(--glass-edge);
+  backdrop-filter:blur(10px);box-shadow:var(--shadow);margin-top:2.6rem}
+.clockface{width:120px;height:120px;border-radius:50%;flex:none;position:relative;
+  background:radial-gradient(circle at 35% 30%,#3a2817,var(--lacquer-3));
+  border:2px solid var(--gold-deep);box-shadow:0 0 40px rgba(231,190,106,.15), inset 0 0 24px rgba(0,0,0,.6)}
+.clockface .hand{position:absolute;left:50%;bottom:50%;transform-origin:bottom center;border-radius:4px;background:var(--gold);transition:transform 3s var(--ease-out)}
+.clockface .h{width:5px;height:30px;margin-left:-2.5px}
+.clockface .m{width:3px;height:44px;margin-left:-1.5px;background:var(--verm)}
+.clockface .pin{position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px;border-radius:50%;
+  background:var(--gold);box-shadow:0 0 8px var(--gold)}
+.visit-points{margin-top:1.2rem;display:grid;gap:.8rem}
+.visit-points .pt{display:flex;gap:.9rem;color:var(--cream-dim)}
+.visit-points .pt b{color:var(--gold);font-family:Georgia,serif;font-size:1.15rem;flex:none}
+
+/* contact */
+.contact-box{text-align:center;padding:3.4rem 1.6rem;border-radius:var(--r-lg);margin-top:2.6rem;
+  background:
+    radial-gradient(80% 120% at 50% -20%,rgba(200,55,30,.25),transparent 60%),
+    var(--glass);
+  border:1px solid var(--glass-edge);backdrop-filter:blur(10px);box-shadow:var(--shadow)}
+.contact-box p{max-width:38rem;margin:0 auto;color:var(--cream-dim)}
+.seal-chip{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.8rem;
+  padding:.8rem 1.5rem;border-radius:999px;border:1px dashed rgba(231,190,106,.5);
+  color:var(--gold);font-weight:700;font-size:.95rem;background:rgba(23,16,9,.4)}
+
+footer{padding:4rem 1.4rem 3rem;text-align:center;color:var(--cream-dim);font-size:.92rem}
+footer .bless{color:var(--gold);font-size:1.15rem;font-weight:600;margin-bottom:1rem}
+footer .fine{margin-top:.5rem}
+
+/* reveal system */
+html.reveal-ready .reveal{opacity:0;transform:translateY(26px)}
+html.reveal-ready .reveal.in{opacity:1;transform:none;
+  transition:opacity 1.05s var(--ease-out),transform 1.05s var(--ease-out)}
+html.reveal-ready .reveal.d1.in{transition-delay:.14s}
+html.reveal-ready .reveal.d2.in{transition-delay:.28s}
+html.reveal-ready .reveal.d3.in{transition-delay:.42s}
+
+@media(prefers-reduced-motion:reduce){
+  .hero-photo img,.visit-bg img,.shot .bg{transform:none!important}
+  html.reveal-ready .reveal{opacity:1;transform:none}
+  .kicker .dot,.hero-note .dot{animation:none}
+  .btn,.card,.work,.chip{transition:none}
+  .cell .reel{transition:none}
+  #scratch{display:none}
+}
+@media(max-width:720px){
+  nav{top:10px}
+  .visit-card{grid-template-columns:1fr;text-align:center}
+  .clockface{margin:0 auto}
+  .visit-points .pt{text-align:left}
+  section{padding:4.5rem 1.1rem}
+  .brow{padding:1rem 1.1rem}
+  .cell{font-size:1.1rem}
+}
+.support{margin:.5rem auto 0;font-size:.8rem;opacity:.8}.support a{margin:0 .3rem}.fleet{margin:.9rem auto 0;max-width:60rem;font-size:.8rem;line-height:2;opacity:.8}.fleet a{margin:0 .3rem;white-space:nowrap}
+
+/* ---- fixed fills
+   A text box paints its fill the way a band paints its photograph: as a background the
+   page moves over, anchored to the window rather than to the box, so the glow on the
+   contact card holds still while the card scrolls through it. The colours are the ones
+   already set above; only where they sit changes. Off for coarse pointers and for
+   reduced motion. */
+.card,.work,.visit-card,.contact-box{background-attachment:fixed}
+@media(pointer:coarse),(prefers-reduced-motion:reduce){
+  .card,.work,.visit-card,.contact-box{background-attachment:scroll}}
+
+/* ============ portfolio — lanes, shelves, cards ============ */
+.lanes{display:flex;flex-wrap:wrap;gap:.6rem;margin:2.6rem 0 .2rem}
+html:not(.js-lanes) .lanes{display:none}
+.lane{font:inherit;font-size:.88rem;font-weight:700;color:var(--cream-dim);cursor:pointer;
+  padding:.6rem 1.05rem;border-radius:999px;background:rgba(44,30,19,.5);
+  border:1px solid rgba(231,190,106,.18);backdrop-filter:blur(8px);
+  transition:color .45s,border-color .45s,transform .42s var(--ease-spring),background .45s,box-shadow .45s}
+.lane b{color:var(--gold);font-weight:800;margin-left:.42rem;font-variant-numeric:tabular-nums}
+.lane:hover{color:var(--cream);border-color:rgba(231,190,106,.45);transform:translateY(-2px)}
+.lane.on{color:#2a1a08;background:linear-gradient(135deg,#f2d491,var(--gold) 45%,var(--gold-deep));
+  border-color:transparent;box-shadow:0 14px 34px -16px rgba(231,190,106,.6)}
+.lane.on b{color:#4a3413}
+.lane:active{transform:scale(.97)}
+
+.shelf{margin-top:4.6rem}
+.shelf[hidden]{display:none}
+.shelf-head{max-width:46rem}
+.shelf-title{font-family:Georgia,"Times New Roman","Thonburi","Noto Serif Thai",serif;
+  font-size:clamp(1.35rem,2.8vw,2rem);font-weight:800;letter-spacing:-.01em;margin:.5rem 0 .3rem}
+.shelf .works{margin-top:2.1rem}
+
+.facts{display:flex;flex-wrap:wrap;gap:.4rem;margin:.8rem 0 .2rem}
+.pill{font-size:.78rem;letter-spacing:.02em;color:var(--cream-dim);
+  padding:.3rem .68rem;border-radius:999px;background:rgba(23,16,9,.5);
+  border:1px solid rgba(231,190,106,.2)}
+.pill b{color:var(--gold);font-weight:800;font-variant-numeric:tabular-nums}
+.pill.soft{border-color:rgba(231,190,106,.1);color:rgba(205,191,164,.82)}
+
+.work::before{content:"";position:absolute;top:0;left:-85%;width:55%;height:100%;z-index:3;
+  pointer-events:none;background:linear-gradient(100deg,transparent,rgba(246,227,180,.10),transparent);
+  transition:left 1.15s var(--ease-out)}
+.work:hover::before{left:135%}
+.shot .bg{transition:scale 1.3s var(--ease-out)}
+.work:hover .shot .bg{scale:1.035}
+.work:hover .shot .tx{text-decoration:underline;text-underline-offset:.16em}
+.works.small .shot .tx{font-size:1.06rem;padding:.7rem .9rem}
+.work-body .also a{display:inline}
+
+@media(min-width:900px){
+  .work.feat{grid-column:1/-1;display:grid;grid-template-columns:1.2fr .92fr;align-items:stretch}
+  .work.feat .chrome{grid-column:1/-1}
+  .work.feat .work-body{display:flex;flex-direction:column;justify-content:center;padding:2.1rem 2.2rem}
+  .work.feat .shot .tx{font-size:1.65rem;padding:1.1rem 1.35rem}
+  .work.feat .work-body p{font-size:1.02rem}
+}
+</style>
+<meta name="google" content="notranslate">
+<meta name="robots" content="notranslate">
+<script>if(/[.]translate[.]goog$/.test(location.hostname))location.replace("https://"+location.hostname.slice(0,-15).replace(/--/g,"~").replace(/-/g,".").replace(/~/g,"-")+location.pathname+location.search.replace(/([?&])_x_tr_[^&]*/g,"$1").replace(/[?&]+$/,"").replace(/[?]&+/,"?")+location.hash)</script>
+</head>
+<body>
+<a class="skip" href="#main">ข้ามไปเนื้อหา · Skip to content</a>
+<div class="gilt" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<canvas id="dustfield" aria-hidden="true"></canvas>
+
+<nav aria-label="Primary">
+  <span class="nav-mark"><span class="seal" aria-hidden="true" lang="th">ห</span>Hongdam</span>
+  <a class="link" href="#services"><b lang="th">งานที่ทำ</b> · Services</a>
+  <a class="link" href="#work"><b lang="th">เว็บที่เปิดอยู่</b> · Live</a>
+  <a class="link" href="/portfolio/"><b lang="th">ผลงาน</b> · Portfolio</a>
+  <a class="link" href="#workshop"><b lang="th">โรงงาน</b> · Workshop</a>
+  <a class="link" href="#visit"><b lang="th">เยี่ยม</b> · Visit</a>
+  <a class="link" href="#contact"><b lang="th">ติดต่อ</b> · Contact</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-photo" aria-hidden="false">
+    <img id="heroimg" class="plx" data-speed="-0.16"
+      src="assets/graphics/mural-lersi.jpg"
+      srcset="assets/graphics/mural-lersi-m.jpg 1280w, assets/graphics/mural-lersi.jpg 1760w"
+      sizes="100vw"
+      alt="Lanna temple mural: a lersi teaching in a forest cave, a peacock looking on — photographed at a northern wat"
+      width="1760" height="1560" fetchpriority="high" decoding="async">
+  </div>
+  <div class="scrim scrim-frame" aria-hidden="true"></div>
+  <div class="scrim scrim-text" aria-hidden="true"></div>
+  <canvas id="laikham" aria-hidden="true"></canvas>
+  <canvas id="scratch" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <span class="kicker"><span class="dot" aria-hidden="true"></span><span lang="th">เชียงราย</span> · Chiang Rai — Web Development Studio</span>
+    <h1>Real <span class="verm">platforms</span>,<br>not templates.<br><span class="goldline">Built to be used.</span></h1>
+    <p class="hero-th" lang="th">หงส์ดำ — แพลตฟอร์มจริง ไม่ใช่เทมเพลต สร้างมาให้ใช้งานจริง</p>
+    <p class="hero-sub">Hongdam designs and builds <b>bilingual, data-driven web platforms</b> out of Chiang Rai —
+      sites that hold thousands of real records, work over LINE, and still load with no signal.
+      Not brochure sites. <b>Tools people open every day.</b> Every screenshot below comes off the production page it links to.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold magnetic" href="#work"><span lang="th">เว็บที่เปิดอยู่</span> · See the live sites ↓</a>
+      <a class="btn btn-glass magnetic" href="#services">What we build</a>
+    </div>
+    <p class="hero-note"><span class="dot" aria-hidden="true"></span>The gold vines growing on this page are drawn fresh for you — seeded by today's date, so this growth differs from yesterday's. Run your pointer across the dark: the lacquer scratches to gold.</p>
+  </div>
+  <span class="hero-credit">mural photographed at a Lanna wat · from the studio's own camera roll</span>
+</header>
+
+<main id="main">
+
+<div class="sig" role="img" aria-label="Hongdam — หงส์ดำ, written in gold dust">
+  <div class="sig-stage">
+    <canvas id="dust" aria-hidden="true"></canvas>
+    <p class="sig-fallback" lang="th">หงส์ดำ</p>
+  </div>
+  <p class="sig-cap">the signature — thousands of grains of gold dust, drawn live, no libraries · <span lang="th">ลายเซ็นทองคำเปลว</span></p>
+</div>
+
+<section class="reveal" aria-label="The bench — live numbers">
+  <div class="wrap">
+    <div class="bench reveal">
+<!-- BENCH:START -->
+      <div class="bench-head">
+        <span class="t">The bench · <span lang="th">โต๊ะช่าง</span> — the machines' own numbers</span>
+        <span class="d">counted 2026-09-23 from the files, databases and sitemaps named in the index</span>
+      </div>
+      <div class="bench-rows">
+        <div class="brow"><span class="lbl"><b>Live addresses in the portfolio</b><span lang="th">ที่อยู่ที่เปิดอยู่จริง</span></span><span class="flap" data-flap="47"></span></div>
+        <div class="brow"><span class="lbl"><b>Place records in the city directory</b><span lang="th">หน้าสถานที่ในสารบัญเมือง</span></span><span class="flap" data-flap="88313"></span></div>
+        <div class="brow"><span class="lbl"><b>Lanna manuscripts archived</b><span lang="th">ใบลานในหอจดหมายเหตุ</span></span><span class="flap" data-flap="6986"></span></div>
+        <div class="brow"><span class="lbl"><b>Manuscript page images</b><span lang="th">ภาพหน้าใบลาน</span></span><span class="flap" data-flap="120178"></span></div>
+        <div class="brow"><span class="lbl"><b>Amulet listings read from the market</b><span lang="th">ประกาศตลาดพระที่อ่านแล้ว</span></span><span class="flap" data-flap="17473"></span></div>
+        <div class="brow"><span class="lbl"><b>Pages on motdang.net</b><span lang="th">หน้าบนมดแดง</span></span><span class="flap" data-flap="86080"></span></div>
+        <div class="brow"><span class="lbl"><b>Pages on wichaa.net</b><span lang="th">หน้าบนวิชา</span></span><span class="flap" data-flap="17022"></span></div>
+      </div>
+<!-- BENCH:END -->
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="unalome plx" data-speed="-0.06" aria-hidden="true" style="top:2%;right:-3%"><canvas></canvas></div>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-kick">What we build</div>
+      <h2>Six things most agencies won't attempt</h2>
+      <div class="sec-th" lang="th">หกอย่างที่เอเจนซี่ส่วนใหญ่ไม่กล้าทำ</div>
+      <p class="sec-sub">Every service below is drawn from something already running at an address you can open.</p>
+    </div>
+    <div class="grid6">
+      <div class="card reveal"><div class="glyph" lang="th">ท</div><h3>Thai-first, bilingual by design</h3><div class="th" lang="th">ไทยเป็นหลัก อังกฤษเป็นชั้นแสดงผลจริง</div><p>Thai as the canonical language with English as a true display layer — not a bolted-on translation plugin. Built for how Thai readers actually search and scan.</p></div>
+      <div class="card reveal d1"><div class="glyph">☰</div><h3>LINE-native apps</h3><div class="th" lang="th">แอปในไลน์ ไม่ต้องจำรหัสผ่าน</div><p>LIFF + Official Account integration for zero-password sign-in — invoicing, bookings, announcements, all inside the app people already have open.</p></div>
+      <div class="card reveal d2"><div class="glyph">◐</div><h3>Offline-first &amp; installable</h3><div class="th" lang="th">ไม่มีสัญญาณก็ยังใช้ได้</div><p>Progressive web apps that keep working with no signal — real for Thailand's patchier rural connectivity, not a checkbox feature.</p></div>
+      <div class="card reveal"><div class="glyph">✦</div><h3>Custom generative design</h3><div class="th" lang="th">กราฟิกวาดด้วยโค้ด เฉพาะแบรนด์</div><p>Procedural, code-drawn visuals built for the brand — the gold vines growing on this very page, the dust signature above, the instruments below. All drawn live, no libraries.</p></div>
+      <div class="card reveal d1"><div class="glyph">⚏</div><h3>Data pipelines &amp; crawlers</h3><div class="th" lang="th">จากข้อมูลกระจัดกระจาย สู่สารบัญที่ค้นได้</div><p>Turning messy, scattered real-world data — listings, archives, directories — into structured, searchable, maintainable catalogs.</p></div>
+      <div class="card reveal d2"><div class="glyph">◈</div><h3>Static-first builds</h3><div class="th" lang="th">เร็ว โฮสต์ถูก ย้ายง่าย</div><p>A page assembled at build time and served as files — cheap to host, quick on a rural connection, and portable to any server you can point a domain at.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="unalome plx" data-speed="-0.05" aria-hidden="true" style="top:26%;left:-4%"><canvas></canvas></div>
+  <div class="wrap">
+<!-- WORK:START -->
+    <div class="reveal">
+      <div class="sec-kick">The portfolio</div>
+      <h2>47 live addresses, photographed for this page</h2>
+      <div class="sec-th" lang="th">ผลงานทั้งหมด 47 ที่อยู่ · ถ่ายจากหน้าจริง</div>
+      <p class="sec-sub">Platforms, directories, apps and instruments — every frame below is a
+      screenshot of the production page, taken on 2026-09-23. Pick a shelf, or take the lot in order.</p>
+    </div>
+<div class="lanes" role="group" aria-label="Filter the portfolio by kind">
+<button class="lane on" data-lane="all" aria-pressed="true">All <b>47</b></button>
+<button class="lane" data-lane="platforms" aria-pressed="false">The platforms <b>8</b></button>
+<button class="lane" data-lane="directories" aria-pressed="false">The directories <b>14</b></button>
+<button class="lane" data-lane="apps" aria-pressed="false">The apps <b>8</b></button>
+<button class="lane" data-lane="instruments" aria-pressed="false">The instruments <b>8</b></button>
+<button class="lane" data-lane="explainers" aria-pressed="false">The explainers <b>6</b></button>
+<button class="lane" data-lane="record" aria-pressed="false">The record <b>3</b></button>
+</div>
+
+    <div class="shelf" data-lane="platforms">
+      <div class="shelf-head reveal">
+        <div class="sec-kick">Live right now</div>
+        <h3 class="shelf-title">Eight platforms, each at its own address</h3>
+        <div class="sec-th" lang="th">แพลตฟอร์ม · 8 รายการ</div>
+        <p class="sec-sub">Every frame is a screenshot of the production page, taken for this build. Click through — they are all open.</p>
+      </div>
+      <div class="works">
+      <article class="work reveal feat">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">motdang.net/all.html</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://motdang.net/" aria-label="Mot Dang — open the live page at motdang.net"><span class="bg drift" style="aspect-ratio:1280/900;background-image:url(assets/screens/md_all.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Mot Dang<span class="d">motdang.net</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">มดแดง · สารบัญเมืองเชียงใหม่–เชียงราย</div>
+          <div class="facts"><span class="pill"><b>88,313</b> place records</span><span class="pill"><b>86,080</b> pages</span><span class="pill soft">ไทย + EN</span></div>
+          <p>A Thai-first city directory for Chiang Mai and Chiang Rai — places, hours, phones, pins, shelves and answer pages. The crawlers run every morning and the page says where each field came from.</p>
+          <a class="go" href="https://motdang.net/"><span lang="th">เปิดดู</span> · motdang.net →</a>
+          <div class="also">Also inside: <a href="https://motdang.net/all.html">every shelf, every category →</a> · <a href="https://motdang.net/mail">the send page →</a> · <a href="https://motdang.net/who.html">who keeps the ants →</a></div>
+        </div>
+      </article>
+      <article class="work reveal feat d1">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">wichaa.net</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://wichaa.net/" aria-label="wichaa — open the live page at wichaa.net"><span class="bg drift" style="aspect-ratio:1280/900;background-image:url(assets/screens/wichaa.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">wichaa<span class="d">wichaa.net</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">วิชา · หอความรู้ล้านนาที่ยังมีชีวิต</div>
+          <div class="facts"><span class="pill"><b>6,986</b> manuscripts</span><span class="pill"><b>120,178</b> page images</span><span class="pill"><b>17,022</b> pages</span></div>
+          <p>Lanna manuscripts from the northern libraries, with their page images, read in three scripts — palm leaf carried to a phone screen. The amulet market, the temple atlas and the instruments below all live inside it.</p>
+          <a class="go" href="https://wichaa.net/"><span lang="th">เปิดดู</span> · wichaa.net →</a>
+          <div class="also">Also inside: <a href="https://wichaa.net/wats">the temple atlas of the Lanna north →</a> · <a href="https://wichaa.net/amulets">amulet essentials →</a></div>
+        </div>
+      </article>
+      <article class="work reveal d2">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">defiant.to</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://defiant.to/" aria-label="Defiant — open the live page at defiant.to"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/defiant.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Defiant<span class="d">defiant.to</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">คู่มือผู้ป่วยข้ามพรมแดน</div>
+          <div class="facts"><span class="pill"><b>147</b> pages</span><span class="pill soft">EN + ไทย</span></div>
+          <p>Medical and dental care in Chiang Mai with the price posted before you commit, a professional translator at the appointment, and a flat concierge fee that does not scale with the bill.</p>
+          <a class="go" href="https://defiant.to/"><span lang="th">เปิดดู</span> · defiant.to →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">hakfarang.net</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://hakfarang.net/" aria-label="Hak Farang — open the live page at hakfarang.net"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/hakfarang.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Hak Farang<span class="d">hakfarang.net</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ฮักฝรั่ง · พี่สาวที่ผ่านมาก่อน</div>
+          <div class="facts"><span class="pill soft">ไทย</span></div>
+          <p>Money, visas, travel and life with a farang partner, written in Thai for the women living it — by the older sister who went first.</p>
+          <a class="go" href="https://hakfarang.net/"><span lang="th">เปิดดู</span> · hakfarang.net →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d1">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">offrampt.net</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://offrampt.net/" aria-label="Offrampt — open the live page at offrampt.net"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/offramp.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Offrampt<span class="d">offrampt.net</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">เปลี่ยนคริปโตเป็นเงินใช้ในไทย</div>
+          <div class="facts"><span class="pill"><b>9</b> pages</span></div>
+          <p>Turning crypto into spendable local money without a local bank account. Thailand first: the routes, the cards, the fees, and what each one costs to use.</p>
+          <a class="go" href="https://offrampt.net/"><span lang="th">เปิดดู</span> · offrampt.net →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d2">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">poplucky.net</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://poplucky.net/" aria-label="Poplucky — open the live page at poplucky.net"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/poplucky.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Poplucky<span class="d">poplucky.net</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ป๊อปลัคกี้ · สารบบกล่องสุ่ม</div>
+          <div class="facts"><span class="pill soft">EN · ไทย · 中文</span></div>
+          <p>Every blind box, catalogued in the words collectors use — characters, series, and what a shelf is missing.</p>
+          <a class="go" href="https://poplucky.net/"><span lang="th">เปิดดู</span> · poplucky.net →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nan.wichaa.net</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nan.wichaa.net/" aria-label="The portal — open the live page at nan.wichaa.net"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/nanportal.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">The portal<span class="d">nan.wichaa.net</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ประตูรวมทุกงาน</div>
+          <div class="facts"><span class="pill soft">generative</span></div>
+          <p>One door onto the whole constellation — platforms, directories, apps and instruments, on a page drawn fresh each visit.</p>
+          <a class="go" href="https://nan.wichaa.net/"><span lang="th">เปิดดู</span> · nan.wichaa.net →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d1">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">chiangmaivisadesk.com</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://chiangmaivisadesk.com/" aria-label="Chiang Mai Visa Desk — open the live page at chiangmaivisadesk.com"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/visadesk.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Chiang Mai Visa Desk<span class="d">chiangmaivisadesk.com</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ใบอนุญาตทำงาน จดทะเบียนบริษัท และวีซ่า</div>
+          <div class="facts"><span class="pill soft">EN + ไทย</span><span class="pill soft">LINE</span><span class="pill soft">partner codes</span></div>
+          <p>A visa and work-permit desk for Chiang Mai, in English and Thai: work permits, Thai company registration, retirement extensions, 90-day reports and escorted border runs, each quoted in writing. A second book prepares US visa files for Thai nationals, and the site licenses to agencies in other provinces.</p>
+          <a class="go" href="https://chiangmaivisadesk.com/"><span lang="th">เปิดดู</span> · chiangmaivisadesk.com →</a>
+          <div class="also">Also inside: <a href="https://chiangmaivisadesk.com/us-visas/">US visas for Thai nationals →</a> · <a href="https://chiangmaivisadesk.com/white-label/">licensing →</a> · <a href="https://chiangmaivisadesk.com/partners/">partners →</a></div>
+        </div>
+      </article>
+      </div>
+    </div>
+
+    <div class="shelf" data-lane="directories">
+      <div class="shelf-head reveal">
+        <div class="sec-kick">One subject, counted</div>
+        <h3 class="shelf-title">Directories built on the same bench</h3>
+        <div class="sec-th" lang="th">สารบัญ · 14 รายการ</div>
+        <p class="sec-sub">One toolchain: harvest, cite, publish a map, an API and a plain-text copy for machines. Point it at a new subject and a directory comes out.</p>
+      </div>
+      <div class="works">
+      <article class="work reveal d2">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/amulet-atlas</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/amulet-atlas/" aria-label="Amulet Atlas — open the live page at nanobotco.github.io/amulet-atlas"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/atlas.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Amulet Atlas<span class="d">nanobotco.github.io/amulet-atlas</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">แผนที่เครื่องรางทั่วโลก</div>
+          <div class="facts"><span class="pill"><b>286</b> entries</span><span class="pill"><b>310</b> pages</span></div>
+          <p>Amulets, charms and talismans worldwide, by tradition and by place — from the Girsu foundation pegs of about 2130 BCE forward. The global companion to the Thai catalogue.</p>
+          <a class="go" href="https://nanobotco.github.io/amulet-atlas/"><span lang="th">เปิดดู</span> · nanobotco.github.io/amulet-atlas →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/care-abroad</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/care-abroad/" aria-label="Care Abroad — open the live page at nanobotco.github.io/care-abroad"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/careabroad.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Care Abroad<span class="d">nanobotco.github.io/care-abroad</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">รักษาข้ามพรมแดน · ราคาที่ประกาศไว้</div>
+          <div class="facts"><span class="pill"><b>342</b> records</span><span class="pill"><b>56</b> countries</span><span class="pill"><b>244</b> published prices</span></div>
+          <p>Who goes where for treatment, what it costs, what the law says, and who checked. A price carries the date it was published; a legality reading carries its statute.</p>
+          <a class="go" href="https://nanobotco.github.io/care-abroad/"><span lang="th">เปิดดู</span> · nanobotco.github.io/care-abroad →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d1">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/mae-hong-son-loop</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/mae-hong-son-loop/" aria-label="The Mae Hong Son Loop — open the live page at nanobotco.github.io/mae-hong-son-loop"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/mhsloop.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">The Mae Hong Son Loop<span class="d">nanobotco.github.io/mae-hong-son-loop</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">วงรอบแม่ฮ่องสอน</div>
+          <div class="facts"><span class="pill"><b>1,864</b> curves</span><span class="pill"><b>110</b> hairpins</span><span class="pill"><b>109</b> records</span></div>
+          <p>600 km of mountain road out of Chiang Mai, with the curves counted off the geometry rather than repeated from a brochure — and everything worth stopping for along the way.</p>
+          <a class="go" href="https://nanobotco.github.io/mae-hong-son-loop/"><span lang="th">เปิดดู</span> · nanobotco.github.io/mae-hong-son-loop →</a>
+          <div class="also">Also inside: <a href="https://motdang.net/loop">the same guide, in Thai, on Mot Dang →</a></div>
+        </div>
+      </article>
+      <article class="work reveal d2">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">wichaa.net/handpoke</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://wichaa.net/handpoke/" aria-label="Hand Poke — open the live page at wichaa.net/handpoke"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/handpoke.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Hand Poke<span class="d">wichaa.net/handpoke</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">สักด้วยมือ</div>
+          <div class="facts"><span class="pill"><b>28</b> traditions</span><span class="pill"><b>42</b> countries</span><span class="pill"><b>130</b> records</span></div>
+          <p>Traditions of marking skin by hand: who is marked, who does the marking, and where on the body. Five sources put the leg tattoo of Burma, the Shan States and Lanna in the same zone — and none of them had read the others.</p>
+          <a class="go" href="https://wichaa.net/handpoke/"><span lang="th">เปิดดู</span> · wichaa.net/handpoke →</a>
+          <div class="also">Also inside: <a href="https://wichaa.net/handpoke">the leg-tattoo zone, counted, on wichaa →</a></div>
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">motdang.net/muay-thai</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://motdang.net/muay-thai" aria-label="Muay Thai — open the live page at motdang.net/muay-thai"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/muaythai.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Muay Thai<span class="d">motdang.net/muay-thai</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">มวยไทย · แปดอาวุธ</div>
+          <div class="facts"><span class="pill"><b>30</b> named techniques</span><span class="pill"><b>527</b> gyms mapped</span><span class="pill"><b>129</b> records</span></div>
+          <p>The eight limbs, the thirty named techniques, and the gyms that teach them — with the Lanna root of the art and the sak yant that came with it kept in the frame.</p>
+          <a class="go" href="https://motdang.net/muay-thai"><span lang="th">เปิดดู</span> · motdang.net/muay-thai →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d1">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/carolina-barbecue</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/carolina-barbecue/" aria-label="Carolina Barbecue — open the live page at nanobotco.github.io/carolina-barbecue"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/carolina.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Carolina Barbecue<span class="d">nanobotco.github.io/carolina-barbecue</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">บาร์บีคิวแคโรไลนา</div>
+          <div class="facts"><span class="pill"><b>179</b> places</span><span class="pill"><b>199</b> pages</span></div>
+          <p>Wood, sauce and pig across North and South Carolina, pit by pit — a tag carries the source it was read from.</p>
+          <a class="go" href="https://nanobotco.github.io/carolina-barbecue/"><span lang="th">เปิดดู</span> · nanobotco.github.io/carolina-barbecue →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d2">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/buffalo-wings</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/buffalo-wings/" aria-label="Wing Country — open the live page at nanobotco.github.io/buffalo-wings"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/wings.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Wing Country<span class="d">nanobotco.github.io/buffalo-wings</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ปีกไก่อเมริกัน</div>
+          <div class="facts"><span class="pill"><b>158</b> records</span><span class="pill"><b>185</b> pages</span></div>
+          <p>Thirteen American cities argue about a chicken wing. An Albers map of all fifty states, the sauces read off the panel, and a claim carries the name it came from.</p>
+          <a class="go" href="https://nanobotco.github.io/buffalo-wings/"><span lang="th">เปิดดู</span> · nanobotco.github.io/buffalo-wings →</a>
+          <div class="also">Also inside: <a href="https://nanobotco.github.io/buffalo-wings/make/">build a sauce, a rub or a dip from a cited recipe →</a></div>
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/pink-box</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/pink-box/" aria-label="Pink Box — open the live page at nanobotco.github.io/pink-box"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/pinkbox.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Pink Box<span class="d">nanobotco.github.io/pink-box</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">โดนัทร้านเล็กทั่วอเมริกา</div>
+          <div class="facts"><span class="pill"><b>10,686</b> shops</span><span class="pill"><b>156</b> pages</span></div>
+          <p>The American mom-and-pop donut shop — cake against raised, what else is in the case, and the chains told apart from the independents. The counts page shows the split.</p>
+          <a class="go" href="https://nanobotco.github.io/pink-box/"><span lang="th">เปิดดู</span> · nanobotco.github.io/pink-box →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d1">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/pinot-noir</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/pinot-noir/" aria-label="Pinot Country — open the live page at nanobotco.github.io/pinot-noir"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/pinot.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Pinot Country<span class="d">nanobotco.github.io/pinot-noir</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ไร่องุ่นปีโนต์นัวร์</div>
+          <div class="facts"><span class="pill"><b>3,055</b> cellars</span><span class="pill"><b>34</b> regions</span></div>
+          <p>One thin-skinned grape, the ground it answers to, and the cellars that work it — with every AVA boundary date read off 27 CFR part 9 rather than a wine list.</p>
+          <a class="go" href="https://nanobotco.github.io/pinot-noir/"><span lang="th">เปิดดู</span> · nanobotco.github.io/pinot-noir →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d2">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/basque-tables</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/basque-tables/" aria-label="Basque Tables — open the live page at nanobotco.github.io/basque-tables"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/basque.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Basque Tables<span class="d">nanobotco.github.io/basque-tables</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">โต๊ะอาหารบาสก์</div>
+          <div class="facts"><span class="pill"><b>29</b> dining rooms</span><span class="pill soft">English + Euskara</span></div>
+          <p>The Basque dining rooms of California, Nevada and Idaho — where the house sits you, what dinner runs to, which nights the door opens, and whether the bar makes a Picon. In English and Basque.</p>
+          <a class="go" href="https://nanobotco.github.io/basque-tables/"><span lang="th">เปิดดู</span> · nanobotco.github.io/basque-tables →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">wichaa.net/amulets</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://wichaa.net/amulets" aria-label="Amulet Essentials — open the live page at wichaa.net/amulets"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/amulets.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Amulet Essentials<span class="d">wichaa.net/amulets</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">สารบบเครื่องราง</div>
+          <div class="facts"><span class="pill"><b>82</b> kinds</span><span class="pill"><b>683</b> free-to-use pictures</span><span class="pill"><b>17,473</b> market listings read</span></div>
+          <p>The kinds of sacred object, as data — each with the market listings behind it, a price chart, and pictures anyone may reuse.</p>
+          <a class="go" href="https://wichaa.net/amulets"><span lang="th">เปิดดู</span> · wichaa.net/amulets →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d1">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">motdang.net/roads</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://motdang.net/roads/" aria-label="Roads of Chiang Mai — open the live page at motdang.net/roads"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/roads.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Roads of Chiang Mai<span class="d">motdang.net/roads</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ถนนเชียงใหม่</div>
+          <div class="facts"><span class="pill"><b>6,934</b> km of road</span><span class="pill"><b>31,668</b> intersections</span><span class="pill soft">EN + ไทย</span></div>
+          <p>The square of 1296, four rings around it and the roads between, and what each one did to the city. Counted from the map, dated from the record.</p>
+          <a class="go" href="https://motdang.net/roads/"><span lang="th">เปิดดู</span> · motdang.net/roads →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d2">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">motdang.net/ghost</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://motdang.net/ghost/" aria-label="Ghost Chiang Mai — open the live page at motdang.net/ghost"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/ghost.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Ghost Chiang Mai<span class="d">motdang.net/ghost</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ผีเจียงใหม่</div>
+          <div class="facts"><span class="pill"><b>24</b> stops</span><span class="pill"><b>53</b> sources named</span><span class="pill soft">5 routes</span></div>
+          <p>A self-guided tour of the city&#x27;s dead, on foot, by bicycle, by scooter or with a driver: a ghost story at each stop and the merit act that goes with it.</p>
+          <a class="go" href="https://motdang.net/ghost/"><span lang="th">เปิดดู</span> · motdang.net/ghost →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/pike-place-market</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/pike-place-market/" aria-label="Pike Place Market — open the live page at nanobotco.github.io/pike-place-market"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/pike.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Pike Place Market<span class="d">nanobotco.github.io/pike-place-market</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ตลาดไพค์เพลส · ซีแอตเทิล</div>
+          <div class="facts"><span class="pill"><b>153</b> licensed businesses</span><span class="pill"><b>12.827</b> acres</span></div>
+          <p>Every licensed business inside Seattle&#x27;s Pike Place Market Historical District, the date each started trading, and a map drawn from open data.</p>
+          <a class="go" href="https://nanobotco.github.io/pike-place-market/"><span lang="th">เปิดดู</span> · nanobotco.github.io/pike-place-market →</a>
+          <div class="also">Also inside: <a href="https://pike.motdang.net/">ask the Market →</a></div>
+        </div>
+      </article>
+      </div>
+    </div>
+
+    <div class="shelf" data-lane="apps">
+      <div class="shelf-head reveal">
+        <div class="sec-kick">Things you use</div>
+        <h3 class="shelf-title">Apps that install from a link</h3>
+        <div class="sec-th" lang="th">แอป · 8 รายการ</div>
+        <p class="sec-sub">Open the address on a phone, add it to the home screen, and it runs from there like anything else on it.</p>
+      </div>
+      <div class="works">
+      <article class="work reveal d1">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/scanner</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/scanner/" aria-label="Scanner — open the live page at nanobotco.github.io/scanner"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/scanner.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Scanner<span class="d">nanobotco.github.io/scanner</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">เครื่องสแกนในเบราว์เซอร์</div>
+          <div class="facts"><span class="pill soft">installs to the home screen</span><span class="pill soft">opens without a connection</span><span class="pill soft">PDF · A4 · Letter · Legal</span></div>
+          <p>Photograph a page; it finds the sheet, straightens it, flattens the light so the paper reads white, and writes a PDF. Sign with a finger on the glass — a saved signature is encrypted under a PIN, or under the fingerprint sensor where the phone offers it.</p>
+          <a class="go" href="https://nanobotco.github.io/scanner/"><span lang="th">เปิดดู</span> · nanobotco.github.io/scanner →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d2">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">ask.motdang.net</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://ask.motdang.net/" aria-label="Ask Mot Dang — open the live page at ask.motdang.net"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/askmotdang.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Ask Mot Dang<span class="d">ask.motdang.net</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">คุยกับมด</div>
+          <div class="facts"><span class="pill soft">ไทย + EN</span><span class="pill soft">links the page it answered from</span></div>
+          <p>A reader&#x27;s assistant sitting on the city directory. Ask in Thai or English — it answers from the directory&#x27;s own pages and links the one it used.</p>
+          <a class="go" href="https://ask.motdang.net/"><span lang="th">เปิดดู</span> · ask.motdang.net →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">ai.motdang.net</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://ai.motdang.net/" aria-label="White-label assistants — open the live page at ai.motdang.net"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/aimotdang.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">White-label assistants<span class="d">ai.motdang.net</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ผู้ช่วยติดแบรนด์ รายที่นั่ง</div>
+          <div class="facts"><span class="pill soft">per-tenant corpus</span><span class="pill soft">by seat</span></div>
+          <p>The same assistant, rebuilt as a product: one tenant, its own corpus, its own front door, sold by the seat. Ask Mot Dang is tenant number one.</p>
+          <a class="go" href="https://ai.motdang.net/"><span lang="th">เปิดดู</span> · ai.motdang.net →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d1">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">motdang.net/mail</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://motdang.net/mail" aria-label="The send page — open the live page at motdang.net/mail"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/sendmail.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">The send page<span class="d">motdang.net/mail</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ส่งเมลจากมือถือ</div>
+          <div class="facts"><span class="pill soft">phone-first</span><span class="pill soft">four senders</span></div>
+          <p>Four people send mail from their own address on a phone, without a mail client. The passphrase is the identity.</p>
+          <a class="go" href="https://motdang.net/mail"><span lang="th">เปิดดู</span> · motdang.net/mail →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d2">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/thairoots</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/thairoots/" aria-label="Thai Roots — open the live page at nanobotco.github.io/thairoots"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/thairoots.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Thai Roots<span class="d">nanobotco.github.io/thairoots</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">รากศัพท์</div>
+          <div class="facts"><span class="pill soft">runs offline</span><span class="pill soft">RTGS toggle</span><span class="pill soft">flashcards</span></div>
+          <p>A Thai dictionary read by root, in the Hans Wehr manner — Pali and Sanskrit roots, native morpheme families, sound-change keys and a decomposer that takes a word apart. The whole dictionary is on the phone.</p>
+          <a class="go" href="https://nanobotco.github.io/thairoots/"><span lang="th">เปิดดู</span> · nanobotco.github.io/thairoots →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">samching.nanobotco.workers.dev</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://samching.nanobotco.workers.dev/" aria-label="Sam Ching — open the live page at samching.nanobotco.workers.dev"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/samching.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Sam Ching<span class="d">samching.nanobotco.workers.dev</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">สามชิ่ง · บิลเลียดสามคูชั่น</div>
+          <div class="facts"><span class="pill soft">ไทย + EN</span><span class="pill soft">touch physics</span></div>
+          <p>Three-cushion billiards on a phone: drag anywhere to aim, release to shoot, and the cloth carries the physics rather than a scoreboard.</p>
+          <a class="go" href="https://samching.nanobotco.workers.dev/"><span lang="th">เปิดดู</span> · samching.nanobotco.workers.dev →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d1">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/skipdjt</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/skipdjt/" aria-label="Skip DJT — open the live page at nanobotco.github.io/skipdjt"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/skipdjt.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Skip DJT<span class="d">nanobotco.github.io/skipdjt</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">เทียบค่าตั๋วสามสนามบิน</div>
+          <div class="facts"><span class="pill soft">live fares</span><span class="pill soft">3 airports</span></div>
+          <p>Palm Beach airport took a president&#x27;s name. This compares the same-day fare out of Palm Beach, Fort Lauderdale and Miami, and shows what the drive south saves.</p>
+          <a class="go" href="https://nanobotco.github.io/skipdjt/"><span lang="th">เปิดดู</span> · nanobotco.github.io/skipdjt →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d2">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">farangbuddy.netlify.app</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://farangbuddy.netlify.app/" aria-label="FarangBuddy — open the live page at farangbuddy.netlify.app"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/farangbuddy.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">FarangBuddy<span class="d">farangbuddy.netlify.app</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ตัวนับวันพำนักในไทย</div>
+          <div class="facts"><span class="pill soft">installs to the home screen</span><span class="pill soft">works offline</span><span class="pill soft">free</span></div>
+          <p>A Thailand stay tracker. Entries, exits, border runs and extensions go in; the admitted-until date and the next 90-day report and TM30 come out. More than one person per phone.</p>
+          <a class="go" href="https://farangbuddy.netlify.app/"><span lang="th">เปิดดู</span> · farangbuddy.netlify.app →</a>
+          <div class="also">Also inside: <a href="https://chiangmaivisadesk.com/farang-buddy/">how to install it →</a></div>
+        </div>
+      </article>
+      </div>
+    </div>
+
+    <div class="shelf" data-lane="instruments">
+      <div class="shelf-head reveal">
+        <div class="sec-kick">Drawn in code</div>
+        <h3 class="shelf-title">Working instruments, procedurally drawn</h3>
+        <div class="sec-th" lang="th">เครื่องมือ · 8 รายการ</div>
+        <p class="sec-sub">Astronomical and ritual instruments — every dial, hand and grain of gold drawn live in the browser, no libraries.</p>
+      </div>
+      <div class="works">
+      <article class="work reveal">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">wichaa.net/jovilabe</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://wichaa.net/jovilabe" aria-label="The Jovilabe — open the live page at wichaa.net/jovilabe"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/jovilabe.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">The Jovilabe<span class="d">wichaa.net/jovilabe</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">เครื่องดูดวงจันทร์บริวารดาวพฤหัส</div>
+          
+          <p>Jupiter&#x27;s four great moons, where they stand tonight and where their shadows fall.</p>
+          <a class="go" href="https://wichaa.net/jovilabe"><span lang="th">เปิดดู</span> · wichaa.net/jovilabe →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d1">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">wichaa.net/moon</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://wichaa.net/moon" aria-label="The moon complication — open the live page at wichaa.net/moon"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/moon.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">The moon complication<span class="d">wichaa.net/moon</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">หน้าปัดข้างขึ้นข้างแรม</div>
+          
+          <p>One dial, two moons, and what it takes to get it right.</p>
+          <a class="go" href="https://wichaa.net/moon"><span lang="th">เปิดดู</span> · wichaa.net/moon →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d2">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">wichaa.net/redspot</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://wichaa.net/redspot" aria-label="The Red Spot dial — open the live page at wichaa.net/redspot"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/redspot.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">The Red Spot dial<span class="d">wichaa.net/redspot</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">หน้าปัดจุดแดงใหญ่</div>
+          
+          <p>When the Great Red Spot faces someone standing in the storm — from a Jovian horizon.</p>
+          <a class="go" href="https://wichaa.net/redspot"><span lang="th">เปิดดู</span> · wichaa.net/redspot →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">wichaa.net/divination</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://wichaa.net/divination" aria-label="Divination — open the live page at wichaa.net/divination"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/divination.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Divination<span class="d">wichaa.net/divination</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">เครื่องเสี่ยงทายตามตำรา</div>
+          
+          <p>I Ching, Plum Blossom and Wen Wang Gua on one engine, showing its working rather than hiding it.</p>
+          <a class="go" href="https://wichaa.net/divination"><span lang="th">เปิดดู</span> · wichaa.net/divination →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d1">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">wichaa.net/hun</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://wichaa.net/hun" aria-label="Hun Payont — open the live page at wichaa.net/hun"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/hun.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Hun Payont<span class="d">wichaa.net/hun</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">หุ่นพยนต์ · หุ่นที่ปลุกด้วยวิชา</div>
+          
+          <p>An effigy you forge, carrying your name to the market each morning and bringing one thing back.</p>
+          <a class="go" href="https://wichaa.net/hun"><span lang="th">เปิดดู</span> · wichaa.net/hun →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d2">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">wichaa.net/waikhru</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://wichaa.net/waikhru" aria-label="Waikhru Yon — open the live page at wichaa.net/waikhru"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/waikhru.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Waikhru Yon<span class="d">wichaa.net/waikhru</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ไหว้ครูยนต์ · พรสำหรับมือที่จับเครื่อง</div>
+          
+          <p>The mark a craftsperson paints on a machine, and the blessing that goes with the hand at the lathe.</p>
+          <a class="go" href="https://wichaa.net/waikhru"><span lang="th">เปิดดู</span> · wichaa.net/waikhru →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">wichaa.net/holding</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://wichaa.net/holding" aria-label="I&#x27;m holding an amulet — open the live page at wichaa.net/holding"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/holding.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">I&#x27;m holding an amulet<span class="d">wichaa.net/holding</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ถืออยู่ในมือ · ประตูจำแนกพระเครื่อง</div>
+          
+          <p>You have the thing but not its name. Answer the questions a dealer would ask, in the dealer&#x27;s order.</p>
+          <a class="go" href="https://wichaa.net/holding"><span lang="th">เปิดดู</span> · wichaa.net/holding →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d1">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">wichaa.net/kesa</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://wichaa.net/kesa/" aria-label="The kesa yant — open the live page at wichaa.net/kesa"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/kesa.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">The kesa yant<span class="d">wichaa.net/kesa</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ยันต์เกศาผิด</div>
+          <div class="facts"><span class="pill"><b>32</b> parts</span></div>
+          <p>The thirty-two parts of the body as thirty-two letters, laid in by the knight&#x27;s move. The method traced through the manuals in the corpus, and whether the loop closes.</p>
+          <a class="go" href="https://wichaa.net/kesa/"><span lang="th">เปิดดู</span> · wichaa.net/kesa →</a>
+          
+        </div>
+      </article>
+      </div>
+    </div>
+
+    <div class="shelf" data-lane="explainers">
+      <div class="shelf-head reveal">
+        <div class="sec-kick">Hard subjects, plainly</div>
+        <h3 class="shelf-title">Six explainers, drawn from the equations</h3>
+        <div class="sec-th" lang="th">คำอธิบาย · 6 รายการ</div>
+        <p class="sec-sub">Physics and mathematics in plain words, with the pictures and figures computed on the page from the formula shown.</p>
+      </div>
+      <div class="works">
+      <article class="work reveal d2">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/black-holes</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/black-holes/" aria-label="Black Holes, Drawn — open the live page at nanobotco.github.io/black-holes"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/blackholes.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Black Holes, Drawn<span class="d">nanobotco.github.io/black-holes</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">หลุมดำ วาดจากสมการ</div>
+          <div class="facts"><span class="pill soft">drawn in the browser</span></div>
+          <p>Black holes modelled and drawn from the equations: generators you can run, the past, the present and the far future, and the legends that got there first.</p>
+          <a class="go" href="https://nanobotco.github.io/black-holes/"><span lang="th">เปิดดู</span> · nanobotco.github.io/black-holes →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/quantum-computing</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/quantum-computing/" aria-label="Quantum Computing, plainly — open the live page at nanobotco.github.io/quantum-computing"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/quantum.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Quantum Computing, plainly<span class="d">nanobotco.github.io/quantum-computing</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">คอมพิวเตอร์ควอนตัม</div>
+          <div class="facts"><span class="pill soft">history + theory</span></div>
+          <p>Qubits, interference, entanglement, Shor, Grover, error correction and the machines, in plain words.</p>
+          <a class="go" href="https://nanobotco.github.io/quantum-computing/"><span lang="th">เปิดดู</span> · nanobotco.github.io/quantum-computing →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d1">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/three-body</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/three-body/" aria-label="The Three-Body Problem — open the live page at nanobotco.github.io/three-body"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/threebody.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">The Three-Body Problem<span class="d">nanobotco.github.io/three-body</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ปัญหาสามวัตถุ</div>
+          <div class="facts"><span class="pill soft">orbits computed live</span></div>
+          <p>Gravity, the two-body solution, why three has no formula, chaos, Lagrange points and the figure-eight orbit, computed on the page.</p>
+          <a class="go" href="https://nanobotco.github.io/three-body/"><span lang="th">เปิดดู</span> · nanobotco.github.io/three-body →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d2">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/exceptional-magic</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/exceptional-magic/" aria-label="Exceptional Magic — open the live page at nanobotco.github.io/exceptional-magic"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/magic.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Exceptional Magic<span class="d">nanobotco.github.io/exceptional-magic</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ออกโทเนียน · E8</div>
+          <div class="facts"><span class="pill soft">octonions · E8</span></div>
+          <p>Eight ways to multiply and where they lead: the octonions, triality, the magic square and E8, drawn from the arithmetic.</p>
+          <a class="go" href="https://nanobotco.github.io/exceptional-magic/"><span lang="th">เปิดดู</span> · nanobotco.github.io/exceptional-magic →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/factoring</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/factoring/" aria-label="Big Numbers, Split — open the live page at nanobotco.github.io/factoring"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/factoring.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Big Numbers, Split<span class="d">nanobotco.github.io/factoring</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">การแยกตัวประกอบ</div>
+          <div class="facts"><span class="pill soft">Eratosthenes → Shor</span></div>
+          <p>Factoring from Eratosthenes to Shor: how big numbers get split, who has split the biggest, and what it means for a bitcoin wallet.</p>
+          <a class="go" href="https://nanobotco.github.io/factoring/"><span lang="th">เปิดดู</span> · nanobotco.github.io/factoring →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d1">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/goin-fast</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/goin-fast/" aria-label="Goin&#x27; Fast — open the live page at nanobotco.github.io/goin-fast"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/goinfast.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Goin&#x27; Fast<span class="d">nanobotco.github.io/goin-fast</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ความเร็ว</div>
+          <div class="facts"><span class="pill"><b>20</b> measured speeds</span><span class="pill soft">4 calculators</span></div>
+          <p>Twenty measured speeds from continental drift to light, the three things that make going fast cost, and four calculators.</p>
+          <a class="go" href="https://nanobotco.github.io/goin-fast/"><span lang="th">เปิดดู</span> · nanobotco.github.io/goin-fast →</a>
+          
+        </div>
+      </article>
+      </div>
+    </div>
+
+    <div class="shelf" data-lane="record">
+      <div class="shelf-head reveal">
+        <div class="sec-kick">Our own numbers</div>
+        <h3 class="shelf-title">What the work is measured against</h3>
+        <div class="sec-th" lang="th">บันทึก · 3 รายการ</div>
+        <p class="sec-sub">The count of everything held, the traffic study behind how it is published, and the page that says who runs the directory.</p>
+      </div>
+      <div class="works">
+      <article class="work reveal d2">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/index</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/index/" aria-label="The index — open the live page at nanobotco.github.io/index"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/theindex.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">The index<span class="d">nanobotco.github.io/index</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">สารบัญของทั้งหมด</div>
+          <div class="facts"><span class="pill"><b>301,812</b> records</span><span class="pill"><b>18</b> corpora</span></div>
+          <p>Everything held, counted once, at one address — a number names the file, database or endpoint it was read from, and the day it was read.</p>
+          <a class="go" href="https://nanobotco.github.io/index/"><span lang="th">เปิดดู</span> · nanobotco.github.io/index →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">nanobotco.github.io/uptake</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://nanobotco.github.io/uptake/" aria-label="Uptake — open the live page at nanobotco.github.io/uptake"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/uptake.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Uptake<span class="d">nanobotco.github.io/uptake</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">คู่มือ — เขียนให้เครื่องอ่าน</div>
+          <div class="facts"><span class="pill"><b>961</b> clones</span><span class="pill"><b>501</b> distinct machines</span><span class="pill"><b>36</b> page views</span></div>
+          <p>Fourteen days across fifty-two repositories: 961 clones from 501 distinct machines against 36 page views from 20 browsers. The manual written on that measurement — the arrival worth designing for is the copy, not the click.</p>
+          <a class="go" href="https://nanobotco.github.io/uptake/"><span lang="th">เปิดดู</span> · nanobotco.github.io/uptake →</a>
+          
+        </div>
+      </article>
+      <article class="work reveal d1">
+        <div class="chrome" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">motdang.net/who.html</span></div>
+        <h3 class="shot-h"><a class="shot" href="https://motdang.net/who.html" aria-label="Who keeps the ants — open the live page at motdang.net/who.html"><span class="bg drift" style="aspect-ratio:1160/816;background-image:url(assets/screens/who.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx">Who keeps the ants<span class="d">motdang.net/who.html</span></span></a></h3>
+        <div class="work-body">
+          <div class="th" lang="th">ใครเลี้ยงมด</div>
+          <div class="facts"><span class="pill soft">ไทย + EN</span></div>
+          <p>The page on the city directory that names the person behind it, the machines that run the crawls, and the address to write to about a mistake.</p>
+          <a class="go" href="https://motdang.net/who.html"><span lang="th">เปิดดู</span> · motdang.net/who.html →</a>
+          
+        </div>
+      </article>
+      </div>
+    </div>
+<!-- WORK:END -->
+  </div>
+</section>
+
+<section id="workshop">
+  <div class="unalome plx" data-speed="-0.07" aria-hidden="true" style="top:-4%;right:1%"><canvas></canvas></div>
+  <div class="wrap">
+<!-- SHOP:START -->
+    <div class="reveal">
+      <div class="sec-kick">Behind the storefront</div>
+      <h2>And the workshop behind it</h2>
+      <div class="sec-th" lang="th">และโรงงานเบื้องหลัง</div>
+      <p class="sec-sub">The addresses above stand on a bench of smaller tools — written, used daily, and kept running. A sampling:</p>
+    </div>
+    <div class="shop reveal">
+      <div class="shop-group"><div class="g-title">Crawlers &amp; pipelines <span lang="th">ตัวเก็บข้อมูล</span></div>
+        <div class="chips"><span class="chip">manuscript crawler — <b>6,986</b> manuscripts</span><span class="chip">amulet market listener — <b>17,473</b> listings</span><span class="chip">city census bots — Chiang Mai and Chiang Rai</span><span class="chip">wat registry, off the ONAB temple register</span><span class="chip">OpenStreetMap and Overture harvests</span><span class="chip">Thai romaniser, scored against its own benchmark</span></div></div>
+      <div class="shop-group"><div class="g-title">Datasets, published <span lang="th">ชุดข้อมูลที่เผยแพร่</span></div>
+        <div class="chips"><span class="chip">Thai place-name romanisation benchmark — <b>153,948</b> rows</span><span class="chip">Thai trade words, Chiang Mai — <b>2,185</b> rows</span><span class="chip">RTGS romanisation lexicon — <b>694</b> rows</span><span class="chip">the Mot Dang export, with per-field provenance</span></div></div>
+      <div class="shop-group"><div class="g-title">Back office <span lang="th">งานหลังร้าน</span></div>
+        <div class="chips"><span class="chip">BOOKS — bilingual double-entry books, payment by QR, LINE receipts</span><span class="chip">a tasking app for four people and four doors</span><span class="chip">stocktake</span><span class="chip">the listing sheet</span></div></div>
+      <div class="shop-group"><div class="g-title">Games &amp; play <span lang="th">เกม</span></div>
+        <div class="chips"><span class="chip">Moat — an interactive novel of Chiang Mai 2076</span><span class="chip">Sam Ching</span><span class="chip">blinky1200 — 11 levels</span><span class="chip">a Stardew Valley mod</span></div></div>
+      <div class="shop-group"><div class="g-title">Everyday tools <span lang="th">เครื่องมือประจำวัน</span></div>
+        <div class="chips"><span class="chip">Scanner</span><span class="chip">PDF pleading generator</span><span class="chip">prediction keyboard</span><span class="chip">flight helper</span><span class="chip">medication tracker</span><span class="chip">a mail sender that fits on a phone</span></div></div>
+      <div class="shop-group"><div class="g-title">Physical &amp; devices <span lang="th">อุปกรณ์</span></div>
+        <div class="chips"><span class="chip">Coucal — an e-ink clock built to last 70 years</span><span class="chip">motorcycle cockpit HUD</span></div></div>
+    </div>
+    <p class="shop-note">Source code moves between forges as platforms come and go. Ask for the current mirror of anything here; the live addresses above are the ones to bookmark.</p>
+<!-- SHOP:END -->
+  </div>
+</section>
+
+<section id="visit">
+  <div class="visit-bg" aria-hidden="true">
+    <img class="plx" data-speed="-0.1" src="assets/graphics/clocktower-night.jpg" alt="" loading="lazy" decoding="async" width="1500" height="1461">
+  </div>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-kick">Chiang Rai</div>
+      <h2>Offices overlooking the clocktower</h2>
+      <div class="sec-th" lang="th">ออฟฟิศเห็นหอนาฬิกา</div>
+    </div>
+    <div class="visit-card reveal">
+      <div class="clockface" aria-hidden="true">
+        <span class="hand h" id="hh"></span><span class="hand m" id="mh"></span><span class="pin"></span>
+      </div>
+      <div>
+        <p style="color:var(--cream-dim)">Hongdam works out of Chiang Rai with a view of the city's golden clocktower — a fitting vantage point for a studio that spends its days making things that need to work <b style="color:var(--cream)">on time, every time</b>. The night sky behind this card is from the studio camera roll too.</p>
+        <div class="visit-points">
+          <div class="pt"><b lang="th">๑</b><span>Based in Chiang Rai, Thailand — offices with a direct view of the clocktower landmark.</span></div>
+          <div class="pt"><b lang="th">๒</b><span>Working bilingually, Thai and English, on every project by default.</span></div>
+          <div class="pt"><b lang="th">๓</b><span>Open to remote collaboration for clients beyond Chiang Rai and Chiang Mai.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:2rem">
+  <div class="unalome plx" data-speed="-0.05" aria-hidden="true" style="top:-14%;left:5%"><canvas></canvas></div>
+  <div class="wrap">
+    <div class="contact-box reveal">
+      <div class="sec-kick"><span lang="th">ติดต่อ</span> · Contact</div>
+      <h2>Have something to build?</h2>
+      <div class="sec-th" lang="th">มีอะไรอยากสร้างไหม</div>
+      <p style="margin-top:1rem">Tell us what you're trying to make — a directory, a LINE app, a catalog of things nobody's organized yet.
+      We'll tell you plainly whether it's a good fit, and what it would take.</p>
+      <div class="cta-row" style="margin-top:1.8rem">
+        <a class="btn btn-gold magnetic" href="/services/"><span lang="th">ส่งเรื่องมา</span> · Send us the brief →</a>
+        <a class="btn btn-glass magnetic" href="mailto:nan@motdang.net">nan@motdang.net</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="bless" lang="th">ขอให้กิจการเจริญรุ่งเรือง ๙</div>
+  <div>Hongdam <span lang="th">หงส์ดำ</span> · Chiang Rai, Thailand</div>
+  <div class="fine">written to be read by people and machines alike — see <a href="/llms.txt">/llms.txt</a></div>
+  <div class="fleet">Built here too: <a href="https://motdang.net/" title="city directory for Chiang Mai and Chiang Rai">Mot Dang</a> · <a href="https://wichaa.net/" title="Lanna manuscripts, the amulet market, and the traditions around them">wichaa</a> · <a href="https://nanobotco.github.io/amulet-atlas/" title="amulets, charms and talismans worldwide">Amulet Atlas</a> · <a href="https://nanobotco.github.io/carolina-barbecue/" title="barbecue in North and South Carolina">Carolina Barbecue</a> · <a href="https://nanobotco.github.io/buffalo-wings/" title="the American chicken wing">Wing Country</a> · <a href="https://nanobotco.github.io/pink-box/" title="the American mom-and-pop donut shop">Pink Box</a> · <a href="https://nanobotco.github.io/basque-tables/" title="Basque dining rooms of California, Nevada and Idaho">Basque Tables</a> · <a href="https://nanobotco.github.io/pinot-noir/" title="pinot noir: the vine, the regions, the cellars">Pinot Country</a> · <a href="https://nanobotco.github.io/care-abroad/" title="treatment across borders, with published prices and their dates">Care Abroad</a> · <a href="https://nanobotco.github.io/thairoots/" title="a root dictionary of Thai, with a word decomposer">Thai Roots</a> · <a href="https://nanobotco.github.io/index/" title="every corpus, site and repository, counted">The index</a> · <a href="https://nanobotco.github.io/uptake/" title="a field manual on publishing for machines that copy">Uptake</a> · <a href="https://nanobotco.github.io/" title="the portal">NaNoBotCo</a> · <a href="https://hakfarang.net/" title="เรื่องเงิน วีซ่า และชีวิตกับแฟนฝรั่ง">ฮักฝรั่ง</a> · <a href="https://offrampt.net/" title="turning crypto into spendable local money, Thailand first">Offrampt</a></div>
+  <div class="support">Contact: Nan · <a href="mailto:nan@motdang.net">nan@motdang.net</a> · Sponsor: <a href="https://www.patreon.com/nanobotco" rel="noopener" target="_blank">Patreon</a> · <a href="https://ko-fi.com/defiantchiangmai" rel="noopener" target="_blank">Ko-fi</a></div>
+  <div class="khomut" aria-hidden="true" lang="th">๛</div>
+</footer>
+
+<script>
+(function(){
+  var doc=document.documentElement;
+  doc.classList.remove('no-js');
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var finePointer=window.matchMedia('(pointer: fine)').matches;
+  var DPR=Math.min(window.devicePixelRatio||1,1.5);
+  var mobile=window.innerWidth<760;
+
+  /* seeded rng — Bangkok date, so the vines are today's vines */
+  function bkkSeed(){
+    try{
+      var p=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Bangkok',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+      return parseInt(p.replace(/-/g,''),10);
+    }catch(e){ var d=new Date(); return d.getFullYear()*10000+(d.getMonth()+1)*100+d.getDate(); }
+  }
+  function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+
+  /* ---- reveal system ---- */
+  var revealEls=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window && !reduced){
+    doc.classList.add('reveal-ready');
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    revealEls.forEach(function(el){io.observe(el)});
+    setTimeout(function(){ revealEls.forEach(function(el){el.classList.add('in')}); },1500);
+  }
+
+
+  /* ---- lanes: the portfolio filters to one shelf ---- */
+  (function(){
+    var rail=document.querySelector('.lanes'); if(!rail)return;
+    var btns=[].slice.call(rail.querySelectorAll('.lane'));
+    var shelves=[].slice.call(document.querySelectorAll('.shelf'));
+    if(!btns.length||!shelves.length)return;
+    doc.classList.add('js-lanes');
+    rail.addEventListener('click',function(e){
+      var b=e.target.closest? e.target.closest('.lane') : null; if(!b)return;
+      var k=b.getAttribute('data-lane');
+      btns.forEach(function(x){
+        var on=(x===b);
+        x.classList.toggle('on',on);
+        x.setAttribute('aria-pressed',on?'true':'false');
+      });
+      shelves.forEach(function(s){
+        s.hidden=!(k==='all'||s.getAttribute('data-lane')===k);
+      });
+      /* the drift geometry and the dust ledges both re-read on resize */
+      dispatchEvent(new Event('resize'));
+    });
+  })();
+
+  /* ---- one rAF scroll handler: progress + parallax + frame drift ---- */
+  var progress=document.getElementById('progress');
+  var plx=[].slice.call(document.querySelectorAll('.plx'));
+  var drifts=[].slice.call(document.querySelectorAll('.drift'));
+  var geo=[];
+  function measure(){
+    geo=drifts.map(function(el){
+      var r=el.closest('.shot').getBoundingClientRect(), y=window.pageYOffset;
+      return {img:el,top:r.top+y,h:r.height,
+              overflow:Math.max(0,el.getBoundingClientRect().height - r.height)};
+    });
+  }
+  var ticking=false;
+  function onScroll(){
+    if(ticking)return; ticking=true;
+    requestAnimationFrame(function(){
+      ticking=false;
+      var y=window.pageYOffset, vh=window.innerHeight, max=doc.scrollHeight-vh;
+      progress.style.width=(max>0?(y/max*100):0)+'%';
+      if(reduced)return;
+      plx.forEach(function(el){ el.style.transform='translateY('+(y*+el.getAttribute('data-speed'))+'px)'; });
+      geo.forEach(function(g){
+        var p=(y+vh-g.top)/(vh+g.h);
+        if(p<0||p>1)return;
+        g.img.style.transform='translateY('+(-p*g.overflow*0.85)+'px)';
+      });
+    });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',function(){measure();onScroll();},{passive:true});
+  window.addEventListener('load',function(){measure();onScroll();});
+  measure();onScroll();
+
+  /* ---- magnetic buttons ---- */
+  if(!reduced && finePointer){
+    [].slice.call(document.querySelectorAll('.magnetic')).forEach(function(btn){
+      btn.addEventListener('pointermove',function(e){
+        var r=btn.getBoundingClientRect(),
+            dx=(e.clientX-r.left-r.width/2)/r.width, dy=(e.clientY-r.top-r.height/2)/r.height;
+        btn.style.transform='translate('+dx*6+'px,'+dy*5+'px)';
+      });
+      btn.addEventListener('pointerleave',function(){ btn.style.transform=''; });
+    });
+  }
+
+  /* ---- clocktower hands: continuous sweep, never a backwards jump ---- */
+  function clock(){
+    try{
+      var mins=Date.now()/60000+420;   /* minutes since epoch, shifted to Asia/Bangkok */
+      var h=document.getElementById('hh'), m=document.getElementById('mh');
+      if(h&&m){
+        h.style.transform='rotate('+(mins/60*30)+'deg)';   /* monotonic — the CSS eases each step */
+        m.style.transform='rotate('+(mins*6)+'deg)';
+      }
+    }catch(e){}
+  }
+  clock(); setInterval(clock,20000);
+
+  var hero=document.querySelector('.hero');
+  /* run cb only once the element has real layout — background tabs can load at 0x0 */
+  function whenSized(el,cb){
+    var tries=0;
+    (function poll(){
+      var r=el.getBoundingClientRect();
+      if(r.width>40&&r.height>40){cb();return;}
+      if(++tries<600)requestAnimationFrame(poll);
+    })();
+  }
+  /* how far a stage sits from the viewport's centre: -1 above … 0 centred … 1 below.
+     Drives dust parallax — the cloud drifts at its own rate, and depth-spread
+     collapses to zero exactly as the stage centres, so the word snaps into focus. */
+  function parallaxOf(el){
+    if(reduced)return 0;
+    var r=el.getBoundingClientRect(), vh=window.innerHeight||1;
+    var t=((r.top+r.height/2)-vh/2)/(vh/2+r.height/2);
+    return t<-1?-1:(t>1?1:t);
+  }
+  /* loops that park while the tab is hidden register a resumer here — without this
+     the IntersectionObserver never re-fires and the canvas stays blank forever. */
+  var resumers=[];
+  document.addEventListener('visibilitychange',function(){
+    if(!document.hidden)resumers.forEach(function(fn){try{fn();}catch(e){}});
+  });
+  /* ============ THE DUST FIELD — one weather system for the whole page ============
+     A single fixed canvas. Gold sheds from the signature and the unalomes, drifts
+     down through the page, and settles on whatever ledge it meets — card tops, the
+     bench, the contact seal. Settled dust rides its tile as you scroll, melts over
+     minutes, and kicks back into the air under a passing hand. Airborne dust is
+     additive (it catches light); settled dust is matte — like real gold leaf. */
+  var fieldShed=function(){};
+  (function(){
+    if(reduced)return;
+    var cv=document.getElementById('dustfield'); if(!cv)return;
+    var ctx=cv.getContext('2d');
+    var W,H;
+    function size(){
+      W=cv.width=Math.round(innerWidth*DPR);
+      H=cv.height=Math.round(innerHeight*DPR);
+    }
+    size();
+    var GOLD=['#e7be6a','#f6e3b4','#d4a24e','#fff2cf'];
+    var rngF=mulberry32(0xF1E1D);
+    var LEDGE_SEL='.card,.work,.bench,.visit-card,.contact-box';
+    var ledges=[];
+    function collect(){
+      ledges=[].slice.call(document.querySelectorAll(LEDGE_SEL)).map(function(el){
+        return {el:el,grains:[],bins:null,binW:8*DPR};
+      });
+    }
+    collect();
+    var air=[], AMAX=mobile?40:80, SMAX=mobile?350:900, settledTotal=0;
+    fieldShed=function(cssX,cssY,cssR,c){
+      if(air.length>=AMAX)air.shift();
+      air.push({x:cssX*DPR,y:cssY*DPR,vx:(rngF()-0.5)*0.10*DPR,vy:0.015*DPR,
+                r:Math.max(0.5,cssR)*DPR,c:c||GOLD[(rngF()*4)|0],ph:rngF()*7,sw:0.6+rngF()*0.8});
+      kickLoop();
+    };
+    /* ambient motes — the room itself sheds a little */
+    setInterval(function(){
+      if(document.hidden||air.length>=AMAX)return;
+      fieldShed(rngF()*innerWidth, -4, 0.5+rngF()*0.6, GOLD[(rngF()*4)|0]);
+    }, mobile?4200:2600);
+    /* a passing hand stirs the settled gold */
+    addEventListener('pointermove',function(e){
+      var px=e.clientX*DPR, py=e.clientY*DPR, R=52*DPR, lofted=0;
+      for(var li=0;li<ledges.length;li++){
+        var L=ledges[li]; if(!L.grains.length)continue;
+        var r=L.el.getBoundingClientRect();
+        if(r.bottom<0||r.top>innerHeight)continue;
+        var topD=r.top*DPR;
+        if(Math.abs(py-topD)>34*DPR)continue;
+        for(var gi=L.grains.length-1;gi>=0&&lofted<12;gi--){
+          var g=L.grains[gi], gx=r.left*DPR+g.off;
+          if(Math.abs(gx-px)<R){
+            if(L.bins)L.bins[Math.min(L.bins.length-1,(g.off/L.binW)|0)]*=0.5;
+            air.push({x:gx,y:topD-g.r,vx:((gx-px)/R)*(0.3+rngF()*0.25)*DPR,
+                      vy:-(0.22+rngF()*0.4)*DPR,r:g.r,c:g.c,ph:rngF()*7,sw:0.6+rngF()*0.8});
+            L.grains.splice(gi,1); settledTotal--; lofted++;
+          }
+        }
+      }
+      if(lofted)kickLoop();
+    },{passive:true});
+    var running=false,tPrev=0;
+    /* a standing frame chain, started from init — never scheduled out of a timer,
+       where this scheduler can drop the very first callback and strand the loop */
+    function kickLoop(){ if(!running&&!document.hidden){running=true;tPrev=0;requestAnimationFrame(frame);} }
+    resumers.push(kickLoop);
+    function frame(ts){
+      if(document.hidden){running=false;return;}
+      if(!tPrev)tPrev=ts;
+      var dt=Math.min(40,ts-tPrev)/16.7; tPrev=ts;
+      if(!air.length&&!settledTotal){   /* idle: keep the chain, skip the work */
+        requestAnimationFrame(frame); return;
+      }
+      ctx.clearRect(0,0,W,H);
+      /* rects once per frame, only for ledges on screen */
+      var rects=[];
+      for(var li=0;li<ledges.length;li++){
+        var L=ledges[li];
+        if(!L.grains.length&&!air.length){rects.push(null);continue;}
+        var r=L.el.getBoundingClientRect();
+        rects.push((r.bottom<-40||r.top>innerHeight+40)?null:r);
+      }
+      /* settled gold — matte, riding its tile */
+      for(li=0;li<ledges.length;li++){
+        var L2=ledges[li], rr=rects[li];
+        if(!L2.grains.length)continue;
+        if(!rr){continue;}
+        var leftD=rr.left*DPR, topD=rr.top*DPR;
+        for(var gi=L2.grains.length-1;gi>=0;gi--){
+          var g2=L2.grains[gi];
+          g2.life-=0.000045*dt;
+          if(g2.life<=0){
+            if(L2.bins)L2.bins[Math.min(L2.bins.length-1,(g2.off/L2.binW)|0)]*=0.7;
+            L2.grains.splice(gi,1); settledTotal--; continue;
+          }
+          ctx.globalAlpha=Math.min(0.5,g2.life*0.42);
+          ctx.fillStyle=g2.c;
+          ctx.beginPath(); ctx.arc(leftD+g2.off, topD-g2.h, g2.r*0.9, 0, 7); ctx.fill();
+        }
+      }
+      /* airborne gold — additive flutter */
+      ctx.globalCompositeOperation='lighter';
+      for(var i=air.length-1;i>=0;i--){
+        var f=air[i];
+        f.vy=Math.min(f.vy+0.0045*DPR*dt, 0.40*DPR);
+        f.x+=(f.vx+Math.sin(ts*0.0009*f.sw+f.ph)*0.15)*dt;
+        f.y+=f.vy*dt;
+        if(f.x<-10||f.x>W+10||f.y>H+10){air.splice(i,1);continue;}
+        /* does it land on a ledge? */
+        if(f.vy>0){
+          var landed=false;
+          for(li=0;li<ledges.length&&!landed;li++){
+            var rl=rects[li]; if(!rl)continue;
+            var lt=rl.top*DPR;
+            if(f.y+f.r>=lt&&f.y-f.vy*dt<=lt+6*DPR&&
+               f.x>rl.left*DPR+4*DPR&&f.x<rl.right*DPR-4*DPR){
+              var L3=ledges[li];
+              if(!L3.bins)L3.bins=new Float32Array(Math.ceil(rl.width*DPR/L3.binW)+1);
+              var b=Math.min(L3.bins.length-1,((f.x-rl.left*DPR)/L3.binW)|0);
+              var h=Math.min(6*DPR,L3.bins[b]); L3.bins[b]=h+0.5*DPR;
+              if(settledTotal>=SMAX){
+                for(var lj=0;lj<ledges.length;lj++){
+                  if(ledges[lj].grains.length){ledges[lj].grains.shift();settledTotal--;break;}
+                }
+              }
+              L3.grains.push({off:f.x-rl.left*DPR,h:h+f.r*0.55,r:f.r,c:f.c,life:1});
+              settledTotal++; air.splice(i,1); landed=true;
+            }
+          }
+          if(landed)continue;
+        }
+        ctx.globalAlpha=0.30+0.26*Math.sin(ts*0.0016+f.ph);
+        ctx.fillStyle=f.c;
+        ctx.beginPath(); ctx.arc(f.x,f.y,f.r,0,7); ctx.fill();
+      }
+      ctx.globalCompositeOperation='source-over';
+      ctx.globalAlpha=1;
+      requestAnimationFrame(frame);
+    }
+    kickLoop();   /* the chain starts with the page, like every module that works */
+    var rsz;
+    addEventListener('resize',function(){
+      clearTimeout(rsz);
+      rsz=setTimeout(function(){
+        size();
+        ledges.forEach(function(L){L.grains.length=0;L.bins=null;});
+        settledTotal=0; collect(); kickLoop();
+      },250);
+    },{passive:true});
+    /* debug porthole */
+    window.__hdDust=function(){return {air:air.length,settled:settledTotal};};
+  })();
+
+  var heroVisible=true;
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){ heroVisible=es[0].isIntersecting; },{threshold:0}).observe(hero);
+  }
+  var pointer={x:-1e4,y:-1e4,inHero:false};
+  hero.addEventListener('pointermove',function(e){
+    var r=hero.getBoundingClientRect();
+    pointer.x=e.clientX-r.left; pointer.y=e.clientY-r.top; pointer.inHero=true;
+    scratchAt(pointer.x,pointer.y);
+  },{passive:true});
+  hero.addEventListener('pointerleave',function(){pointer.inHero=false;});
+
+  /* ============ GROWING GOLD — fractal lai kham ============ */
+  whenSized(hero,function(){
+    var cv=document.getElementById('laikham'); if(!cv)return;
+    var ctx=cv.getContext('2d');
+    var W,H;
+    function size(){
+      var r=hero.getBoundingClientRect();
+      W=cv.width=Math.round(r.width*DPR); H=cv.height=Math.round(r.height*DPR);
+      cv.style.width=r.width+'px'; cv.style.height=r.height+'px';
+    }
+    size();
+    var rng=mulberry32(bkkSeed());
+    var GOLD=['#e7be6a','#d4a24e','#f6e3b4','#c89a45'];
+    var segs=[], tips=[], leaves=[], blooms=[];
+    var SEGBUDGET=reduced?0:(mobile?520:1200);
+    /* seed vines from the right edge and bottom-left corner — kranok climbs toward the text */
+    function spawnSeed(x,y,a){ grow(x,y,a,(mobile?62:96)*DPR,0,0); }
+    function grow(x,y,angle,len,depth,t0){
+      if(segs.length>=SEGBUDGET||depth>7||len<7*DPR)return;
+      var bend=(rng()-0.5)*0.9;
+      /* pointer lure — vines curl toward a nearby hand */
+      if(pointer.inHero){
+        var px=pointer.x*DPR,py=pointer.y*DPR,dx=px-x,dy=py-y,d=Math.hypot(dx,dy);
+        if(d<360*DPR&&d>1){ var want=Math.atan2(dy,dx),diff=Math.atan2(Math.sin(want-angle),Math.cos(want-angle)); bend+=diff*0.1; }
+      }
+      var a2=angle+bend;
+      var mx=x+Math.cos(angle)*len*0.55+Math.cos(angle+Math.PI/2)*(rng()-0.5)*len*0.5;
+      var my=y+Math.sin(angle)*len*0.55+Math.sin(angle+Math.PI/2)*(rng()-0.5)*len*0.5;
+      var x1=x+Math.cos(a2)*len, y1=y+Math.sin(a2)*len;
+      var col=GOLD[(rng()*GOLD.length)|0];
+      segs.push({x0:x,y0:y,cx:mx,cy:my,x1:x1,y1:y1,a:a2,w:Math.max(0.7,(2.6-depth*0.36))*DPR,t0:t0,col:col,drawn:0});
+      var dt=650+rng()*750;   /* unhurried — the forest takes the whole visit */
+      /* continue the stem */
+      grow(x1,y1,a2+(rng()-0.5)*0.5,len*(0.82+rng()*0.1),depth+(rng()<0.25?1:0),t0+dt);
+      /* fractal side shoots — the kranok flame splits */
+      if(rng()<0.75) grow(x1,y1,a2+(0.7+rng()*0.7),len*0.62,depth+1,t0+dt+300);
+      if(rng()<0.75) grow(x1,y1,a2-(0.7+rng()*0.7),len*0.62,depth+1,t0+dt+500);
+      /* occasional curl tip (log spiral) */
+      if(depth>=3&&rng()<0.5) tips.push({x:x1,y:y1,a:a2,s:len*0.34,t0:t0+dt+700,dir:rng()<0.5?1:-1,col:col,done:false});
+      /* kranok flame-leaves along the stems, dok blossoms at the fine tips */
+      if(depth>=1&&depth<=4&&rng()<0.2) leaves.push({x:x1,y:y1,a:a2+(rng()<0.5?0.9:-0.9),s:len*(0.42+rng()*0.25),t0:t0+dt+900,col:col,done:false});
+      if(depth>=4&&rng()<0.16) blooms.push({x:x1,y:y1,s:(4.5+rng()*4)*DPR,t0:t0+dt+1200,ph:rng()*7,done:false});
+    }
+    if(!reduced){
+      var n=mobile?4:6;
+      for(var i=0;i<n;i++){
+        var side=rng();
+        if(side<0.45) spawnSeed(W+8, H*(0.12+rng()*0.7), Math.PI+(rng()-0.5)*0.6);
+        else if(side<0.75) spawnSeed(W*(0.55+rng()*0.4), H+8, -Math.PI/2+(rng()-0.5)*0.5);
+        else spawnSeed(-8, H*(0.55+rng()*0.4), (rng()-0.5)*0.5);
+      }
+    }
+    var T=0,last=0,running=!reduced&&segs.length>0;
+    function frame(ts){
+      if(!running)return;
+      if(!last)last=ts;
+      var dt=Math.min(50,ts-last); last=ts;
+      if(heroVisible&&!document.hidden){
+        T+=dt;
+        ctx.save();
+        ctx.shadowColor='rgba(231,190,106,.55)'; ctx.shadowBlur=4*DPR;
+        ctx.lineCap='round';
+        var pending=false;
+        segs.forEach(function(s){
+          if(s.drawn>=1)return;
+          if(T<s.t0){pending=true;return;}
+          var p=Math.min(1,(T-s.t0)/1400); pending=pending||p<1;
+          if(p<=s.drawn)return;
+          /* draw only the new slice of the bezier */
+          var steps=8, from=Math.floor(s.drawn*steps), to=Math.ceil(p*steps);
+          ctx.beginPath();
+          for(var k=from;k<=to;k++){
+            var t=k/steps, u=1-t;
+            var bx=u*u*s.x0+2*u*t*s.cx+t*t*s.x1, by=u*u*s.y0+2*u*t*s.cy+t*t*s.y1;
+            k===from?ctx.moveTo(bx,by):ctx.lineTo(bx,by);
+          }
+          ctx.strokeStyle=s.col; ctx.lineWidth=s.w; ctx.globalAlpha=0.62;
+          ctx.stroke();
+          s.drawn=p;
+          if(p>=1&&rng()<0.14){ /* gold-leaf fleck at joints */
+            ctx.globalAlpha=0.3+rng()*0.3; ctx.fillStyle='#f6e3b4';
+            ctx.beginPath(); ctx.arc(s.x1,s.y1,(0.7+rng()*1.2)*DPR,0,7); ctx.fill();
+          }
+        });
+        tips.forEach(function(tp){
+          if(tp.done||T<tp.t0){pending=pending||!tp.done;return;}
+          var p=Math.min(1,(T-tp.t0)/2400); pending=pending||p<1;
+          ctx.strokeStyle=tp.col; ctx.lineWidth=1.0*DPR; ctx.globalAlpha=0.55;
+          ctx.beginPath();
+          var turns=2.6*p, pts=Math.max(2,Math.floor(26*p));
+          for(var k=0;k<=pts;k++){
+            var th=k/pts*turns*Math.PI*2*tp.dir;
+            var rr=tp.s*Math.exp(-0.32*Math.abs(th));
+            var bx=tp.x+Math.cos(th+tp.a)*rr, by=tp.y+Math.sin(th+tp.a)*rr;
+            k===0?ctx.moveTo(bx,by):ctx.lineTo(bx,by);
+          }
+          ctx.stroke();
+          if(p>=1)tp.done=true;
+        });
+        /* kranok flame-leaves — the serrated flame silhouette, unfurling scale-up */
+        leaves.forEach(function(lf){
+          if(lf.done||T<lf.t0){pending=pending||!lf.done;return;}
+          var p=Math.min(1,(T-lf.t0)/2000); pending=pending||p<1;
+          if(p<1)return;             /* draw once, complete — no half-leaves */
+          lf.done=true;
+          var s=lf.s, th=lf.a;
+          var cs=Math.cos(th), sn=Math.sin(th);
+          var nx=Math.cos(th+Math.PI/2), ny=Math.sin(th+Math.PI/2);
+          var tipX=lf.x+cs*s, tipY=lf.y+sn*s, w=s*0.34;
+          ctx.beginPath();
+          ctx.moveTo(lf.x,lf.y);
+          /* smooth belly */
+          ctx.quadraticCurveTo(lf.x+cs*s*0.45+nx*w, lf.y+sn*s*0.45+ny*w, tipX, tipY);
+          /* serrated spine — three diminishing flame cusps back to the base */
+          for(var c=1;c<=3;c++){
+            var tt=1-c/3.4;
+            var bx2=lf.x+cs*s*tt-nx*w*tt*0.9, by2=lf.y+sn*s*tt-ny*w*tt*0.9;
+            var qx=lf.x+cs*s*(tt+0.14)-nx*w*tt*0.3, qy=lf.y+sn*s*(tt+0.14)-ny*w*tt*0.3;
+            ctx.quadraticCurveTo(qx,qy,bx2,by2);
+          }
+          ctx.closePath();
+          ctx.globalAlpha=0.2; ctx.fillStyle=lf.col; ctx.fill();
+          ctx.globalAlpha=0.45; ctx.lineWidth=0.8*DPR; ctx.strokeStyle=lf.col; ctx.stroke();
+        });
+        /* dok blossoms — five cream petals, a vermillion heart */
+        blooms.forEach(function(b){
+          if(b.done||T<b.t0){pending=pending||!b.done;return;}
+          var p=Math.min(1,(T-b.t0)/2400); pending=pending||p<1;
+          if(p<1)return;
+          b.done=true;
+          var petals=5, s=b.s;
+          ctx.fillStyle='#f6e3b4'; ctx.globalAlpha=0.34;
+          for(var k=0;k<petals;k++){
+            var a=k/petals*Math.PI*2+b.ph;
+            ctx.beginPath();
+            ctx.ellipse(b.x+Math.cos(a)*s*0.55, b.y+Math.sin(a)*s*0.55, s*0.42, s*0.24, a, 0, 7);
+            ctx.fill();
+          }
+          ctx.globalAlpha=0.5; ctx.fillStyle='#c8371e';
+          ctx.beginPath(); ctx.arc(b.x,b.y,s*0.2,0,7); ctx.fill();
+        });
+        ctx.restore();
+        if(!pending)running=false; /* forest finished — canvas persists, loop retires */
+      }
+      if(running)requestAnimationFrame(frame);
+    }
+    if(running)requestAnimationFrame(frame);
+  });
+
+  /* ============ SCRATCH THE LACQUER ============ */
+  var scratchAt=function(){};
+  if(!reduced) whenSized(hero,function(){
+    var cv=document.getElementById('scratch'); if(!cv)return;
+    var ctx=cv.getContext('2d');
+    var r=cv.getBoundingClientRect();   /* taller than the hero — it bleeds into the signature */
+    var W=cv.width=Math.round(r.width*DPR), H=cv.height=Math.round(r.height*DPR);
+    var zoneVis=true;
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){zoneVis=es[0].isIntersecting;},{threshold:0}).observe(cv);
+    }
+    /* procedural gold foil */
+    var foil=document.createElement('canvas'); foil.width=W; foil.height=H;
+    var f=foil.getContext('2d');
+    var g=f.createLinearGradient(0,0,W,H);
+    g.addColorStop(0,'#8a6524'); g.addColorStop(.3,'#e7be6a'); g.addColorStop(.5,'#f6e3b4');
+    g.addColorStop(.7,'#c89a45'); g.addColorStop(1,'#7a5a20');
+    f.fillStyle=g; f.fillRect(0,0,W,H);
+    var rng2=mulberry32(0x9E37);
+    for(var i=0;i<W*H/900;i++){ /* speckle */
+      f.globalAlpha=0.05+rng2()*0.12;
+      f.fillStyle=rng2()<0.5?'#fff6dd':'#5c4212';
+      var sx=rng2()*W, sy=rng2()*H, sw=(1+rng2()*3)*DPR;
+      f.fillRect(sx,sy,sw,sw*(0.4+rng2()));
+    }
+    f.globalAlpha=0.1;
+    for(i=0;i<26;i++){ /* brush streaks */
+      f.strokeStyle=rng2()<0.5?'#fff2cf':'#6e5118'; f.lineWidth=(6+rng2()*30)*DPR;
+      f.beginPath(); var yy=rng2()*H;
+      f.moveTo(-40,yy); f.bezierCurveTo(W*.3,yy+(rng2()-.5)*220*DPR,W*.6,yy+(rng2()-.5)*220*DPR,W+40,yy+(rng2()-.5)*120*DPR);
+      f.stroke();
+    }
+    var trail=document.createElement('canvas'); trail.width=W; trail.height=H;
+    var t=trail.getContext('2d');
+    var active=0, lastScratch=0;
+    /* water-brush: the stroke breathes with your hand —
+       linger and it pools wide, whip across and it thins to a hairline */
+    var lx=null, ly=null, lt=0, brushR=(mobile?30:44)*DPR;
+    var MINR=(mobile?9:13)*DPR, MAXR=(mobile?46:68)*DPR, VMAX=2.4; /* px/ms at CSS scale */
+    function stamp(px,py,rad,alpha){
+      var rg=t.createRadialGradient(px,py,0,px,py,rad);
+      rg.addColorStop(0,'rgba(255,255,255,'+alpha+')');
+      rg.addColorStop(.55,'rgba(255,255,255,'+(alpha*0.42)+')');
+      rg.addColorStop(1,'rgba(255,255,255,0)');
+      t.fillStyle=rg;
+      t.beginPath(); t.arc(px,py,rad,0,7); t.fill();
+    }
+    scratchAt=function(x,y){
+      var now=performance.now();
+      if(lx!==null&&now-lt>400){lx=ly=null;}   /* a pause breaks the stroke, a seam does not */
+      var px=x*DPR, py=y*DPR;
+      t.globalCompositeOperation='source-over';
+      if(lx===null){
+        stamp(px,py,brushR,0.8);
+      }else{
+        var dx=px-lx, dy=py-ly;
+        var dist=Math.hypot(dx,dy);
+        var v=(dist/DPR)/Math.max(1,now-lt);            /* css px per ms */
+        var speed=Math.min(1,v/VMAX);
+        var target=MAXR-(MAXR-MINR)*Math.pow(speed,0.65); /* fast = skinny */
+        brushR+=(target-brushR)*0.14;                     /* ink has inertia */
+        var alpha=0.85-speed*0.45;                        /* fast = drier ink */
+        var gap=Math.max(2*DPR,brushR*0.4), steps=Math.max(1,Math.ceil(dist/gap));
+        for(var i=1;i<=steps;i++){
+          stamp(lx+dx*i/steps, ly+dy*i/steps, brushR, alpha);
+        }
+      }
+      lx=px; ly=py; lt=now;
+      lastScratch=now;
+      if(!active){active=1;requestAnimationFrame(loop);}
+    };
+    /* the signature band shares the brush, so a stroke carries straight across the seam */
+    var sigEl=document.querySelector('.sig');
+    if(sigEl)sigEl.addEventListener('pointermove',function(e){
+      var rr=cv.getBoundingClientRect();
+      scratchAt(e.clientX-rr.left,e.clientY-rr.top);
+    },{passive:true});
+    function loop(ts){
+      /* re-pooling lacquer: the trail slowly fades */
+      t.globalCompositeOperation='destination-out';
+      t.fillStyle='rgba(0,0,0,0.005)'; t.fillRect(0,0,W,H);
+      ctx.clearRect(0,0,W,H);
+      ctx.drawImage(trail,0,0);
+      ctx.globalCompositeOperation='source-in';
+      ctx.drawImage(foil,0,0);
+      ctx.globalCompositeOperation='source-over';
+      /* idle out ~14s after the last touch — by then the trail has re-pooled to nothing */
+      if(zoneVis&&!document.hidden&&(ts-lastScratch)<24000){requestAnimationFrame(loop);}
+      else{active=0;ctx.clearRect(0,0,W,H);}
+    }
+  });
+
+  /* ============ GOLD DUST — the signature ============ */
+  (function(){
+    var cv=document.getElementById('dust'); if(!cv)return;
+    var stage=cv.parentElement;
+    if(reduced){return;} /* fallback <p> stays visible */
+    whenSized(stage,function(){
+    doc.classList.add('js-dust');
+    var ctx=cv.getContext('2d');
+    var W,H;
+    function size(){
+      var r=stage.getBoundingClientRect();
+      W=cv.width=Math.round(r.width*DPR); H=cv.height=Math.round(r.height*DPR);
+      cv.style.width=r.width+'px'; cv.style.height=r.height+'px';
+    }
+    size();
+    var words=[{t:'หงส์ดำ',f:'"Thonburi","Noto Sans Thai","Avenir Next",sans-serif',w:900},
+               {t:'HONGDAM',f:'Georgia,"Times New Roman",serif',w:700}];
+    function sample(word){
+      var off=document.createElement('canvas'); off.width=W; off.height=H;
+      var o=off.getContext('2d');
+      var fs=H*0.62;
+      o.font=word.w+' '+fs+'px '+word.f;
+      o.textAlign='center'; o.textBaseline='alphabetic';
+      /* fit BOTH axes from real glyph metrics — no font's ascenders or tails can crop */
+      var m=o.measureText(word.t);
+      var asc=m.actualBoundingBoxAscent||fs*0.78, desc=m.actualBoundingBoxDescent||fs*0.22;
+      var k=Math.min(1, W*0.84/Math.max(1,m.width), H*0.76/Math.max(1,asc+desc));
+      if(k<1){ fs*=k; o.font=word.w+' '+fs+'px '+word.f;
+        m=o.measureText(word.t);
+        asc=m.actualBoundingBoxAscent||fs*0.78; desc=m.actualBoundingBoxDescent||fs*0.22; }
+      o.fillStyle='#fff';
+      o.fillText(word.t, W/2, H/2+(asc-desc)/2);   /* true optical center */
+      var img=o.getImageData(0,0,W,H).data, pts=[];
+      var step=Math.max(2,Math.round(2.6*DPR));
+      for(var y=0;y<H;y+=step)for(var x=0;x<W;x+=step){
+        if(img[(y*W+x)*4+3]>128)pts.push([x,y]);
+      }
+      return pts;
+    }
+    var targets=words.map(sample);
+    var N=Math.min(mobile?2200:3800,Math.max(targets[0].length,targets[1].length));
+    var rng3=mulberry32(0xA11CE);
+    var parts=[];
+    for(var i=0;i<N;i++){
+      parts.push({x:rng3()*W,y:rng3()*H,vx:0,vy:0,r:(0.5+rng3()*0.9)*DPR,
+        c:['#e7be6a','#f6e3b4','#d4a24e','#fff2cf'][(rng3()*4)|0],ph:rng3()*7,
+        dz:rng3()*2-1, dx:rng3()*2-1});   /* depth — near grains travel further */
+    }
+    var lastShed=0, SHED=1400;
+    var wi=0,switchAt=0,running=false,visible=false;
+    function kick(){
+      if(visible&&!running&&!document.hidden){
+        running=true; tPrev=0; switchAt=0;   /* hold the current word a full cycle on return */
+        requestAnimationFrame(step);
+      }
+    }
+    new IntersectionObserver(function(es){ visible=es[0].isIntersecting; kick(); },
+      {threshold:0}).observe(stage);
+    resumers.push(kick);
+    var px=-1e4,py=-1e4;
+    stage.addEventListener('pointermove',function(e){
+      var r=stage.getBoundingClientRect(); px=(e.clientX-r.left)*DPR; py=(e.clientY-r.top)*DPR;
+    },{passive:true});
+    stage.addEventListener('pointerleave',function(){px=py=-1e4;});
+    var tPrev=0;
+    function step(ts){
+      if(!running)return;
+      if(!visible||document.hidden){running=false;return;}
+      if(!tPrev)tPrev=ts;
+      var dt=Math.min(40,ts-tPrev)/16.7; tPrev=ts;
+      if(!switchAt)switchAt=ts+22000;
+      if(ts>switchAt){wi=(wi+1)%words.length;switchAt=ts+22000;}
+      if(!lastShed)lastShed=ts;
+      if(ts-lastShed>SHED){ lastShed=ts;
+        var q=parts[(rng3()*N)|0], sr=stage.getBoundingClientRect();
+        if(q)fieldShed(sr.left+q.x/DPR, sr.top+q.y/DPR, q.r/DPR, q.c); }
+      var tg=targets[wi], tl=tg.length;
+      /* parallax: whole cloud lags the page, grains spread by depth away from centre */
+      var par=parallaxOf(stage), spread=Math.abs(par);
+      var driftY=par*H*0.30, sprY=H*0.20, sprX=W*0.05;
+      ctx.clearRect(0,0,W,H);
+      ctx.globalCompositeOperation='lighter';
+      for(var i=0;i<N;i++){
+        var p=parts[i], T=tg[tl>N?((i*tl/N)|0):(i%tl)];
+        var tx=T[0]+p.dx*spread*sprX, ty=T[1]+driftY+p.dz*spread*sprY;
+        /* half-speed spring — sediment in still water */
+        var ax=(tx-p.x)*0.0045, ay=(ty-p.y)*0.0045;
+        /* slow shimmer wander */
+        ax+=Math.sin(ts*0.00035+p.ph)*0.022; ay+=Math.cos(ts*0.0003+p.ph)*0.022;
+        /* soft pointer breeze */
+        var dx=p.x-px,dy=p.y-py,d2=dx*dx+dy*dy,RR=100*DPR;
+        if(d2<RR*RR){var d=Math.sqrt(d2)||1,f=(RR-d)/RR*0.7;ax+=dx/d*f;ay+=dy/d*f;}
+        p.vx=(p.vx+ax*dt)*0.962; p.vy=(p.vy+ay*dt)*0.962;
+        p.x+=p.vx*dt; p.y+=p.vy*dt;
+        ctx.globalAlpha=(0.45+0.4*Math.sin(ts*0.0006+p.ph))*(1-spread*0.4);  /* dims as it disperses */
+        ctx.fillStyle=p.c;
+        ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,7); ctx.fill();
+      }
+      ctx.globalCompositeOperation='source-over';
+      requestAnimationFrame(step);
+    }
+    var rsz;
+    window.addEventListener('resize',function(){
+      clearTimeout(rsz);
+      rsz=setTimeout(function(){size();targets=words.map(sample);},220);
+    },{passive:true});
+    });
+  })();
+
+  /* ============ UNALOME DIVIDERS — gold dust, pointing skyward ============
+     The khomut ๛ closes a manuscript section; stood upright it becomes an
+     unalome — spiral at the base, the line rising to a single point.
+     A band of light climbs it, over and over. */
+  (function(){
+    var stages=[].slice.call(document.querySelectorAll('.unalome'));
+    if(!stages.length)return;
+    stages.forEach(function(st){
+      whenSized(st,function(){ setup(st); });
+    });
+    function setup(st){
+      var cv=st.querySelector('canvas'); if(!cv)return;
+      var ctx=cv.getContext('2d'),W,H;
+      var r=st.getBoundingClientRect();
+      W=cv.width=Math.round(r.width*DPR); H=cv.height=Math.round(r.height*DPR);
+      cv.style.width=r.width+'px'; cv.style.height=r.height+'px';
+      /* rasterize the rotated glyph — its tail becomes the ascending point */
+      var off=document.createElement('canvas'); off.width=W; off.height=H;
+      var o=off.getContext('2d');
+      var probe=100;
+      o.font='400 '+probe+'px "Thonburi","Noto Sans Thai",serif';
+      var m=o.measureText('๛');
+      var bw=Math.max(m.width||probe,(m.actualBoundingBoxLeft||0)+(m.actualBoundingBoxRight||0));
+      var bh=(m.actualBoundingBoxAscent||probe*0.8)+(m.actualBoundingBoxDescent||probe*0.2);
+      /* rotated: advance width becomes height, em box becomes width */
+      var fs=probe*Math.min((H*0.88)/Math.max(1,bw),(W*0.6)/Math.max(1,bh));
+      o.font='400 '+fs+'px "Thonburi","Noto Sans Thai",serif';
+      o.translate(W/2,H/2); o.rotate(-Math.PI/2);
+      o.textAlign='center'; o.textBaseline='middle';
+      o.fillStyle='#fff'; o.fillText('๛',0,0);
+      if(reduced){ /* still gold, just still */
+        ctx.globalAlpha=0.5; ctx.drawImage(off,0,0);
+        ctx.globalCompositeOperation='source-in';
+        ctx.fillStyle='#c89a45'; ctx.fillRect(0,0,W,H);
+        return;
+      }
+      var img=o.getImageData(0,0,W,H).data, targets=[];
+      var step=Math.max(2,Math.round(2.3*DPR));
+      for(var y=0;y<H;y+=step)for(var x=0;x<W;x+=step){
+        if(img[(y*W+x)*4+3]>128)targets.push([x,y]);
+      }
+      if(!targets.length)return;
+      var rngU=mulberry32(0xE5B), parts=[];
+      var N=Math.min(mobile?1500:2900,targets.length*2);
+      for(var i=0;i<N;i++){
+        parts.push({x:rngU()*W,y:rngU()*H,vx:0,vy:0,r:(0.6+rngU()*1.0)*DPR,
+          ph:rngU()*7,c:['#e7be6a','#f6e3b4','#d4a24e'][(rngU()*3)|0],
+          dz:rngU()*2-1, dx:rngU()*2-1});
+      }
+      var lastShed=0, SHED=2100;
+      var px=-1e4,py=-1e4,visible=false,running=false,tPrev=0;
+      /* the stage is background now (pointer-events:none) — its section carries the breeze */
+      var host=st.closest('section')||st.parentElement;
+      host.addEventListener('pointermove',function(e){
+        var rr=st.getBoundingClientRect(); px=(e.clientX-rr.left)*DPR; py=(e.clientY-rr.top)*DPR;
+      },{passive:true});
+      host.addEventListener('pointerleave',function(){px=py=-1e4;});
+      function kick(){
+        if(visible&&!running&&!document.hidden){running=true;tPrev=0;requestAnimationFrame(loop);}
+      }
+      new IntersectionObserver(function(es){ visible=es[0].isIntersecting; kick(); },
+        {threshold:0}).observe(st);
+      resumers.push(kick);
+      function loop(ts){
+        if(!visible||document.hidden){running=false;return;}
+        if(!tPrev)tPrev=ts;
+        var dt=Math.min(40,ts-tPrev)/16.7; tPrev=ts;
+        ctx.clearRect(0,0,W,H);
+        ctx.globalCompositeOperation='lighter';
+        /* the rising light — base to point, a slow perpetual ascent (~18s a cycle) */
+        var bandY=H*1.15-((ts*0.00005)%1)*H*1.45;
+        if(!lastShed)lastShed=ts;
+        if(ts-lastShed>SHED){ lastShed=ts;
+          var q=parts[(rngU()*parts.length)|0], sr=st.getBoundingClientRect();
+          if(q)fieldShed(sr.left+q.x/DPR, sr.top+q.y/DPR, q.r/DPR, q.c); }
+        var par=parallaxOf(st), spread=Math.abs(par);
+        var driftY=par*H*0.26, sprY=H*0.18, sprX=W*0.06;
+        var tl=targets.length;
+        var NP=parts.length;
+        for(var i=0;i<NP;i++){
+          /* when grains are scarcer than target points, walk the glyph evenly —
+             i%tl would pack them all into the top rows and lop off the tail */
+          var p=parts[i],T=targets[tl>NP?((i*tl/NP)|0):(i%tl)];
+          var tx=T[0]+p.dx*spread*sprX, ty=T[1]+driftY+p.dz*spread*sprY;
+          var ax=(tx-p.x)*0.014, ay=(ty-p.y)*0.014;   /* holds the shape instead of smearing */
+          ax+=Math.sin(ts*0.00035+p.ph)*0.010; ay+=Math.cos(ts*0.0003+p.ph)*0.010;
+          var dx=p.x-px,dy=p.y-py,d2=dx*dx+dy*dy,RR=95*DPR;
+          if(d2<RR*RR){var d=Math.sqrt(d2)||1,f=(RR-d)/RR*0.7;ax+=dx/d*f;ay+=dy/d*f;}
+          p.vx=(p.vx+ax*dt)*0.962; p.vy=(p.vy+ay*dt)*0.962;
+          p.x+=p.vx*dt; p.y+=p.vy*dt;
+          var glow=Math.max(0,1-Math.abs(p.y-bandY)/(H*0.14));
+          ctx.globalAlpha=Math.min(1,(0.40+0.24*Math.sin(ts*0.0006+p.ph)+glow*0.6)*(1-spread*0.35));
+          ctx.fillStyle=p.c;
+          ctx.beginPath(); ctx.arc(p.x,p.y,p.r*(1+glow*0.8),0,7); ctx.fill();
+        }
+        ctx.globalCompositeOperation='source-over';
+        requestAnimationFrame(loop);
+      }
+    }
+  })();
+
+  /* ============ THE BENCH — split-flap ============ */
+  (function(){
+    var flaps=[].slice.call(document.querySelectorAll('.flap'));
+    if(!flaps.length)return;
+    var REEL='<span class="reel"><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i></span>';
+    flaps.forEach(function(fl){
+      var target=parseInt(fl.getAttribute('data-flap'),10)||0;
+      var str=target.toLocaleString('en-US');
+      var html='';
+      for(var i=0;i<str.length;i++){
+        html+= str[i]===','
+          ? '<span class="cell sep"><span class="reel"><i>,</i></span></span>'
+          : '<span class="cell">'+REEL+'</span>';
+      }
+      fl.innerHTML=html;
+      var cells=[].slice.call(fl.querySelectorAll('.cell:not(.sep) .reel'));
+      var digits=str.replace(/,/g,'').split('').map(Number);
+      function setVal(v){ /* v: 0..1 progress toward target */
+        var cur=Math.round(target*v);
+        var cs=cur.toLocaleString('en-US').replace(/,/g,'').padStart(digits.length,'0').split('').map(Number);
+        cells.forEach(function(reel,i){ reel.style.transform='translateY(-'+cs[i]*1.7+'em)'; });
+      }
+      if(reduced||!('IntersectionObserver' in window)){ setVal(1); return; }
+      setVal(0);
+      var done=false;
+      new IntersectionObserver(function(es,ob){
+        if(!es[0].isIntersecting||done)return;
+        done=true; ob.disconnect();
+        var t0=null;
+        function anim(ts){
+          if(!t0)t0=ts;
+          var p=Math.min(1,(ts-t0)/3400);
+          setVal(1-Math.pow(1-p,3));
+          if(p<1)requestAnimationFrame(anim);
+        }
+        requestAnimationFrame(anim);
+      },{threshold:.35}).observe(fl);
+    });
+  })();
+})();
+</script>
+</body>
+</html>

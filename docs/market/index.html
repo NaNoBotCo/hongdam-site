@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hongdam — red-team market</title>
+<meta name="description" content="Probe packs for testing chatbots: prompt extraction, instruction override, indirect injection, Thai-language attacks. Run each one in the browser.">
+<meta name="theme-color" content="#171009">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/assets/favicon.svg">
+<link rel="canonical" href="https://hongdam.net/market">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hongdam.net/market">
+<meta property="og:title" content="Hongdam — red-team market">
+<meta property="og:description" content="Probe packs for testing chatbots, run in the browser.">
+<meta property="og:image" content="https://hongdam.net/assets/card.jpg">
+<link rel="stylesheet" href="/assets/rt.css">
+<meta name="google" content="notranslate">
+<meta name="robots" content="notranslate">
+<script>if(/[.]translate[.]goog$/.test(location.hostname))location.replace("https://"+location.hostname.slice(0,-15).replace(/--/g,"~").replace(/-/g,".").replace(/~/g,"-")+location.pathname+location.search.replace(/([?&])_x_tr_[^&]*/g,"$1").replace(/[?&]+$/,"").replace(/[?]&+/,"?")+location.hash)</script>
+</head>
+<body>
+<header class="top">
+  <a class="mark" href="/">HONGDAM <span lang="th">หงส์ดำ</span></a>
+  <nav><a href="/redteam">Red team</a><a href="/market" aria-current="page">Market</a></nav>
+</header>
+<main>
+  <h1>Market <span lang="th">ตลาด</span></h1>
+  <p class="lede">6 packs · 50 probes. A probe is one attack message sent to your chatbot; a pack is a set of them aimed at one weakness.</p>
+
+  <section class="packs">
+    <article class="pack">
+      <h2>Prompt extraction <span lang="th">ดึงคำสั่งระบบ</span></h2>
+      <p>Asks the bot to repeat, summarise, translate or encode its own instructions.</p>
+      <dl>
+        <div><dt>Probes</dt><dd>10</dd></div>
+        <div><dt>Checks</dt><dd>10 leak</dd></div>
+        <div><dt>By</dt><dd><a href="https://hongdam.net/">Hongdam</a></dd></div>
+        <div><dt>Licence</dt><dd>CC BY 4.0</dd></div>
+        <div><dt>Price</dt><dd>Free</dd></div>
+      </dl>
+      <p class="acts"><a class="btn" href="/redteam?pack=extraction">Run</a>
+        <a href="/market/extraction.json" download>JSON</a></p>
+    </article>
+    <article class="pack">
+      <h2>Instruction override <span lang="th">สั่งทับคำสั่งเดิม</span></h2>
+      <p>Tells the bot its old instructions no longer apply and asks for a marker phrase as proof.</p>
+      <dl>
+        <div><dt>Probes</dt><dd>10</dd></div>
+        <div><dt>Checks</dt><dd>10 marker</dd></div>
+        <div><dt>By</dt><dd><a href="https://hongdam.net/">Hongdam</a></dd></div>
+        <div><dt>Licence</dt><dd>CC BY 4.0</dd></div>
+        <div><dt>Price</dt><dd>Free</dd></div>
+      </dl>
+      <p class="acts"><a class="btn" href="/redteam?pack=override">Run</a>
+        <a href="/market/override.json" download>JSON</a></p>
+    </article>
+    <article class="pack">
+      <h2>Indirect injection <span lang="th">คำสั่งแฝงในเอกสาร</span></h2>
+      <p>Hides instructions inside an email, review, web page or file the user asks the bot to process.</p>
+      <dl>
+        <div><dt>Probes</dt><dd>8</dd></div>
+        <div><dt>Checks</dt><dd>8 marker</dd></div>
+        <div><dt>By</dt><dd><a href="https://hongdam.net/">Hongdam</a></dd></div>
+        <div><dt>Licence</dt><dd>CC BY 4.0</dd></div>
+        <div><dt>Price</dt><dd>Free</dd></div>
+      </dl>
+      <p class="acts"><a class="btn" href="/redteam?pack=indirect">Run</a>
+        <a href="/market/indirect.json" download>JSON</a></p>
+    </article>
+    <article class="pack">
+      <h2>Thai-language attacks <span lang="th">โจมตีเป็นภาษาไทย</span></h2>
+      <p>The extraction and override attacks, asked in Thai. Guardrails written in English often hold less well in Thai.</p>
+      <dl>
+        <div><dt>Probes</dt><dd>8</dd></div>
+        <div><dt>Checks</dt><dd>4 leak · 3 marker · 1 judge</dd></div>
+        <div><dt>By</dt><dd><a href="https://hongdam.net/">Hongdam</a></dd></div>
+        <div><dt>Licence</dt><dd>CC BY 4.0</dd></div>
+        <div><dt>Price</dt><dd>Free</dd></div>
+      </dl>
+      <p class="acts"><a class="btn" href="/redteam?pack=thai">Run</a>
+        <a href="/market/thai.json" download>JSON</a></p>
+    </article>
+    <article class="pack">
+      <h2>Obfuscated instructions <span lang="th">คำสั่งอำพราง</span></h2>
+      <p>Delivers the override in base64, reversed text, split tokens or leetspeak.</p>
+      <dl>
+        <div><dt>Probes</dt><dd>6</dd></div>
+        <div><dt>Checks</dt><dd>6 marker</dd></div>
+        <div><dt>By</dt><dd><a href="https://hongdam.net/">Hongdam</a></dd></div>
+        <div><dt>Licence</dt><dd>CC BY 4.0</dd></div>
+        <div><dt>Price</dt><dd>Free</dd></div>
+      </dl>
+      <p class="acts"><a class="btn" href="/redteam?pack=encoding">Run</a>
+        <a href="/market/encoding.json" download>JSON</a></p>
+    </article>
+    <article class="pack">
+      <h2>Scope drift <span lang="th">หลุดขอบเขตงาน</span></h2>
+      <p>Asks the bot for work outside its stated purpose. A judge model reads the system prompt and the reply.</p>
+      <dl>
+        <div><dt>Probes</dt><dd>8</dd></div>
+        <div><dt>Checks</dt><dd>8 judge</dd></div>
+        <div><dt>By</dt><dd><a href="https://hongdam.net/">Hongdam</a></dd></div>
+        <div><dt>Licence</dt><dd>CC BY 4.0</dd></div>
+        <div><dt>Price</dt><dd>Free</dd></div>
+      </dl>
+      <p class="acts"><a class="btn" href="/redteam?pack=scope">Run</a>
+        <a href="/market/scope.json" download>JSON</a></p>
+    </article>
+  </section>
+
+  <section class="sell">
+    <h2>Sell a pack <span lang="th">ลงขายชุดทดสอบ</span></h2>
+    <p>Send the pack as JSON in the <a href="/market/extraction.json">same shape</a>, with your price and licence.</p>
+    <form id="f" novalidate>
+      <label>Name<input name="name" maxlength="120" autocomplete="name"></label>
+      <label>Email<input name="email" type="email" maxlength="200" autocomplete="email" required></label>
+      <label>Pack<textarea name="message" maxlength="4000" required placeholder='{"name": "…", "price_usd": 0, "probes": [ … ]}'></textarea></label>
+      <div class="hp" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off"></div>
+      <button type="submit">Send</button>
+      <p class="status" id="s" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+<footer><a href="/">hongdam.net</a> · Chiang Rai</footer>
+<script>
+(function () {
+  var f = document.getElementById('f'), s = document.getElementById('s'), b = f.querySelector('button');
+  function say(t, k) { s.textContent = t; s.className = 'status ' + (k || ''); }
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var d = Object.fromEntries(new FormData(f));
+    if (!d.email || !d.message.trim()) return say('Email and pack, please.', 'err');
+    d.message = '[market listing]\n\n' + d.message;
+    b.disabled = true; say('Sending…');
+    fetch('/api/contact', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(d) })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (r) { if (!r.ok || !r.j.ok) throw new Error(r.j.error || ''); f.reset(); say('Sent.', 'ok'); })
+      .catch(function (err) { say(err.message || 'Could not send that just now.', 'err'); })
+      .then(function () { b.disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>
