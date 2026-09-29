@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hongdam — your own builder</title>
+<meta name="description" content="A coding agent that builds and publishes websites, set up on your computer and your own GitHub and Cloudflare accounts. เครื่องสร้างเว็บของคุณเอง">
+<meta name="theme-color" content="#171009">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/assets/favicon.svg">
+<link rel="canonical" href="https://hongdam.net/own">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hongdam.net/own">
+<meta property="og:title" content="Your own builder · เครื่องสร้างเว็บของคุณเอง">
+<meta property="og:description" content="A coding agent that builds and publishes websites, on your own accounts. Setup ฿25,000 for Thai companies, US$25,000 for everyone else, training included.">
+<meta property="og:image" content="https://hongdam.net/own/card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hongdam.net/own/card.jpg">
+<link rel="stylesheet" href="/assets/rt.css">
+<style>
+  .pair{margin:14px 0 36px; max-width:62ch}
+  .pair p{color:var(--cream-dim)}
+  .pair p[lang="th"]{color:var(--cream); margin-bottom:8px}
+  section{margin-top:52px}
+  h2{margin-bottom:14px}
+  table{width:100%; border-collapse:collapse; font-size:16px}
+  th,td{text-align:left; vertical-align:top; padding:12px 10px; border-top:1px solid var(--line)}
+  th{width:26%; color:var(--gold); font-weight:600}
+  th span{display:block; color:var(--gold-deep); font-weight:500; font-size:14px}
+  td{color:var(--cream-dim)}
+  td span[lang="th"]{display:block; color:var(--cream); margin-top:3px}
+  a.shot{position:relative; display:block; overflow:hidden; border-radius:12px; border:1px solid var(--line); color:#fff; max-width:640px}
+  a.shot .bg{position:absolute; inset:0; background-size:cover; background-position:top center; transition:transform .9s cubic-bezier(.3,1.1,.4,1)}
+  a.shot .scrim{position:absolute; inset:0; background:linear-gradient(180deg,rgba(23,16,9,0) 20%,rgba(23,16,9,.9) 62%,rgba(23,16,9,.97) 100%)}
+  a.shot .sp{display:block; padding-top:62%}
+  a.shot .tx{position:absolute; left:0; right:0; bottom:0; padding:18px}
+  a.shot .tx b{display:block; font-family:Georgia,serif; font-size:22px; color:var(--gold)}
+  a.shot .tx i{font-style:normal; display:block; font-size:14px; color:var(--cream-dim)}
+  a.shot:hover .bg{transform:scale(1.04)}
+  a.shot:focus-visible{outline:2px solid var(--gold); outline-offset:2px}
+  .note{margin-top:14px; max-width:62ch; color:var(--cream-dim); font-size:16px}
+  .note span[lang="th"]{display:block; color:var(--cream); margin-bottom:4px}
+  .price{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; max-width:640px}
+  .price div{background:var(--lacquer-2); border:1px solid var(--line); border-radius:12px; padding:20px}
+  .price b{display:block; font-family:Georgia,serif; font-size:32px; color:var(--gold)}
+  .price span{color:var(--cream-dim); font-size:16px}
+  .price span[lang="th"]{display:block; color:var(--cream)}
+  .cta{margin-top:26px; display:flex; flex-wrap:wrap; gap:18px; align-items:center}
+  footer{max-width:980px; margin:0 auto; padding:0 16px 48px; font-size:15px; color:var(--cream-dim)}
+  @media (prefers-reduced-motion:reduce){a.shot .bg{transition:none}}
+</style>
+<meta name="google" content="notranslate">
+<meta name="robots" content="notranslate">
+<script>if(/[.]translate[.]goog$/.test(location.hostname))location.replace("https://"+location.hostname.slice(0,-15).replace(/--/g,"~").replace(/-/g,".").replace(/~/g,"-")+location.pathname+location.search.replace(/([?&])_x_tr_[^&]*/g,"$1").replace(/[?&]+$/,"").replace(/[?]&+/,"?")+location.hash)</script>
+</head>
+<body>
+<header class="top">
+  <a class="mark" href="/">HONGDAM <span lang="th">หงส์ดำ</span></a>
+  <nav><a href="/own" aria-current="page">Own</a><a href="/redteam">Red team</a><a href="/market">Market</a></nav>
+</header>
+<main>
+  <h1>Your own builder <span lang="th">เครื่องสร้างเว็บของคุณเอง</span></h1>
+  <div class="pair">
+    <p lang="th">เอเจนต์เขียนโค้ดที่สร้างเว็บและเผยแพร่ให้เสร็จ ติดตั้งบนคอมพิวเตอร์ของคุณ ใช้บัญชี GitHub และ Cloudflare ของคุณเอง</p>
+    <p>A coding agent that builds a website and publishes it, installed on your computer and working through your own GitHub and Cloudflare accounts.</p>
+  </div>
+
+  <section>
+    <h2>Where it lives <span lang="th">อยู่ที่ไหน</span></h2>
+    <table>
+      <tr><th>Agent<span lang="th">เอเจนต์</span></th>
+        <td>OpenCode, on your computer<span lang="th">OpenCode บนคอมพิวเตอร์ของคุณ</span></td></tr>
+      <tr><th>Models<span lang="th">โมเดล</span></th>
+        <td>Open-weight models — DeepSeek, Kimi, GLM, Qwen — through Workers AI on your Cloudflare account. Cloudflare bills you by use.<span lang="th">โมเดลเปิด เช่น DeepSeek, Kimi, GLM, Qwen ผ่าน Workers AI ในบัญชี Cloudflare ของคุณ จ่ายตามที่ใช้ให้ Cloudflare โดยตรง</span></td></tr>
+      <tr><th>Code<span lang="th">โค้ด</span></th>
+        <td>Your GitHub account<span lang="th">บัญชี GitHub ของคุณ</span></td></tr>
+      <tr><th>Sites<span lang="th">เว็บไซต์</span></th>
+        <td>GitHub Pages or Cloudflare Pages, on your domain<span lang="th">GitHub Pages หรือ Cloudflare Pages ใต้โดเมนของคุณ</span></td></tr>
+      <tr><th>Assistant<span lang="th">ผู้ช่วย</span></th>
+        <td>If you want one: a chat assistant under your name, with seats for your staff — like <a href="https://ask.motdang.net/">ask.motdang.net</a><span lang="th">ถ้าต้องการ: ผู้ช่วยแชตในชื่อของคุณ แจกที่นั่งให้ทีมงานได้ แบบ <a href="https://ask.motdang.net/">ask.motdang.net</a></span></td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Built with it <span lang="th">สร้างด้วยเครื่องนี้</span></h2>
+    <a class="shot" href="https://nanobotco.github.io/golden-triangle/" aria-label="Golden Triangle — open the live site at nanobotco.github.io/golden-triangle"><span class="bg" style="background-image:url(/assets/screens/goldentriangle.webp)"></span><span class="scrim"></span><span class="sp"></span><span class="tx"><b>Golden Triangle <span lang="th">สามเหลี่ยมทองคำ</span></b><i>nanobotco.github.io/golden-triangle</i></span></a>
+    <p class="note"><span lang="th">เก้าหน้า ไทยและอังกฤษ เอเจนต์เขียนและเผยแพร่จากบรีฟเดียว ใช้เวลา 10 นาที 21 วินาที</span>Nine pages in Thai and English. The agent wrote and published them from one brief in 10 minutes 21 seconds.</p>
+  </section>
+
+  <section>
+    <h2>Setup <span lang="th">ติดตั้ง</span></h2>
+    <div class="price">
+      <div><b>฿25,000</b><span lang="th">บริษัทไทย</span><span>Thai companies</span></div>
+      <div><b>US$25,000</b><span lang="th">ลูกค้าอื่นทั้งหมด</span><span>Everyone else</span></div>
+    </div>
+    <p class="note"><span lang="th">เราติดตั้งบนคอมพิวเตอร์ของคุณ เชื่อมบัญชี GitHub และ Cloudflare และสอนใช้งาน</span>We install it on your computer, connect your GitHub and Cloudflare accounts, and train you on it.</p>
+    <p class="note"><span lang="th">ระบบงานรอบ ๆ เครื่องนี้ แจกฟรีเป็นชุดให้ทำเอง ที่ <a href="https://nanobotco.github.io/onemansideshow/">The One Man Sideshow</a></span>The workshop around it is a free kit to set up yourself: <a href="https://nanobotco.github.io/onemansideshow/">The One Man Sideshow</a>.</p>
+    <div class="cta">
+      <a class="btn" href="/services/"><span lang="th">ส่งเรื่องมา</span> · Send us the brief</a>
+      <a href="mailto:nan@motdang.net">nan@motdang.net</a>
+    </div>
+  </section>
+</main>
+<footer><span lang="th">หงส์ดำ</span> Hongdam · Chiang Rai · <a href="/">hongdam.net</a></footer>
+<script src="/ticker.js" defer></script>
+</body>
+</html>

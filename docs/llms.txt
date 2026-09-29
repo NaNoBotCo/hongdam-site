@@ -172,6 +172,14 @@ cockpit HUD.
 
 - [The roster as JSON](https://nanobotco.github.io/index/fleet.json)
 
+## Your own builder
+
+- https://hongdam.net/own — a coding agent (OpenCode, open-weight models on
+  Workers AI) set up on the client's computer and their own GitHub and
+  Cloudflare accounts. Setup ฿25,000 for Thai companies, US$25,000 for
+  everyone else, training included. Built with it:
+  https://nanobotco.github.io/golden-triangle/ (nine pages, 621 seconds).
+
 ## Red team and market
 
 - https://hongdam.net/redteam — paste a chatbot's system prompt, pick probe
