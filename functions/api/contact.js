@@ -1,7 +1,7 @@
 /**
  * POST /api/contact — relays the /services enquiry form to Nan.
  *
- * The destination address is never sent to the browser: it lives here and in
+ * The destination address stays on the server: it lives here and in
  * the Pages environment. Requires two secrets on the Pages project:
  *   RESEND_API_KEY   full-access Resend key
  *   CONTACT_TO       destination mailbox
