@@ -79,7 +79,7 @@ def main():
         (OUT / f"{p['id']}.json").write_text(json.dumps(p, ensure_ascii=False, indent=2) + "\n")
     (OUT / "packs.json").write_text(json.dumps(packs, ensure_ascii=False, indent=2) + "\n")
     server = {p["id"]: {"probes": p["probes"]} for p in packs}
-    FN.write_text("// Built by tools/build_market.py from data/packs/. Do not edit.\n"
+    FN.write_text("// Built by tools/build_market.py from data/packs/. Do not edit.\n"  # stylecheck: allow — generated-file header for developers
                   f"export const PACKS = {json.dumps(server, ensure_ascii=False)};\n")
     (OUT / "index.html").write_text(page(packs))
     print(f"{len(packs)} packs, {sum(len(p['probes']) for p in packs)} probes")
