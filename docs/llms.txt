@@ -41,6 +41,9 @@ libraries or external requests:
 - Data pipelines and crawlers (scattered real-world data into searchable catalogs)
 - Static-first builds: assembled at build time, served as files, cheap to host
   and portable to any server a domain can point at
+- Translation and interpreting between Thai, English and Burmese: papers, business
+  text, and interpreting in person in Chiang Rai and Chiang Mai or by phone and video.
+  https://hongdam.net/translation/ · /translation/th/ · /translation/my/
 
 ## The work
 
