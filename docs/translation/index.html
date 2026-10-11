@@ -29,6 +29,11 @@
   h2{margin-bottom:16px}
   .pairs{display:flex; flex-wrap:wrap; gap:12px}
   .pairs span{background:var(--lacquer-2); border:1px solid var(--line); border-radius:10px; padding:12px 18px; font-size:20px; color:var(--gold)}
+  .prices{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; max-width:860px}
+  .prices div{background:var(--lacquer-2); border:1px solid var(--line); border-radius:12px; padding:18px}
+  .prices span{display:block; color:var(--cream); font-size:16px}
+  .prices b{display:block; font-family:Georgia,serif; font-size:30px; color:var(--gold); margin:4px 0}
+  .prices i{font-style:normal; color:var(--cream-dim); font-size:15px}
   .note{margin-top:14px; max-width:62ch; color:var(--cream-dim); font-size:16px}
   .cols{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px}
   .col{background:var(--lacquer-2); border:1px solid var(--line); border-radius:12px; padding:20px}
@@ -106,6 +111,11 @@
   </section>
 
   <section>
+    <h2>Prices</h2>
+    <div class="prices"><div><span>New translation</span><b>฿1,500</b><i>Up to 5 pages; ฿500 a page after that.</i></div><div><span>Checking an existing translation</span><b>฿500</b><i>Up to 5 pages; ฿150 a page after that.</i></div><div><span>Stamp</span><b>฿100</b><i>A page.</i></div><div><span>Interpreting</span><b>Quote</b><i>In writing, by the hour and the place.</i></div></div>
+  </section>
+
+  <section>
     <h2>The stamp</h2>
     <div class="stamp">
       <img src="/assets/stamp/hongdam-translation-stamp-red.svg" alt="Round Hongdam translation stamp with blanks for the date and the translator&#x27;s name, and a QR code." width="300" height="300" loading="lazy">
@@ -115,11 +125,11 @@
 
   <section>
     <h2>How it works</h2>
-    <div class="steps"><div><b>Photos</b><p>A photo or a scan of each page. A phone photo works when every line can be read.</p></div><div><b>Price</b><p>In writing, for the pages, the words or the hours, before any work starts.</p></div><div><b>Delivery</b><p>A PDF by email or LINE, and as stamped paper if you ask for it.</p></div></div>
+    <div class="steps"><div><b>Photos</b><p>A photo or a scan of each page. A phone photo works when every line can be read.</p></div><div><b>Price</b><p>From the table above, in writing before any work starts. Interpreting by quote.</p></div><div><b>Delivery</b><p>A PDF by email or LINE, and as stamped paper if you ask for it.</p></div></div>
   </section>
 
   <section id="quote">
-    <h2>Price</h2>
+    <h2>Contact</h2>
     <form id="f" action="/api/contact" method="post" novalidate>
       <div class="row">
         <label>Name<input name="name" type="text" autocomplete="name" maxlength="120"></label>
@@ -130,7 +140,7 @@
         <label>Into<select name="to"><option>English</option><option>Thai</option><option>Burmese</option></select></label>
       </div>
       <div class="row">
-        <label>What it is<select name="kind"><option>Papers</option><option>Business text</option><option>Interpreting</option><option>Something else</option></select></label>
+        <label>What it is<select name="kind"><option>Papers</option><option>Checking a translation</option><option>Business text</option><option>Interpreting</option><option>Something else</option></select></label>
         <label>Pages, words or hours<input name="size" type="text" maxlength="80" placeholder="For example: 3 pages"></label>
       </div>
       <label>Anything else<textarea name="notes" maxlength="3000" placeholder="What the papers are for, and the date you need them."></textarea></label>

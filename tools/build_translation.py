@@ -59,12 +59,12 @@ W = {
         "how_h": "How it works",
         "how": [
             ("Photos", "A photo or a scan of each page. A phone photo works when every line can be read."),
-            ("Price", "In writing, for the pages, the words or the hours, before any work starts."),
+            ("Price", "From the table above, in writing before any work starts. Interpreting by quote."),
             ("Delivery", "A PDF by email or LINE, and as stamped paper if you ask for it."),
         ],
-        "form_h": "Price",
+        "form_h": "Contact",
         "f_name": "Name", "f_email": "Email", "f_from": "From", "f_to": "Into",
-        "f_kind": "What it is", "f_kinds": ["Papers", "Business text", "Interpreting", "Something else"],
+        "f_kind": "What it is", "f_kinds": ["Papers", "Checking a translation", "Business text", "Interpreting", "Something else"],
         "f_pages": "Pages, words or hours", "f_pages_ph": "For example: 3 pages",
         "f_msg": "Anything else", "f_msg_ph": "What the papers are for, and the date you need them.",
         "f_send": "Send", "f_hp": "Leave this empty",
@@ -113,12 +113,12 @@ W = {
         "how_h": "ขั้นตอน",
         "how": [
             ("รูปถ่าย", "รูปถ่ายหรือสแกนทุกหน้า รูปจากโทรศัพท์ใช้ได้ถ้าอ่านออกทุกบรรทัด"),
-            ("ราคา", "เป็นลายลักษณ์อักษร ตามจำนวนหน้า คำ หรือชั่วโมง ก่อนเริ่มงาน"),
+            ("ราคา", "ตามตารางด้านบน เป็นลายลักษณ์อักษรก่อนเริ่มงาน ล่ามคิดตามใบเสนอราคา"),
             ("ส่งคืน", "เป็น PDF ทางอีเมลหรือ LINE และฉบับกระดาษประทับตราถ้าต้องการ"),
         ],
-        "form_h": "ราคา",
+        "form_h": "ติดต่อ",
         "f_name": "ชื่อ", "f_email": "อีเมล", "f_from": "จากภาษา", "f_to": "เป็นภาษา",
-        "f_kind": "งานแบบไหน", "f_kinds": ["เอกสาร", "ข้อความธุรกิจ", "ล่าม", "อื่น ๆ"],
+        "f_kind": "งานแบบไหน", "f_kinds": ["เอกสาร", "ตรวจงานแปล", "ข้อความธุรกิจ", "ล่าม", "อื่น ๆ"],
         "f_pages": "จำนวนหน้า คำ หรือชั่วโมง", "f_pages_ph": "เช่น 3 หน้า",
         "f_msg": "รายละเอียดอื่น", "f_msg_ph": "เอกสารใช้ทำอะไร และต้องการวันไหน",
         "f_send": "ส่ง", "f_hp": "เว้นว่างช่องนี้",
@@ -167,12 +167,12 @@ W = {
         "how_h": "လုပ်ပုံ",
         "how": [
             ("ဓာတ်ပုံ", "စာမျက်နှာတိုင်း၏ ဓာတ်ပုံ သို့မဟုတ် စကင်ဖိုင်။ စာကြောင်းတိုင်း ဖတ်၍ရလျှင် ဖုန်းဓာတ်ပုံဖြင့် ရပါသည်။"),
-            ("စျေးနှုန်း", "စာဖြင့်၊ စာမျက်နှာ၊ စာလုံး သို့မဟုတ် နာရီအလိုက်၊ အလုပ်မစမီ။"),
+            ("စျေးနှုန်း", "အထက်ပါ ဇယားအတိုင်း၊ အလုပ်မစမီ စာဖြင့်။ စကားပြန်ကို သီးခြား စျေးနှုန်းပေးပါသည်။"),
             ("ပြန်ပို့ခြင်း", "အီးမေးလ် သို့မဟုတ် LINE ဖြင့် PDF၊ တောင်းဆိုပါက တံဆိပ်တုံးထားသော စာရွက်မူ။"),
         ],
-        "form_h": "စျေးနှုန်း",
+        "form_h": "ဆက်သွယ်ရန်",
         "f_name": "အမည်", "f_email": "အီးမေးလ်", "f_from": "မူရင်းဘာသာ", "f_to": "ပြန်လိုသည့်ဘာသာ",
-        "f_kind": "အမျိုးအစား", "f_kinds": ["စာရွက်စာတမ်း", "လုပ်ငန်းသုံးစာ", "စကားပြန်", "အခြား"],
+        "f_kind": "အမျိုးအစား", "f_kinds": ["စာရွက်စာတမ်း", "ဘာသာပြန် စစ်ဆေးခြင်း", "လုပ်ငန်းသုံးစာ", "စကားပြန်", "အခြား"],
         "f_pages": "စာမျက်နှာ၊ စာလုံး သို့မဟုတ် နာရီ", "f_pages_ph": "ဥပမာ - ၃ မျက်နှာ",
         "f_msg": "အခြားအချက်များ", "f_msg_ph": "စာရွက်များကို ဘာအတွက် သုံးမည်နှင့် မည်သည့်ရက်တွင် လိုအပ်သည်။",
         "f_send": "ပို့မည်", "f_hp": "ဤနေရာကို ဗလာထားပါ",
@@ -181,6 +181,23 @@ W = {
         "s_ok": "ပို့ပြီးပါပြီ။ စျေးနှုန်းကို ထိုအီးမေးလ်သို့ ပြန်ပို့ပါမည်။", "s_err": "ယခု မပို့နိုင်ပါ။ nan@motdang.net သို့ အီးမေးလ် ပို့ပါ။",
         "or_mail": "သို့မဟုတ် အီးမေးလ်", "home": "hongdam.net",
     },
+}
+
+
+PRICE_H = {"en": "Prices", "th": "ราคา", "my": "စျေးနှုန်း"}
+PRICES = {
+    "en": [("New translation", "฿1,500", "Up to 5 pages; ฿500 a page after that."),
+           ("Checking an existing translation", "฿500", "Up to 5 pages; ฿150 a page after that."),
+           ("Stamp", "฿100", "A page."),
+           ("Interpreting", "Quote", "In writing, by the hour and the place.")],
+    "th": [("แปลใหม่", "฿1,500", "ไม่เกิน 5 หน้า หน้าต่อไปหน้าละ ฿500"),
+           ("ตรวจงานแปลที่มีอยู่", "฿500", "ไม่เกิน 5 หน้า หน้าต่อไปหน้าละ ฿150"),
+           ("ตราประทับ", "฿100", "ต่อหน้า"),
+           ("ล่าม", "ใบเสนอราคา", "เป็นลายลักษณ์อักษร ตามชั่วโมงและสถานที่")],
+    "my": [("ဘာသာပြန်အသစ်", "฿1,500", "၅ မျက်နှာအထိ၊ ထို့နောက် တစ်မျက်နှာလျှင် ฿500။"),
+           ("ရှိပြီးသား ဘာသာပြန်ကို စစ်ဆေးခြင်း", "฿500", "၅ မျက်နှာအထိ၊ ထို့နောက် တစ်မျက်နှာလျှင် ฿150။"),
+           ("တံဆိပ်", "฿100", "တစ်မျက်နှာလျှင်။"),
+           ("စကားပြန်", "စျေးနှုန်း", "နာရီနှင့် နေရာအလိုက် စာဖြင့်။")],
 }
 
 CSS = """
@@ -192,6 +209,11 @@ CSS = """
   h2{margin-bottom:16px}
   .pairs{display:flex; flex-wrap:wrap; gap:12px}
   .pairs span{background:var(--lacquer-2); border:1px solid var(--line); border-radius:10px; padding:12px 18px; font-size:20px; color:var(--gold)}
+  .prices{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; max-width:860px}
+  .prices div{background:var(--lacquer-2); border:1px solid var(--line); border-radius:12px; padding:18px}
+  .prices span{display:block; color:var(--cream); font-size:16px}
+  .prices b{display:block; font-family:Georgia,serif; font-size:30px; color:var(--gold); margin:4px 0}
+  .prices i{font-style:normal; color:var(--cream-dim); font-size:15px}
   .note{margin-top:14px; max-width:62ch; color:var(--cream-dim); font-size:16px}
   .cols{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px}
   .col{background:var(--lacquer-2); border:1px solid var(--line); border-radius:12px; padding:20px}
@@ -232,6 +254,7 @@ def page(lang):
         for k, n in SWITCH)
     lis = lambda xs: "".join(f"<li>{e(x)}</li>" for x in xs)
     opts = lambda xs: "".join(f"<option>{e(x)}</option>" for x in xs)
+    prices = "".join(f"<div><span>{e(a)}</span><b>{e(b)}</b><i>{e(c)}</i></div>" for a, b, c in PRICES[lang])
     steps = "".join(f"<div><b>{e(h)}</b><p>{e(p)}</p></div>" for h, p in t["how"])
     pairs = "".join(f"<span>{e(p)}</span>" for p in t["pairs"])
     msgs = {k: t[k] for k in ("s_need", "s_sending", "s_ok", "s_err")}
@@ -296,6 +319,11 @@ def page(lang):
     <div class="col"><h2>{e(t["papers_h"])}</h2><ul>{lis(t["papers"])}</ul></div>
     <div class="col"><h2>{e(t["biz_h"])}</h2><ul>{lis(t["biz"])}</ul></div>
     <div class="col"><h2>{e(t["talk_h"])}</h2><ul>{lis(t["talk"])}</ul></div>
+  </section>
+
+  <section>
+    <h2>{e(PRICE_H[lang])}</h2>
+    <div class="prices">{prices}</div>
   </section>
 
   <section>

@@ -29,6 +29,11 @@
   h2{margin-bottom:16px}
   .pairs{display:flex; flex-wrap:wrap; gap:12px}
   .pairs span{background:var(--lacquer-2); border:1px solid var(--line); border-radius:10px; padding:12px 18px; font-size:20px; color:var(--gold)}
+  .prices{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; max-width:860px}
+  .prices div{background:var(--lacquer-2); border:1px solid var(--line); border-radius:12px; padding:18px}
+  .prices span{display:block; color:var(--cream); font-size:16px}
+  .prices b{display:block; font-family:Georgia,serif; font-size:30px; color:var(--gold); margin:4px 0}
+  .prices i{font-style:normal; color:var(--cream-dim); font-size:15px}
   .note{margin-top:14px; max-width:62ch; color:var(--cream-dim); font-size:16px}
   .cols{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px}
   .col{background:var(--lacquer-2); border:1px solid var(--line); border-radius:12px; padding:20px}
@@ -106,6 +111,11 @@
   </section>
 
   <section>
+    <h2>ราคา</h2>
+    <div class="prices"><div><span>แปลใหม่</span><b>฿1,500</b><i>ไม่เกิน 5 หน้า หน้าต่อไปหน้าละ ฿500</i></div><div><span>ตรวจงานแปลที่มีอยู่</span><b>฿500</b><i>ไม่เกิน 5 หน้า หน้าต่อไปหน้าละ ฿150</i></div><div><span>ตราประทับ</span><b>฿100</b><i>ต่อหน้า</i></div><div><span>ล่าม</span><b>ใบเสนอราคา</b><i>เป็นลายลักษณ์อักษร ตามชั่วโมงและสถานที่</i></div></div>
+  </section>
+
+  <section>
     <h2>ตราประทับ</h2>
     <div class="stamp">
       <img src="/assets/stamp/hongdam-translation-stamp-red.svg" alt="ตราประทับงานแปลหงส์ดำ ทรงกลม มีช่องวันที่และชื่อผู้แปล และคิวอาร์โค้ด" width="300" height="300" loading="lazy">
@@ -115,11 +125,11 @@
 
   <section>
     <h2>ขั้นตอน</h2>
-    <div class="steps"><div><b>รูปถ่าย</b><p>รูปถ่ายหรือสแกนทุกหน้า รูปจากโทรศัพท์ใช้ได้ถ้าอ่านออกทุกบรรทัด</p></div><div><b>ราคา</b><p>เป็นลายลักษณ์อักษร ตามจำนวนหน้า คำ หรือชั่วโมง ก่อนเริ่มงาน</p></div><div><b>ส่งคืน</b><p>เป็น PDF ทางอีเมลหรือ LINE และฉบับกระดาษประทับตราถ้าต้องการ</p></div></div>
+    <div class="steps"><div><b>รูปถ่าย</b><p>รูปถ่ายหรือสแกนทุกหน้า รูปจากโทรศัพท์ใช้ได้ถ้าอ่านออกทุกบรรทัด</p></div><div><b>ราคา</b><p>ตามตารางด้านบน เป็นลายลักษณ์อักษรก่อนเริ่มงาน ล่ามคิดตามใบเสนอราคา</p></div><div><b>ส่งคืน</b><p>เป็น PDF ทางอีเมลหรือ LINE และฉบับกระดาษประทับตราถ้าต้องการ</p></div></div>
   </section>
 
   <section id="quote">
-    <h2>ราคา</h2>
+    <h2>ติดต่อ</h2>
     <form id="f" action="/api/contact" method="post" novalidate>
       <div class="row">
         <label>ชื่อ<input name="name" type="text" autocomplete="name" maxlength="120"></label>
@@ -130,7 +140,7 @@
         <label>เป็นภาษา<select name="to"><option>อังกฤษ</option><option>ไทย</option><option>พม่า</option></select></label>
       </div>
       <div class="row">
-        <label>งานแบบไหน<select name="kind"><option>เอกสาร</option><option>ข้อความธุรกิจ</option><option>ล่าม</option><option>อื่น ๆ</option></select></label>
+        <label>งานแบบไหน<select name="kind"><option>เอกสาร</option><option>ตรวจงานแปล</option><option>ข้อความธุรกิจ</option><option>ล่าม</option><option>อื่น ๆ</option></select></label>
         <label>จำนวนหน้า คำ หรือชั่วโมง<input name="size" type="text" maxlength="80" placeholder="เช่น 3 หน้า"></label>
       </div>
       <label>รายละเอียดอื่น<textarea name="notes" maxlength="3000" placeholder="เอกสารใช้ทำอะไร และต้องการวันไหน"></textarea></label>

@@ -29,6 +29,11 @@
   h2{margin-bottom:16px}
   .pairs{display:flex; flex-wrap:wrap; gap:12px}
   .pairs span{background:var(--lacquer-2); border:1px solid var(--line); border-radius:10px; padding:12px 18px; font-size:20px; color:var(--gold)}
+  .prices{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; max-width:860px}
+  .prices div{background:var(--lacquer-2); border:1px solid var(--line); border-radius:12px; padding:18px}
+  .prices span{display:block; color:var(--cream); font-size:16px}
+  .prices b{display:block; font-family:Georgia,serif; font-size:30px; color:var(--gold); margin:4px 0}
+  .prices i{font-style:normal; color:var(--cream-dim); font-size:15px}
   .note{margin-top:14px; max-width:62ch; color:var(--cream-dim); font-size:16px}
   .cols{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px}
   .col{background:var(--lacquer-2); border:1px solid var(--line); border-radius:12px; padding:20px}
@@ -106,6 +111,11 @@
   </section>
 
   <section>
+    <h2>စျေးနှုန်း</h2>
+    <div class="prices"><div><span>ဘာသာပြန်အသစ်</span><b>฿1,500</b><i>၅ မျက်နှာအထိ၊ ထို့နောက် တစ်မျက်နှာလျှင် ฿500။</i></div><div><span>ရှိပြီးသား ဘာသာပြန်ကို စစ်ဆေးခြင်း</span><b>฿500</b><i>၅ မျက်နှာအထိ၊ ထို့နောက် တစ်မျက်နှာလျှင် ฿150။</i></div><div><span>တံဆိပ်</span><b>฿100</b><i>တစ်မျက်နှာလျှင်။</i></div><div><span>စကားပြန်</span><b>စျေးနှုန်း</b><i>နာရီနှင့် နေရာအလိုက် စာဖြင့်။</i></div></div>
+  </section>
+
+  <section>
     <h2>တံဆိပ်</h2>
     <div class="stamp">
       <img src="/assets/stamp/hongdam-translation-stamp-red.svg" alt="Hongdam ဘာသာပြန် တံဆိပ်ဝိုင်း၊ ရက်စွဲနှင့် ဘာသာပြန်သူအမည် ကွက်လပ်များနှင့် QR ကုဒ်။" width="300" height="300" loading="lazy">
@@ -115,11 +125,11 @@
 
   <section>
     <h2>လုပ်ပုံ</h2>
-    <div class="steps"><div><b>ဓာတ်ပုံ</b><p>စာမျက်နှာတိုင်း၏ ဓာတ်ပုံ သို့မဟုတ် စကင်ဖိုင်။ စာကြောင်းတိုင်း ဖတ်၍ရလျှင် ဖုန်းဓာတ်ပုံဖြင့် ရပါသည်။</p></div><div><b>စျေးနှုန်း</b><p>စာဖြင့်၊ စာမျက်နှာ၊ စာလုံး သို့မဟုတ် နာရီအလိုက်၊ အလုပ်မစမီ။</p></div><div><b>ပြန်ပို့ခြင်း</b><p>အီးမေးလ် သို့မဟုတ် LINE ဖြင့် PDF၊ တောင်းဆိုပါက တံဆိပ်တုံးထားသော စာရွက်မူ။</p></div></div>
+    <div class="steps"><div><b>ဓာတ်ပုံ</b><p>စာမျက်နှာတိုင်း၏ ဓာတ်ပုံ သို့မဟုတ် စကင်ဖိုင်။ စာကြောင်းတိုင်း ဖတ်၍ရလျှင် ဖုန်းဓာတ်ပုံဖြင့် ရပါသည်။</p></div><div><b>စျေးနှုန်း</b><p>အထက်ပါ ဇယားအတိုင်း၊ အလုပ်မစမီ စာဖြင့်။ စကားပြန်ကို သီးခြား စျေးနှုန်းပေးပါသည်။</p></div><div><b>ပြန်ပို့ခြင်း</b><p>အီးမေးလ် သို့မဟုတ် LINE ဖြင့် PDF၊ တောင်းဆိုပါက တံဆိပ်တုံးထားသော စာရွက်မူ။</p></div></div>
   </section>
 
   <section id="quote">
-    <h2>စျေးနှုန်း</h2>
+    <h2>ဆက်သွယ်ရန်</h2>
     <form id="f" action="/api/contact" method="post" novalidate>
       <div class="row">
         <label>အမည်<input name="name" type="text" autocomplete="name" maxlength="120"></label>
@@ -130,7 +140,7 @@
         <label>ပြန်လိုသည့်ဘာသာ<select name="to"><option>အင်္ဂလိပ်</option><option>ထိုင်း</option><option>မြန်မာ</option></select></label>
       </div>
       <div class="row">
-        <label>အမျိုးအစား<select name="kind"><option>စာရွက်စာတမ်း</option><option>လုပ်ငန်းသုံးစာ</option><option>စကားပြန်</option><option>အခြား</option></select></label>
+        <label>အမျိုးအစား<select name="kind"><option>စာရွက်စာတမ်း</option><option>ဘာသာပြန် စစ်ဆေးခြင်း</option><option>လုပ်ငန်းသုံးစာ</option><option>စကားပြန်</option><option>အခြား</option></select></label>
         <label>စာမျက်နှာ၊ စာလုံး သို့မဟုတ် နာရီ<input name="size" type="text" maxlength="80" placeholder="ဥပမာ - ၃ မျက်နှာ"></label>
       </div>
       <label>အခြားအချက်များ<textarea name="notes" maxlength="3000" placeholder="စာရွက်များကို ဘာအတွက် သုံးမည်နှင့် မည်သည့်ရက်တွင် လိုအပ်သည်။"></textarea></label>
