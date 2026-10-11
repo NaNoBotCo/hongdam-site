@@ -624,7 +624,7 @@
       "url": "https://ask.motdang.net/",
       "shot": "askmotdang",
       "chrome": "ask.motdang.net",
-      "body": "A reader's assistant sitting on the city directory. Ask in Thai or English — it answers from the directory's own pages and links the one it used.",
+      "body": "A reader's assistant sitting on the city directory. It takes Thai or English, answers from the directory's own pages and links the one it used.",
       "facts": [
         {
           "text": "ไทย + EN"
@@ -1013,7 +1013,7 @@
     "head": "And the workshop behind it",
     "th": "และโรงงานเบื้องหลัง",
     "sub": "The addresses above stand on a bench of smaller tools — written, used daily, and kept running. A sampling:",
-    "note": "Source code moves between forges as platforms come and go. Ask for the current mirror of anything here; the live addresses above are the ones to bookmark.",
+    "note": "Source code moves between forges as platforms come and go. The live addresses above are the canonical ones; the current mirror of anything here is available on request.",
     "groups": [
       {
         "title": "Crawlers & pipelines",

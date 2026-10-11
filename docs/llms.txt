@@ -41,6 +41,11 @@ libraries or external requests:
 - Data pipelines and crawlers (scattered real-world data into searchable catalogs)
 - Static-first builds: assembled at build time, served as files, cheap to host
   and portable to any server a domain can point at
+- Translation and interpreting between Thai, English and Burmese: papers, business
+  text, and interpreting in person in Chiang Rai and Chiang Mai or by phone and video.
+  https://hongdam.net/translation/ · /translation/th/ · /translation/my/
+  New translation ฿1,500 up to 5 pages, then ฿500 a page; checking an existing
+  translation ฿500 up to 5 pages, then ฿150 a page; stamp ฿100 a page.
 
 ## The work
 
@@ -54,11 +59,11 @@ same pages.
 
 Every frame is a screenshot of the production page, taken for this build. Click through — they are all open.
 
-- https://motdang.net/ — Mot Dang มดแดง · สารบัญเมืองเชียงใหม่–เชียงราย: A Thai-first city directory for Chiang Mai and Chiang Rai — places, hours, phones, pins, shelves and answer pages. The crawlers run every morning and the page says where each field came from. — 88,313 place records; 86,080 pages
-- https://wichaa.net/ — wichaa วิชา · หอความรู้ล้านนาที่ยังมีชีวิต: Lanna manuscripts from the northern libraries, with their page images, read in three scripts — palm leaf carried to a phone screen. The amulet market, the temple atlas and the instruments below all live inside it. — 6,986 manuscripts; 120,178 page images; 17,022 pages
+- https://motdang.net/ — Mot Dang มดแดง · สารบัญเมืองเชียงใหม่–เชียงราย: A Thai-first city directory for Chiang Mai and Chiang Rai — places, hours, phones, pins, shelves and answer pages. The crawlers run every morning and the page says where each field came from. — 88,996 place records; 88,472 pages
+- https://wichaa.net/ — wichaa วิชา · หอความรู้ล้านนาที่ยังมีชีวิต: Lanna manuscripts from the northern libraries, with their page images, read in three scripts — palm leaf carried to a phone screen. The amulet market, the temple atlas and the instruments below all live inside it. — 6,986 manuscripts; 120,178 page images; 9,920 pages
 - https://defiant.to/ — Defiant คู่มือผู้ป่วยข้ามพรมแดน: Medical and dental care in Chiang Mai with the price posted before you commit, a professional translator at the appointment, and a flat concierge fee that does not scale with the bill. — 147 pages
 - https://hakfarang.net/ — Hak Farang ฮักฝรั่ง · พี่สาวที่ผ่านมาก่อน: Money, visas, travel and life with a farang partner, written in Thai for the women living it — by the older sister who went first.
-- https://offrampt.net/ — Offrampt เปลี่ยนคริปโตเป็นเงินใช้ในไทย: Turning crypto into spendable local money without a local bank account. Thailand first: the routes, the cards, the fees, and what each one costs to use. — 9 pages
+- https://offrampt.net/ — Offrampt เปลี่ยนคริปโตเป็นเงินใช้ในไทย: Turning crypto into spendable local money without a local bank account. Thailand first: the routes, the cards, the fees, and what each one costs to use. — 30 pages
 - https://poplucky.net/ — Poplucky ป๊อปลัคกี้ · สารบบกล่องสุ่ม: Every blind box, catalogued in the words collectors use — characters, series, and what a shelf is missing.
 - https://nan.wichaa.net/ — The portal ประตูรวมทุกงาน: One door onto the whole constellation — platforms, directories, apps and instruments, on a page drawn fresh each visit.
 - https://chiangmaivisadesk.com/ — Chiang Mai Visa Desk ใบอนุญาตทำงาน จดทะเบียนบริษัท และวีซ่า: A visa and work-permit desk for Chiang Mai, in English and Thai: work permits, Thai company registration, retirement extensions, 90-day reports and escorted border runs, each quoted in writing. A second book prepares US visa files for Thai nationals, and the site licenses to agencies in other provinces.
@@ -67,7 +72,7 @@ Every frame is a screenshot of the production page, taken for this build. Click 
 
 One toolchain: harvest, cite, publish a map, an API and a plain-text copy for machines. Point it at a new subject and a directory comes out.
 
-- https://nanobotco.github.io/amulet-atlas/ — Amulet Atlas แผนที่เครื่องรางทั่วโลก: Amulets, charms and talismans worldwide, by tradition and by place — from the Girsu foundation pegs of about 2130 BCE forward. The global companion to the Thai catalogue. — 286 entries; 310 pages
+- https://nanobotco.github.io/amulet-atlas/ — Amulet Atlas แผนที่เครื่องรางทั่วโลก: Amulets, charms and talismans worldwide, by tradition and by place — from the Girsu foundation pegs of about 2130 BCE forward. The global companion to the Thai catalogue. — 286 entries; 606 pages
 - https://nanobotco.github.io/care-abroad/ — Care Abroad รักษาข้ามพรมแดน · ราคาที่ประกาศไว้: Who goes where for treatment, what it costs, what the law says, and who checked. A price carries the date it was published; a legality reading carries its statute. — 342 records; 56 countries; 244 published prices
 - https://nanobotco.github.io/mae-hong-son-loop/ — The Mae Hong Son Loop วงรอบแม่ฮ่องสอน: 600 km of mountain road out of Chiang Mai, with the curves counted off the geometry rather than repeated from a brochure — and everything worth stopping for along the way. — 1,864 curves; 110 hairpins; 109 records
 - https://wichaa.net/handpoke/ — Hand Poke สักด้วยมือ: Traditions of marking skin by hand: who is marked, who does the marking, and where on the body. Five sources put the leg tattoo of Burma, the Shan States and Lanna in the same zone — and none of them had read the others. — 28 traditions; 42 countries; 130 records
@@ -77,7 +82,7 @@ One toolchain: harvest, cite, publish a map, an API and a plain-text copy for ma
 - https://nanobotco.github.io/pink-box/ — Pink Box โดนัทร้านเล็กทั่วอเมริกา: The American mom-and-pop donut shop — cake against raised, what else is in the case, and the chains told apart from the independents. The counts page shows the split. — 10,686 shops; 156 pages
 - https://nanobotco.github.io/pinot-noir/ — Pinot Country ไร่องุ่นปีโนต์นัวร์: One thin-skinned grape, the ground it answers to, and the cellars that work it — with every AVA boundary date read off 27 CFR part 9 rather than a wine list. — 3,055 cellars; 34 regions
 - https://nanobotco.github.io/basque-tables/ — Basque Tables โต๊ะอาหารบาสก์: The Basque dining rooms of California, Nevada and Idaho — where the house sits you, what dinner runs to, which nights the door opens, and whether the bar makes a Picon. In English and Basque. — 29 dining rooms
-- https://wichaa.net/amulets — Amulet Essentials สารบบเครื่องราง: The kinds of sacred object, as data — each with the market listings behind it, a price chart, and pictures anyone may reuse. — 82 kinds; 683 free-to-use pictures; 17,473 market listings read
+- https://wichaa.net/amulets — Amulet Essentials สารบบเครื่องราง: The kinds of sacred object, as data — each with the market listings behind it, a price chart, and pictures anyone may reuse. — 82 kinds; 683 free-to-use pictures; 17,486 market listings read
 - https://motdang.net/roads/ — Roads of Chiang Mai ถนนเชียงใหม่: The square of 1296, four rings around it and the roads between, and what each one did to the city. Counted from the map, dated from the record. — 6,934 km of road; 31,668 intersections
 - https://motdang.net/ghost/ — Ghost Chiang Mai ผีเจียงใหม่: A self-guided tour of the city's dead, on foot, by bicycle, by scooter or with a driver: a ghost story at each stop and the merit act that goes with it. — 24 stops; 53 sources named
 - https://nanobotco.github.io/pike-place-market/ — Pike Place Market ตลาดไพค์เพลส · ซีแอตเทิล: Every licensed business inside Seattle's Pike Place Market Historical District, the date each started trading, and a map drawn from open data. — 153 licensed businesses; 12.827 acres
@@ -87,7 +92,7 @@ One toolchain: harvest, cite, publish a map, an API and a plain-text copy for ma
 Open the address on a phone, add it to the home screen, and it runs from there like anything else on it.
 
 - https://nanobotco.github.io/scanner/ — Scanner เครื่องสแกนในเบราว์เซอร์: Photograph a page; it finds the sheet, straightens it, flattens the light so the paper reads white, and writes a PDF. Sign with a finger on the glass — a saved signature is encrypted under a PIN, or under the fingerprint sensor where the phone offers it.
-- https://ask.motdang.net/ — Ask Mot Dang คุยกับมด: A reader's assistant sitting on the city directory. Ask in Thai or English — it answers from the directory's own pages and links the one it used.
+- https://ask.motdang.net/ — Ask Mot Dang คุยกับมด: A reader's assistant sitting on the city directory. It takes Thai or English, answers from the directory's own pages and links the one it used.
 - https://ai.motdang.net/ — White-label assistants ผู้ช่วยติดแบรนด์ รายที่นั่ง: The same assistant, rebuilt as a product: one tenant, its own corpus, its own front door, sold by the seat. Ask Mot Dang is tenant number one.
 - https://motdang.net/mail — The send page ส่งเมลจากมือถือ: Four people send mail from their own address on a phone, without a mail client. The passphrase is the identity.
 - https://nanobotco.github.io/thairoots/ — Thai Roots รากศัพท์: A Thai dictionary read by root, in the Hans Wehr manner — Pali and Sanskrit roots, native morpheme families, sound-change keys and a decomposer that takes a word apart. The whole dictionary is on the phone.
