@@ -33,9 +33,10 @@ export async function checkSlip(env, file, baht, fetcher = fetch) {
 }
 
 async function mail(env, subject, text) {
-  if (!env.RESEND_API_KEY || !env.PAY_MAIL_TO || !env.PAY_MAIL_FROM) return
+  const key = env.RESEND_API_KEY || env.RESEND_KEY
+  if (!key || !env.PAY_MAIL_TO || !env.PAY_MAIL_FROM) return
   await fetch('https://api.resend.com/emails', {
-    method: 'POST', headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'content-type': 'application/json' },
+    method: 'POST', headers: { Authorization: `Bearer ${key}`, 'content-type': 'application/json' },
     body: JSON.stringify({ from: env.PAY_MAIL_FROM, to: env.PAY_MAIL_TO.split(','), subject, text }) }).catch(() => {})
 }
 
