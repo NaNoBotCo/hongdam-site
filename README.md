@@ -3,12 +3,14 @@
 Web dev studio site for Hongdam, Chiang Rai. Single static page, no build step —
 `docs/index.html` is the whole site, GitHub-Pages-ready (`.nojekyll` + `CNAME` included).
 
-## Status: draft, not published
+## Publishing
 
-Built per Nan's instructions on 2026-07-30. Content is drafted from Nan's own live
-projects, framed as a **partnership** rather than sole ownership, since the IP
-transfer to Hongdam isn't final yet. Update the "How we work" section once that
-changes.
+Live at https://hongdam.net (Cloudflare Pages project `hongdam`). A merge to `main`
+in github.com/motdang/hongdam-site goes live within about five minutes:
+motdang-server runs `/srv/site-deploy/deploy_on_merge.sh` every five minutes and
+deploys `docs/` and `functions/`. Ledger: `/srv/state/site-deploy.tsv` on the server.
+Roll back by reverting the commit on `main`, or in the Cloudflare dashboard.
+Bindings and secrets (`AI`, `RT_LIMIT`, Resend) live on the Pages project, not here.
 
 ## What's in this build (v2, expanded per Nan's request)
 
