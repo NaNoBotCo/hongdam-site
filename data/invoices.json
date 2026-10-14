@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "rtp-002-1f629c8c",
+    "number": "RTP-002",
+    "issued": "14 October 2026",
+    "due": "28 October 2026",
+    "bill_to": ["Red Team Partners Ltd", "Company no. 09923929, London", "Attn: Zia Bharwani"],
+    "items": [
+      {"name": "Cyber Security Awards prospects: Product + Leader",
+       "detail": "401 prospects (202 Leader, 199 Product) at US$2 a line. Delivered 7 Oct 2026.",
+       "amount": 802},
+      {"name": "RTP batch 2",
+       "detail": "100 named decision-makers. Delivered 10 Oct 2026.",
+       "amount": 0}
+    ],
+    "notes": [
+      "Once this is paid, one more revision round on Product and Leader is included.",
+      "Thank you for paying RTP-001 (US$50, 30 Sep 2026)."
+    ],
+    "lightning": ""
+  }
+]
