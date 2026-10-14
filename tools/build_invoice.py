@@ -37,8 +37,8 @@ def page(inv):
         for i in inv["items"])
     bill = "<br>".join(e(l) for l in inv["bill_to"])
     notes = "".join(f"<p>{e(n)}</p>" for n in inv.get("notes", []))
-    whole = int(total) if total == int(total) else total
-    ways = [f'<a class="pay" href="{PAYPAL}/{whole}USD" target="_blank" rel="noopener">Pay {money(total)} with PayPal</a>']
+    ways = [f'<div class="way first"><a class="pay" href="{PAYPAL}" target="_blank" rel="noopener">Pay with PayPal</a>'
+            f'<p>Enter {money(total)} and reference <code>{e(inv["number"])}</code>.</p></div>']
     ln = inv.get("lightning")
     if ln:
         ways.append(
@@ -78,7 +78,9 @@ def page(inv):
   .pay{{display:inline-block; background:var(--gold); color:#000; font-weight:700; border-radius:10px; padding:14px 22px; margin:18px 0 6px; font-size:19px}}
   .pay:hover{{color:#000; background:var(--cream)}}
   .pay.alt{{font-size:16px; padding:10px 16px}}
+  .inv section{{margin-top:34px}}
   .way{{border-top:1px solid var(--line); padding:18px 0}}
+  .way.first{{border-top:0; padding-top:0}}
   .way h3{{font-size:18px; color:var(--cream)}}
   .way p{{color:var(--cream-dim); font-size:16px}}
   .qr svg{{width:150px; height:150px; margin:10px 0; border-radius:6px}}
