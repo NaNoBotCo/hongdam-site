@@ -1,0 +1,4066 @@
+{
+ "name": "Hongdam task graph",
+ "ladder_baht": [
+  0.1,
+  0.25,
+  0.5,
+  1,
+  2,
+  3,
+  5,
+  10,
+  20,
+  30,
+  50,
+  100,
+  200,
+  300,
+  500,
+  1000,
+  1500,
+  2000,
+  3000,
+  5000,
+  10000,
+  20000,
+  30000,
+  50000,
+  100000,
+  200000
+ ],
+ "grows": "POST https://hongdam.net/api/tasks with a category the graph lacks; new names are listed at /api/tasks/new",
+ "nodes": [
+  {
+   "id": "motdang",
+   "type": "org",
+   "en": "Mot Dang",
+   "th": "มดแดง",
+   "href": "https://motdang.net/"
+  },
+  {
+   "id": "hongdam",
+   "type": "org",
+   "en": "Hongdam",
+   "th": "หงส์ดำ",
+   "href": "https://hongdam.net/"
+  },
+  {
+   "id": "cmvd",
+   "type": "org",
+   "en": "Chiang Mai Visa Desk",
+   "th": "โต๊ะวีซ่าเชียงใหม่",
+   "href": "https://chiangmaivisadesk.com/"
+  },
+  {
+   "id": "both",
+   "type": "worker",
+   "en": "both"
+  },
+  {
+   "id": "human",
+   "type": "worker",
+   "en": "human"
+  },
+  {
+   "id": "robot",
+   "type": "worker",
+   "en": "robot"
+  },
+  {
+   "id": "visa",
+   "type": "group",
+   "en": "Visas and immigration",
+   "th": "วีซ่าและตรวจคนเข้าเมือง",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/visa"
+  },
+  {
+   "id": "visa-workpermit",
+   "type": "category",
+   "en": "Work permit and Non-B visa",
+   "th": "ใบอนุญาตทำงานและวีซ่า Non-B",
+   "price": {
+    "quote": true
+   },
+   "href": "https://chiangmaivisadesk.com/",
+   "page": "https://hongdam.net/tasks/c/visa-workpermit"
+  },
+  {
+   "id": "visa-retire",
+   "type": "category",
+   "en": "Retirement visa, Non-O and O-A",
+   "th": "วีซ่าเกษียณ Non-O และ O-A",
+   "price": {
+    "quote": true
+   },
+   "href": "https://chiangmaivisadesk.com/",
+   "page": "https://hongdam.net/tasks/c/visa-retire"
+  },
+  {
+   "id": "visa-extend",
+   "type": "category",
+   "en": "Extension of stay",
+   "th": "ต่ออายุการพำนัก",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/visa-extend"
+  },
+  {
+   "id": "visa-90day",
+   "type": "category",
+   "en": "90-day report",
+   "th": "รายงานตัว 90 วัน",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/visa-90day"
+  },
+  {
+   "id": "visa-tm30",
+   "type": "category",
+   "en": "TM30 address notice",
+   "th": "แจ้งที่พัก ตม.30",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/visa-tm30"
+  },
+  {
+   "id": "visa-reentry",
+   "type": "category",
+   "en": "Re-entry permit",
+   "th": "ใบอนุญาตกลับเข้าประเทศ (Re-entry)",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/visa-reentry"
+  },
+  {
+   "id": "visa-borderrun",
+   "type": "category",
+   "en": "Border run",
+   "th": "วีซ่ารัน ข้ามด่าน",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/visa-borderrun"
+  },
+  {
+   "id": "visa-dtv",
+   "type": "category",
+   "en": "DTV visa papers",
+   "th": "เอกสารวีซ่า DTV",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/visa-dtv"
+  },
+  {
+   "id": "visa-ed",
+   "type": "category",
+   "en": "Education visa papers",
+   "th": "เอกสารวีซ่านักเรียน ED",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/visa-ed"
+  },
+  {
+   "id": "visa-marriage",
+   "type": "category",
+   "en": "Marriage visa papers",
+   "th": "เอกสารวีซ่าแต่งงาน",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/visa-marriage"
+  },
+  {
+   "id": "visa-us",
+   "type": "category",
+   "en": "US visas for Thai nationals",
+   "th": "วีซ่าอเมริกาสำหรับคนไทย",
+   "price": {
+    "quote": true
+   },
+   "href": "https://chiangmaivisadesk.com/us-visas/",
+   "page": "https://hongdam.net/tasks/c/visa-us"
+  },
+  {
+   "id": "visa-bank",
+   "type": "category",
+   "en": "Bank letters and accounts",
+   "th": "หนังสือรับรองจากธนาคารและบัญชี",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/visa-bank"
+  },
+  {
+   "id": "visa-licence",
+   "type": "category",
+   "en": "Driving licence papers",
+   "th": "เอกสารใบขับขี่",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/visa-licence"
+  },
+  {
+   "id": "visa-tracker",
+   "type": "category",
+   "en": "Stay dates tracked",
+   "th": "ติดตามวันพำนัก",
+   "price": {
+    "free": true
+   },
+   "href": "https://farangbuddy.netlify.app/",
+   "page": "https://hongdam.net/tasks/c/visa-tracker"
+  },
+  {
+   "id": "visa-answers",
+   "type": "category",
+   "en": "Visa questions answered",
+   "th": "ตอบคำถามเรื่องวีซ่า",
+   "price": {
+    "free": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/visa-answers"
+  },
+  {
+   "id": "workers",
+   "type": "group",
+   "en": "Workers from Myanmar, Laos, Cambodia and Vietnam",
+   "th": "แรงงานเมียนมา ลาว กัมพูชา เวียดนาม",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/workers"
+  },
+  {
+   "id": "workers-mou",
+   "type": "category",
+   "en": "MOU recruitment",
+   "th": "นำเข้าแรงงานแบบ MOU",
+   "price": {
+    "quote": true
+   },
+   "href": "https://chiangmaivisadesk.com/migrant-workers/",
+   "page": "https://hongdam.net/tasks/c/workers-mou"
+  },
+  {
+   "id": "workers-permit",
+   "type": "category",
+   "en": "Worker permits and renewals",
+   "th": "ใบอนุญาตทำงานและต่ออายุ (e-WorkPermit)",
+   "price": {
+    "quote": true
+   },
+   "href": "https://chiangmaivisadesk.com/migrant-workers/",
+   "page": "https://hongdam.net/tasks/c/workers-permit"
+  },
+  {
+   "id": "workers-change",
+   "type": "category",
+   "en": "Change of employer",
+   "th": "เปลี่ยนนายจ้าง",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/workers-change"
+  },
+  {
+   "id": "workers-ss",
+   "type": "category",
+   "en": "Social security and health insurance",
+   "th": "ประกันสังคมและประกันสุขภาพ",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/workers-ss"
+  },
+  {
+   "id": "workers-la",
+   "type": "category",
+   "en": "Non-Immigrant L-A visa",
+   "th": "วีซ่า Non-Immigrant L-A",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/workers-la"
+  },
+  {
+   "id": "company",
+   "type": "group",
+   "en": "Companies",
+   "th": "บริษัท",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/company"
+  },
+  {
+   "id": "co-register",
+   "type": "category",
+   "en": "Company registration",
+   "th": "จดทะเบียนบริษัท",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/co-register"
+  },
+  {
+   "id": "co-tax",
+   "type": "category",
+   "en": "Tax ID and VAT",
+   "th": "เลขประจำตัวผู้เสียภาษีและ VAT",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/co-tax"
+  },
+  {
+   "id": "co-bank",
+   "type": "category",
+   "en": "Company bank account",
+   "th": "บัญชีธนาคารบริษัท",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/co-bank"
+  },
+  {
+   "id": "co-books",
+   "type": "category",
+   "en": "Books in Thai and English",
+   "th": "บัญชีสองภาษา",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/co-books"
+  },
+  {
+   "id": "lang",
+   "type": "group",
+   "en": "Translation and language",
+   "th": "แปลและภาษา",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/lang"
+  },
+  {
+   "id": "lang-new",
+   "type": "category",
+   "en": "New translation: Thai, English, Burmese",
+   "th": "แปลใหม่ ไทย อังกฤษ พม่า",
+   "price": {
+    "her": "฿1,500 up to 5 pages, then ฿500 a page"
+   },
+   "href": "https://hongdam.net/translation/",
+   "page": "https://hongdam.net/tasks/c/lang-new"
+  },
+  {
+   "id": "lang-check",
+   "type": "category",
+   "en": "Checking a translation",
+   "th": "ตรวจคำแปล",
+   "price": {
+    "her": "฿500 up to 5 pages, then ฿150 a page"
+   },
+   "href": "https://hongdam.net/translation/",
+   "page": "https://hongdam.net/tasks/c/lang-check"
+  },
+  {
+   "id": "lang-stamp",
+   "type": "category",
+   "en": "Translator's stamp",
+   "th": "ประทับตรารับรองคำแปล",
+   "price": {
+    "her": "฿100 a page"
+   },
+   "href": "https://hongdam.net/translation/",
+   "page": "https://hongdam.net/tasks/c/lang-stamp"
+  },
+  {
+   "id": "lang-interp",
+   "type": "category",
+   "en": "Interpreter at an office",
+   "th": "ล่ามที่สำนักงาน",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/lang-interp"
+  },
+  {
+   "id": "lang-places",
+   "type": "category",
+   "en": "Place names in Thai and English",
+   "th": "ชื่อสถานที่ไทย-อังกฤษ",
+   "price": {
+    "baht": 300
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/lang-places"
+  },
+  {
+   "id": "lang-signs",
+   "type": "category",
+   "en": "Signs and menus",
+   "th": "ป้ายและเมนู",
+   "price": {
+    "baht": 200
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/lang-signs"
+  },
+  {
+   "id": "lang-forms",
+   "type": "category",
+   "en": "Help with a Thai form",
+   "th": "ช่วยกรอกแบบฟอร์มภาษาไทย",
+   "price": {
+    "baht": 300
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/lang-forms"
+  },
+  {
+   "id": "lang-pages",
+   "type": "category",
+   "en": "Web page translation checks",
+   "th": "ตรวจคำแปลหน้าเว็บ",
+   "price": {
+    "baht": 300
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/lang-pages"
+  },
+  {
+   "id": "lang-lessons",
+   "type": "category",
+   "en": "Thai lessons",
+   "th": "เรียนภาษาไทย",
+   "price": {
+    "trade": true
+   },
+   "href": "https://motdang.net/sites/paid-in-lessons/",
+   "page": "https://hongdam.net/tasks/c/lang-lessons"
+  },
+  {
+   "id": "lang-shan",
+   "type": "category",
+   "en": "Shan and Burmese pages",
+   "th": "หน้าเว็บภาษาไทใหญ่และพม่า",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/lang-shan"
+  },
+  {
+   "id": "lang-leaves",
+   "type": "category",
+   "en": "Lanna manuscript transcription",
+   "th": "ถอดอักษรใบลานล้านนา",
+   "price": {
+    "baht": 500
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/lang-leaves"
+  },
+  {
+   "id": "web",
+   "type": "group",
+   "en": "Websites and apps",
+   "th": "เว็บไซต์และแอป",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/web"
+  },
+  {
+   "id": "web-site",
+   "type": "category",
+   "en": "Bilingual website",
+   "th": "เว็บไซต์สองภาษา",
+   "price": {
+    "baht": 30000
+   },
+   "href": "https://hongdam.net/",
+   "page": "https://hongdam.net/tasks/c/web-site"
+  },
+  {
+   "id": "web-minisite",
+   "type": "category",
+   "en": "Minisite",
+   "th": "มินิไซต์",
+   "price": {
+    "baht": 10000
+   },
+   "href": "https://motdang.net/sites/",
+   "page": "https://hongdam.net/tasks/c/web-minisite"
+  },
+  {
+   "id": "web-ownpage",
+   "type": "category",
+   "en": "Your own page on sites.motdang.net",
+   "th": "หน้าของคุณเองบนมดแดง",
+   "price": {
+    "her": "free page; Gold ฿3,000 a year; hotels ฿555 a month"
+   },
+   "href": "https://sites.motdang.net/make",
+   "page": "https://hongdam.net/tasks/c/web-ownpage"
+  },
+  {
+   "id": "web-line",
+   "type": "category",
+   "en": "LINE Official Account and LINE app",
+   "th": "แอปในไลน์ (LINE OA / LIFF)",
+   "price": {
+    "baht": 20000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/web-line"
+  },
+  {
+   "id": "web-pwa",
+   "type": "category",
+   "en": "App that works with no signal",
+   "th": "แอปที่ใช้ได้แม้ไม่มีสัญญาณ",
+   "price": {
+    "baht": 20000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/web-pwa"
+  },
+  {
+   "id": "web-search",
+   "type": "category",
+   "en": "Search for your site",
+   "th": "ช่องค้นหาในเว็บของคุณ",
+   "price": {
+    "baht": 5000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/web-search"
+  },
+  {
+   "id": "web-sharecard",
+   "type": "category",
+   "en": "Share cards",
+   "th": "การ์ดแชร์ลิงก์",
+   "price": {
+    "baht": 500
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/web-sharecard"
+  },
+  {
+   "id": "web-found",
+   "type": "category",
+   "en": "Being found on Google and in AI answers",
+   "th": "ให้คนค้นเจอบน Google และเอไอ",
+   "price": {
+    "baht": 3000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/web-found"
+  },
+  {
+   "id": "web-license",
+   "type": "category",
+   "en": "A copy of a site for another city",
+   "th": "สำเนาเว็บสำหรับเมืองอื่น",
+   "price": {
+    "quote": true
+   },
+   "href": "https://chiangmaivisadesk.com/",
+   "page": "https://hongdam.net/tasks/c/web-license"
+  },
+  {
+   "id": "web-mail",
+   "type": "category",
+   "en": "Mail on your own domain",
+   "th": "อีเมลโดเมนของคุณเอง",
+   "price": {
+    "baht": 1000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/web-mail"
+  },
+  {
+   "id": "web-move",
+   "type": "category",
+   "en": "Moving a site to new hosting",
+   "th": "ย้ายเว็บไปโฮสต์ใหม่",
+   "price": {
+    "baht": 5000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/web-move"
+  },
+  {
+   "id": "ai",
+   "type": "group",
+   "en": "AI and bots",
+   "th": "เอไอและบอท",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/ai"
+  },
+  {
+   "id": "ai-own",
+   "type": "category",
+   "en": "Your own builder on your own accounts",
+   "th": "ผู้ช่วยสร้างเว็บบนบัญชีของคุณเอง",
+   "price": {
+    "her": "฿25,000"
+   },
+   "href": "https://hongdam.net/own",
+   "page": "https://hongdam.net/tasks/c/ai-own"
+  },
+  {
+   "id": "ai-line",
+   "type": "category",
+   "en": "One LINE for many businesses",
+   "th": "ไลน์เดียวสำหรับหลายธุรกิจ",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/ai-line"
+  },
+  {
+   "id": "ai-whitelabel",
+   "type": "category",
+   "en": "AI assistant under your own name",
+   "th": "ผู้ช่วยเอไอในชื่อของคุณ",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/ai-whitelabel"
+  },
+  {
+   "id": "ai-bots",
+   "type": "category",
+   "en": "Bot jobs",
+   "th": "งานของบอท",
+   "price": {
+    "baht": 100
+   },
+   "href": "https://motdang.net/anthill/jobs",
+   "page": "https://hongdam.net/tasks/c/ai-bots"
+  },
+  {
+   "id": "ai-micro",
+   "type": "category",
+   "en": "Microtasks",
+   "th": "งานจิ๋ว",
+   "price": {
+    "baht": 0.1
+   },
+   "href": "https://motdang.net/anthill/micro",
+   "page": "https://hongdam.net/tasks/c/ai-micro"
+  },
+  {
+   "id": "ai-batch",
+   "type": "category",
+   "en": "Bulk text jobs",
+   "th": "งานข้อความจำนวนมาก",
+   "price": {
+    "baht": 500
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/ai-batch"
+  },
+  {
+   "id": "sec",
+   "type": "group",
+   "en": "Security",
+   "th": "ความปลอดภัย",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/sec"
+  },
+  {
+   "id": "sec-redteam",
+   "type": "category",
+   "en": "Red-team test of a chatbot",
+   "th": "ทดสอบเจาะแชตบอต",
+   "price": {
+    "baht": 5000
+   },
+   "href": "https://hongdam.net/redteam",
+   "page": "https://hongdam.net/tasks/c/sec-redteam"
+  },
+  {
+   "id": "sec-packs",
+   "type": "category",
+   "en": "Probe packs",
+   "th": "ชุดคำทดสอบ",
+   "price": {
+    "her": "as listed on the market"
+   },
+   "href": "https://hongdam.net/market",
+   "page": "https://hongdam.net/tasks/c/sec-packs"
+  },
+  {
+   "id": "sec-mail",
+   "type": "category",
+   "en": "Mail spoofing check",
+   "th": "ตรวจการปลอมอีเมล",
+   "price": {
+    "baht": 1000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/sec-mail"
+  },
+  {
+   "id": "sec-msp",
+   "type": "category",
+   "en": "Call lists for IT providers",
+   "th": "รายชื่อโทรหาผู้ให้บริการไอที",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/sec-msp"
+  },
+  {
+   "id": "sec-awards",
+   "type": "category",
+   "en": "Security award entries",
+   "th": "สมัครรางวัลด้านความปลอดภัย",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/sec-awards"
+  },
+  {
+   "id": "data",
+   "type": "group",
+   "en": "Data and research",
+   "th": "ข้อมูลและการค้นคว้า",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/data"
+  },
+  {
+   "id": "data-leads",
+   "type": "category",
+   "en": "Lead sheets and call lists",
+   "th": "รายชื่อลูกค้าเป้าหมาย",
+   "price": {
+    "baht": 5000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/data-leads"
+  },
+  {
+   "id": "data-crawl",
+   "type": "category",
+   "en": "Crawlers and data pipelines",
+   "th": "เก็บข้อมูลอัตโนมัติ",
+   "price": {
+    "baht": 10000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/data-crawl"
+  },
+  {
+   "id": "data-research",
+   "type": "category",
+   "en": "Research job",
+   "th": "งานค้นคว้า",
+   "price": {
+    "baht": 1000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/data-research"
+  },
+  {
+   "id": "data-match",
+   "type": "category",
+   "en": "Record checks: same place, names, links",
+   "th": "ตรวจข้อมูล: ที่เดียวกันไหม ชื่อตรงไหม ลิงก์ใช่ไหม",
+   "price": {
+    "baht": 0.1
+   },
+   "href": "https://motdang.net/anthill/micro",
+   "page": "https://hongdam.net/tasks/c/data-match"
+  },
+  {
+   "id": "data-prices",
+   "type": "category",
+   "en": "Price and stock reading",
+   "th": "อ่านราคาและสต็อก",
+   "price": {
+    "baht": 2000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/data-prices"
+  },
+  {
+   "id": "data-traffic",
+   "type": "category",
+   "en": "Visitor counts: people and machines",
+   "th": "นับผู้เข้าชม คนกับเครื่อง",
+   "price": {
+    "baht": 1000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/data-traffic"
+  },
+  {
+   "id": "data-events",
+   "type": "category",
+   "en": "Reading event listings",
+   "th": "อ่านประกาศกิจกรรม",
+   "price": {
+    "baht": 100
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/data-events"
+  },
+  {
+   "id": "places",
+   "type": "group",
+   "en": "Places and maps",
+   "th": "สถานที่และแผนที่",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/places"
+  },
+  {
+   "id": "pl-page",
+   "type": "category",
+   "en": "Place page",
+   "th": "หน้าสถานที่",
+   "price": {
+    "free": true
+   },
+   "href": "https://motdang.net/",
+   "page": "https://hongdam.net/tasks/c/pl-page"
+  },
+  {
+   "id": "pl-notes",
+   "type": "category",
+   "en": "Notes on places",
+   "th": "โน้ตสถานที่",
+   "price": {
+    "baht": 5
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/pl-notes"
+  },
+  {
+   "id": "pl-toilets",
+   "type": "category",
+   "en": "Toilets",
+   "th": "ห้องน้ำ",
+   "price": {
+    "baht": 5
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/pl-toilets"
+  },
+  {
+   "id": "pl-parking",
+   "type": "category",
+   "en": "Parking",
+   "th": "ที่จอดรถ",
+   "price": {
+    "baht": 5
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/pl-parking"
+  },
+  {
+   "id": "pl-trades",
+   "type": "category",
+   "en": "Tradespeople who keep their own hours",
+   "th": "ช่างที่เปิดตามเวลาตัวเอง",
+   "price": {
+    "baht": 5
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/pl-trades"
+  },
+  {
+   "id": "pl-roadworks",
+   "type": "category",
+   "en": "Roadworks",
+   "th": "ถนนซ่อม",
+   "price": {
+    "baht": 100
+   },
+   "href": "https://motdang.net/roadworks/",
+   "page": "https://hongdam.net/tasks/c/pl-roadworks"
+  },
+  {
+   "id": "pl-maps",
+   "type": "category",
+   "en": "Maps and drawn maps",
+   "th": "แผนที่และแผนที่วาด",
+   "price": {
+    "baht": 1000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/pl-maps"
+  },
+  {
+   "id": "pl-street",
+   "type": "category",
+   "en": "Street rides on camera",
+   "th": "ภาพถนนจากกล้องติดรถ",
+   "price": {
+    "baht": 300
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/pl-street"
+  },
+  {
+   "id": "pl-markets",
+   "type": "category",
+   "en": "Market stall pages and table signs",
+   "th": "หน้าแผงตลาดและป้าย QR บนโต๊ะ",
+   "price": {
+    "baht": 300
+   },
+   "href": "https://motdang.net/markets/cm/kamthieng/amulets/",
+   "page": "https://hongdam.net/tasks/c/pl-markets"
+  },
+  {
+   "id": "pl-hotels",
+   "type": "category",
+   "en": "Hotel pages: rooms and bookings",
+   "th": "หน้าโรงแรม ห้องพัก และการจอง",
+   "price": {
+    "her": "฿555 a month"
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/pl-hotels"
+  },
+  {
+   "id": "pl-weather",
+   "type": "category",
+   "en": "Weather, rain and smoke",
+   "th": "อากาศ ฝน และควัน",
+   "price": {
+    "free": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/pl-weather"
+  },
+  {
+   "id": "field",
+   "type": "group",
+   "en": "Field work",
+   "th": "งานภาคสนาม",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/field"
+  },
+  {
+   "id": "field-photos",
+   "type": "category",
+   "en": "Pictures of places, with EXIF",
+   "th": "ภาพสถานที่พร้อมข้อมูล EXIF",
+   "price": {
+    "baht": 50
+   },
+   "href": "https://motdang.net/anthill/bounty",
+   "page": "https://hongdam.net/tasks/c/field-photos"
+  },
+  {
+   "id": "field-event",
+   "type": "category",
+   "en": "Pictures and notes from an event",
+   "th": "ภาพและบันทึกจากงาน",
+   "price": {
+    "baht": 300
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/field-event"
+  },
+  {
+   "id": "field-call",
+   "type": "category",
+   "en": "Calling a business to check",
+   "th": "โทรถามร้าน",
+   "price": {
+    "baht": 5
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/field-call"
+  },
+  {
+   "id": "field-errand",
+   "type": "category",
+   "en": "Errands in the neighbourhood",
+   "th": "งานแถวบ้าน",
+   "price": {
+    "baht": 100
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/field-errand"
+  },
+  {
+   "id": "field-market",
+   "type": "category",
+   "en": "Market pictures",
+   "th": "ถ่ายภาพตลาด",
+   "price": {
+    "baht": 300
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/field-market"
+  },
+  {
+   "id": "media",
+   "type": "group",
+   "en": "Pictures, video and design",
+   "th": "ภาพ วิดีโอ และการออกแบบ",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/media"
+  },
+  {
+   "id": "media-graphics",
+   "type": "category",
+   "en": "Graphics and brand looks",
+   "th": "กราฟิกและหน้าตาแบรนด์",
+   "price": {
+    "baht": 3000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/media-graphics"
+  },
+  {
+   "id": "media-reels",
+   "type": "category",
+   "en": "Reels and short video",
+   "th": "รีลและวิดีโอสั้น",
+   "price": {
+    "baht": 3000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/media-reels"
+  },
+  {
+   "id": "media-doodles",
+   "type": "category",
+   "en": "Code-drawn pictures",
+   "th": "ภาพวาดด้วยโค้ด",
+   "price": {
+    "baht": 500
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/media-doodles"
+  },
+  {
+   "id": "media-photoday",
+   "type": "category",
+   "en": "A photo day",
+   "th": "วันถ่ายภาพ",
+   "price": {
+    "trade": true
+   },
+   "href": "https://motdang.net/sites/paid-in-art/",
+   "page": "https://hongdam.net/tasks/c/media-photoday"
+  },
+  {
+   "id": "media-print",
+   "type": "category",
+   "en": "Print: signs, QR codes, sheets",
+   "th": "งานพิมพ์ ป้าย คิวอาร์ แผ่นงาน",
+   "price": {
+    "baht": 500
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/media-print"
+  },
+  {
+   "id": "media-decks",
+   "type": "category",
+   "en": "Pitch decks",
+   "th": "สไลด์นำเสนอ",
+   "price": {
+    "baht": 5000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/media-decks"
+  },
+  {
+   "id": "media-animation",
+   "type": "category",
+   "en": "Web animations",
+   "th": "แอนิเมชันบนเว็บ",
+   "price": {
+    "baht": 5000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/media-animation"
+  },
+  {
+   "id": "words",
+   "type": "group",
+   "en": "Writing and social",
+   "th": "งานเขียนและโซเชียล",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/words"
+  },
+  {
+   "id": "words-articles",
+   "type": "category",
+   "en": "Articles and explainers",
+   "th": "บทความและคำอธิบาย",
+   "price": {
+    "baht": 3000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/words-articles"
+  },
+  {
+   "id": "words-newsletter",
+   "type": "category",
+   "en": "Newsletters",
+   "th": "จดหมายข่าว",
+   "price": {
+    "baht": 1000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/words-newsletter"
+  },
+  {
+   "id": "words-social",
+   "type": "category",
+   "en": "Social posts",
+   "th": "โพสต์โซเชียล",
+   "price": {
+    "baht": 500
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/words-social"
+  },
+  {
+   "id": "words-answers",
+   "type": "category",
+   "en": "Answers on question sites",
+   "th": "ตอบคำถามบนเว็บถามตอบ",
+   "price": {
+    "baht": 300
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/words-answers"
+  },
+  {
+   "id": "words-proposals",
+   "type": "category",
+   "en": "Proposals and business plans",
+   "th": "ข้อเสนอและแผนธุรกิจ",
+   "price": {
+    "baht": 5000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/words-proposals"
+  },
+  {
+   "id": "words-copy",
+   "type": "category",
+   "en": "Words for a website",
+   "th": "ข้อความบนเว็บไซต์",
+   "price": {
+    "baht": 2000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/words-copy"
+  },
+  {
+   "id": "sales",
+   "type": "group",
+   "en": "Selling",
+   "th": "การขาย",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/sales"
+  },
+  {
+   "id": "sales-seller",
+   "type": "category",
+   "en": "Seller referrals",
+   "th": "ชวนคนมาเป็นนักขาย",
+   "price": {
+    "baht": 500
+   },
+   "href": "https://sites.motdang.net/sell",
+   "page": "https://hongdam.net/tasks/c/sales-seller"
+  },
+  {
+   "id": "sales-lister",
+   "type": "category",
+   "en": "List homes and home help",
+   "th": "ลงประกาศบ้านและแม่บ้าน",
+   "price": {
+    "her": "60% of each fee"
+   },
+   "href": "https://sites.motdang.net/lister",
+   "page": "https://hongdam.net/tasks/c/sales-lister"
+  },
+  {
+   "id": "sales-plans",
+   "type": "category",
+   "en": "Selling Gold and hotel plans",
+   "th": "ขายแพ็กเกจ Gold และโรงแรม",
+   "price": {
+    "her": "20% of each plan"
+   },
+   "href": "https://sites.motdang.net/sell",
+   "page": "https://hongdam.net/tasks/c/sales-plans"
+  },
+  {
+   "id": "sales-founders",
+   "type": "category",
+   "en": "Founding members",
+   "th": "สมาชิกผู้ก่อตั้ง",
+   "price": {
+    "baht": 3000
+   },
+   "href": "https://sites.motdang.net/founders",
+   "page": "https://hongdam.net/tasks/c/sales-founders"
+  },
+  {
+   "id": "sales-shop",
+   "type": "category",
+   "en": "An online shop",
+   "th": "ร้านค้าออนไลน์",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/sales-shop"
+  },
+  {
+   "id": "sales-groups",
+   "type": "category",
+   "en": "Posting in Facebook groups",
+   "th": "โพสต์ในกลุ่มเฟซบุ๊ก",
+   "price": {
+    "baht": 100
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/sales-groups"
+  },
+  {
+   "id": "money",
+   "type": "group",
+   "en": "Payments and invoices",
+   "th": "รับเงินและใบแจ้งหนี้",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/money"
+  },
+  {
+   "id": "money-paybox",
+   "type": "category",
+   "en": "Pay box: PromptPay QR and slip check",
+   "th": "กล่องรับเงินพร้อมเพย์และตรวจสลิป",
+   "price": {
+    "baht": 3000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/money-paybox"
+  },
+  {
+   "id": "money-invoice",
+   "type": "category",
+   "en": "Invoices paid by PayPal or Wise",
+   "th": "ใบแจ้งหนี้จ่ายผ่าน PayPal หรือ Wise",
+   "price": {
+    "baht": 500
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/money-invoice"
+  },
+  {
+   "id": "money-payouts",
+   "type": "category",
+   "en": "Team payouts on the 1st",
+   "th": "จ่ายทีมทุกวันที่ 1",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/money-payouts"
+  },
+  {
+   "id": "money-exchange",
+   "type": "category",
+   "en": "Money exchange rate pages",
+   "th": "หน้าอัตราแลกเงิน",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/money-exchange"
+  },
+  {
+   "id": "trade",
+   "type": "group",
+   "en": "Paid in kind",
+   "th": "จ่ายด้วยของหรืองาน",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/trade"
+  },
+  {
+   "id": "trade-art",
+   "type": "category",
+   "en": "Paid in art",
+   "th": "จ่ายด้วยงานศิลปะ",
+   "price": {
+    "trade": true
+   },
+   "href": "https://motdang.net/sites/paid-in-art/",
+   "page": "https://hongdam.net/tasks/c/trade-art"
+  },
+  {
+   "id": "trade-meals",
+   "type": "category",
+   "en": "Paid in meals or coffee",
+   "th": "จ่ายด้วยอาหารหรือกาแฟ",
+   "price": {
+    "trade": true
+   },
+   "href": "https://motdang.net/sites/paid-in-meals/",
+   "page": "https://hongdam.net/tasks/c/trade-meals"
+  },
+  {
+   "id": "trade-nights",
+   "type": "category",
+   "en": "Paid in room nights",
+   "th": "จ่ายด้วยห้องพัก",
+   "price": {
+    "trade": true
+   },
+   "href": "https://motdang.net/sites/paid-in-nights/",
+   "page": "https://hongdam.net/tasks/c/trade-nights"
+  },
+  {
+   "id": "trade-lessons",
+   "type": "category",
+   "en": "Paid in lessons",
+   "th": "จ่ายด้วยการสอน",
+   "price": {
+    "trade": true
+   },
+   "href": "https://motdang.net/sites/paid-in-lessons/",
+   "page": "https://hongdam.net/tasks/c/trade-lessons"
+  },
+  {
+   "id": "trade-print",
+   "type": "category",
+   "en": "Paid in printing",
+   "th": "จ่ายด้วยงานพิมพ์",
+   "price": {
+    "trade": true
+   },
+   "href": "https://motdang.net/sites/paid-in-print/",
+   "page": "https://hongdam.net/tasks/c/trade-print"
+  },
+  {
+   "id": "trade-clothes",
+   "type": "category",
+   "en": "Paid in clothes",
+   "th": "จ่ายด้วยเสื้อผ้า",
+   "price": {
+    "trade": true
+   },
+   "href": "https://motdang.net/sites/paid-in-clothes/",
+   "page": "https://hongdam.net/tasks/c/trade-clothes"
+  },
+  {
+   "id": "trade-repairs",
+   "type": "category",
+   "en": "Paid in repairs",
+   "th": "จ่ายด้วยงานซ่อม",
+   "price": {
+    "trade": true
+   },
+   "href": "https://motdang.net/sites/paid-in-repairs/",
+   "page": "https://hongdam.net/tasks/c/trade-repairs"
+  },
+  {
+   "id": "trade-treatments",
+   "type": "category",
+   "en": "Paid in treatments",
+   "th": "จ่ายด้วยบริการความงาม",
+   "price": {
+    "trade": true
+   },
+   "href": "https://motdang.net/sites/paid-in-treatments/",
+   "page": "https://hongdam.net/tasks/c/trade-treatments"
+  },
+  {
+   "id": "trade-posts",
+   "type": "category",
+   "en": "Paid in posts",
+   "th": "จ่ายด้วยโพสต์",
+   "price": {
+    "trade": true
+   },
+   "href": "https://motdang.net/sites/paid-in-posts/",
+   "page": "https://hongdam.net/tasks/c/trade-posts"
+  },
+  {
+   "id": "trade-costumes",
+   "type": "category",
+   "en": "Paid in costumes",
+   "th": "จ่ายด้วยชุดเช่า",
+   "price": {
+    "trade": true
+   },
+   "href": "https://motdang.net/sites/paid-in-costumes/",
+   "page": "https://hongdam.net/tasks/c/trade-costumes"
+  },
+  {
+   "id": "trade-rides",
+   "type": "category",
+   "en": "Paid in rides",
+   "th": "จ่ายด้วยการรับส่ง",
+   "price": {
+    "trade": true
+   },
+   "href": "https://motdang.net/sites/paid-in-rides/",
+   "page": "https://hongdam.net/tasks/c/trade-rides"
+  },
+  {
+   "id": "home",
+   "type": "group",
+   "en": "Homes, stays and home help",
+   "th": "บ้าน ที่พัก และแม่บ้าน",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/home"
+  },
+  {
+   "id": "home-help",
+   "type": "category",
+   "en": "Home help: cleaning, cooking, childcare",
+   "th": "แม่บ้าน ทำอาหาร ดูแลเด็ก",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/home-help"
+  },
+  {
+   "id": "home-homes",
+   "type": "category",
+   "en": "Homes to rent",
+   "th": "บ้านเช่า",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/home-homes"
+  },
+  {
+   "id": "home-longstay",
+   "type": "category",
+   "en": "Long stays",
+   "th": "พักระยะยาว",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/home-longstay"
+  },
+  {
+   "id": "home-match",
+   "type": "category",
+   "en": "Matching people to homes",
+   "th": "จับคู่คนกับบ้าน",
+   "price": {
+    "free": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/home-match"
+  },
+  {
+   "id": "culture",
+   "type": "group",
+   "en": "Festivals, amulets and ceremonies",
+   "th": "เทศกาล พระเครื่อง และพิธี",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/culture"
+  },
+  {
+   "id": "cul-festivals",
+   "type": "category",
+   "en": "Festival pages",
+   "th": "หน้าเทศกาล",
+   "price": {
+    "baht": 1000
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/cul-festivals"
+  },
+  {
+   "id": "cul-amulets",
+   "type": "category",
+   "en": "Amulet pages and the amulet camera",
+   "th": "หน้าพระเครื่องและกล้องส่องพระ",
+   "price": {
+    "her": "Gold ฿3,000 a year"
+   },
+   "href": "https://sites.motdang.net/amulet-demo",
+   "page": "https://hongdam.net/tasks/c/cul-amulets"
+  },
+  {
+   "id": "cul-yant",
+   "type": "category",
+   "en": "Yant cloths",
+   "th": "ผ้ายันต์",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/cul-yant"
+  },
+  {
+   "id": "cul-sukhwan",
+   "type": "category",
+   "en": "Su khwan ceremony packages",
+   "th": "พิธีสู่ขวัญ",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/cul-sukhwan"
+  },
+  {
+   "id": "cul-magic",
+   "type": "category",
+   "en": "Close-up magic",
+   "th": "มายากลระยะใกล้",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/cul-magic"
+  },
+  {
+   "id": "cul-calendar",
+   "type": "category",
+   "en": "Events calendar",
+   "th": "ปฏิทินกิจกรรม",
+   "price": {
+    "free": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/cul-calendar"
+  },
+  {
+   "id": "food",
+   "type": "group",
+   "en": "Food and coffee",
+   "th": "อาหารและกาแฟ",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/food"
+  },
+  {
+   "id": "food-coffee",
+   "type": "category",
+   "en": "Coffee from the farm",
+   "th": "กาแฟจากไร่",
+   "price": {
+    "quote": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/food-coffee"
+  },
+  {
+   "id": "food-pantry",
+   "type": "category",
+   "en": "Food pantry",
+   "th": "ตู้ปันสุข",
+   "price": {
+    "free": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/food-pantry"
+  },
+  {
+   "id": "food-menu",
+   "type": "category",
+   "en": "Menu pages",
+   "th": "หน้าเมนูร้าน",
+   "price": {
+    "baht": 300
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/food-menu"
+  }
+ ],
+ "edges": [
+  {
+   "s": "visa",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "visa",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "visa-workpermit",
+   "t": "visa",
+   "type": "part_of"
+  },
+  {
+   "s": "visa-workpermit",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "visa-workpermit",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "visa-retire",
+   "t": "visa",
+   "type": "part_of"
+  },
+  {
+   "s": "visa-retire",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "visa-retire",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "visa-extend",
+   "t": "visa",
+   "type": "part_of"
+  },
+  {
+   "s": "visa-extend",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "visa-extend",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "visa-90day",
+   "t": "visa",
+   "type": "part_of"
+  },
+  {
+   "s": "visa-90day",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "visa-90day",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "visa-tm30",
+   "t": "visa",
+   "type": "part_of"
+  },
+  {
+   "s": "visa-tm30",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "visa-tm30",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "visa-reentry",
+   "t": "visa",
+   "type": "part_of"
+  },
+  {
+   "s": "visa-reentry",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "visa-reentry",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "visa-borderrun",
+   "t": "visa",
+   "type": "part_of"
+  },
+  {
+   "s": "visa-borderrun",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "visa-borderrun",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "visa-dtv",
+   "t": "visa",
+   "type": "part_of"
+  },
+  {
+   "s": "visa-dtv",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "visa-dtv",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "visa-ed",
+   "t": "visa",
+   "type": "part_of"
+  },
+  {
+   "s": "visa-ed",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "visa-ed",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "visa-marriage",
+   "t": "visa",
+   "type": "part_of"
+  },
+  {
+   "s": "visa-marriage",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "visa-marriage",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "visa-us",
+   "t": "visa",
+   "type": "part_of"
+  },
+  {
+   "s": "visa-us",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "visa-us",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "visa-bank",
+   "t": "visa",
+   "type": "part_of"
+  },
+  {
+   "s": "visa-bank",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "visa-bank",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "visa-licence",
+   "t": "visa",
+   "type": "part_of"
+  },
+  {
+   "s": "visa-licence",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "visa-licence",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "visa-tracker",
+   "t": "visa",
+   "type": "part_of"
+  },
+  {
+   "s": "visa-tracker",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "visa-tracker",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "visa-tracker",
+   "t": "visa-90day",
+   "type": "related"
+  },
+  {
+   "s": "visa-answers",
+   "t": "visa",
+   "type": "part_of"
+  },
+  {
+   "s": "visa-answers",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "visa-answers",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "visa-answers",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "workers",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "workers",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "workers-mou",
+   "t": "workers",
+   "type": "part_of"
+  },
+  {
+   "s": "workers-mou",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "workers-mou",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "workers-permit",
+   "t": "workers",
+   "type": "part_of"
+  },
+  {
+   "s": "workers-permit",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "workers-permit",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "workers-change",
+   "t": "workers",
+   "type": "part_of"
+  },
+  {
+   "s": "workers-change",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "workers-change",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "workers-ss",
+   "t": "workers",
+   "type": "part_of"
+  },
+  {
+   "s": "workers-ss",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "workers-ss",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "workers-la",
+   "t": "workers",
+   "type": "part_of"
+  },
+  {
+   "s": "workers-la",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "workers-la",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "company",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "company",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "co-register",
+   "t": "company",
+   "type": "part_of"
+  },
+  {
+   "s": "co-register",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "co-register",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "co-register",
+   "t": "visa-workpermit",
+   "type": "related"
+  },
+  {
+   "s": "co-tax",
+   "t": "company",
+   "type": "part_of"
+  },
+  {
+   "s": "co-tax",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "co-tax",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "co-bank",
+   "t": "company",
+   "type": "part_of"
+  },
+  {
+   "s": "co-bank",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "co-bank",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "co-books",
+   "t": "company",
+   "type": "part_of"
+  },
+  {
+   "s": "co-books",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "co-books",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "lang",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "lang-new",
+   "t": "lang",
+   "type": "part_of"
+  },
+  {
+   "s": "lang-new",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-new",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-new",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "lang-new",
+   "t": "visa-workpermit",
+   "type": "related"
+  },
+  {
+   "s": "lang-new",
+   "t": "workers-permit",
+   "type": "related"
+  },
+  {
+   "s": "lang-new",
+   "t": "visa-marriage",
+   "type": "related"
+  },
+  {
+   "s": "lang-check",
+   "t": "lang",
+   "type": "part_of"
+  },
+  {
+   "s": "lang-check",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-check",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-check",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "lang-stamp",
+   "t": "lang",
+   "type": "part_of"
+  },
+  {
+   "s": "lang-stamp",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-stamp",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-stamp",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "lang-interp",
+   "t": "lang",
+   "type": "part_of"
+  },
+  {
+   "s": "lang-interp",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-interp",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-interp",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "lang-places",
+   "t": "lang",
+   "type": "part_of"
+  },
+  {
+   "s": "lang-places",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-places",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "lang-places",
+   "t": "pl-page",
+   "type": "related"
+  },
+  {
+   "s": "lang-signs",
+   "t": "lang",
+   "type": "part_of"
+  },
+  {
+   "s": "lang-signs",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-signs",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-signs",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "lang-signs",
+   "t": "pl-markets",
+   "type": "related"
+  },
+  {
+   "s": "lang-signs",
+   "t": "food-menu",
+   "type": "related"
+  },
+  {
+   "s": "lang-forms",
+   "t": "lang",
+   "type": "part_of"
+  },
+  {
+   "s": "lang-forms",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-forms",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-forms",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "lang-forms",
+   "t": "visa-90day",
+   "type": "related"
+  },
+  {
+   "s": "lang-forms",
+   "t": "visa-tm30",
+   "type": "related"
+  },
+  {
+   "s": "lang-pages",
+   "t": "lang",
+   "type": "part_of"
+  },
+  {
+   "s": "lang-pages",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-pages",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-pages",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "lang-lessons",
+   "t": "lang",
+   "type": "part_of"
+  },
+  {
+   "s": "lang-lessons",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-lessons",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "lang-shan",
+   "t": "lang",
+   "type": "part_of"
+  },
+  {
+   "s": "lang-shan",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-shan",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-shan",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "lang-leaves",
+   "t": "lang",
+   "type": "part_of"
+  },
+  {
+   "s": "lang-leaves",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "lang-leaves",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "web",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "web",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "web",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "web-site",
+   "t": "web",
+   "type": "part_of"
+  },
+  {
+   "s": "web-site",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "web-site",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "web-site",
+   "t": "ai-own",
+   "type": "related"
+  },
+  {
+   "s": "web-minisite",
+   "t": "web",
+   "type": "part_of"
+  },
+  {
+   "s": "web-minisite",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "web-minisite",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "web-minisite",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "web-ownpage",
+   "t": "web",
+   "type": "part_of"
+  },
+  {
+   "s": "web-ownpage",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "web-ownpage",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "web-ownpage",
+   "t": "pl-page",
+   "type": "related"
+  },
+  {
+   "s": "web-ownpage",
+   "t": "sales-plans",
+   "type": "related"
+  },
+  {
+   "s": "web-line",
+   "t": "web",
+   "type": "part_of"
+  },
+  {
+   "s": "web-line",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "web-line",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "web-pwa",
+   "t": "web",
+   "type": "part_of"
+  },
+  {
+   "s": "web-pwa",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "web-pwa",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "web-search",
+   "t": "web",
+   "type": "part_of"
+  },
+  {
+   "s": "web-search",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "web-search",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "web-search",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "web-sharecard",
+   "t": "web",
+   "type": "part_of"
+  },
+  {
+   "s": "web-sharecard",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "web-sharecard",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "web-sharecard",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "web-found",
+   "t": "web",
+   "type": "part_of"
+  },
+  {
+   "s": "web-found",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "web-found",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "web-license",
+   "t": "web",
+   "type": "part_of"
+  },
+  {
+   "s": "web-license",
+   "t": "cmvd",
+   "type": "answered_by"
+  },
+  {
+   "s": "web-license",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "web-license",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "web-mail",
+   "t": "web",
+   "type": "part_of"
+  },
+  {
+   "s": "web-mail",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "web-mail",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "web-move",
+   "t": "web",
+   "type": "part_of"
+  },
+  {
+   "s": "web-move",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "web-move",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "ai",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "ai",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "ai",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "ai-own",
+   "t": "ai",
+   "type": "part_of"
+  },
+  {
+   "s": "ai-own",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "ai-own",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "ai-line",
+   "t": "ai",
+   "type": "part_of"
+  },
+  {
+   "s": "ai-line",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "ai-line",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "ai-line",
+   "t": "web-line",
+   "type": "related"
+  },
+  {
+   "s": "ai-whitelabel",
+   "t": "ai",
+   "type": "part_of"
+  },
+  {
+   "s": "ai-whitelabel",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "ai-whitelabel",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "ai-bots",
+   "t": "ai",
+   "type": "part_of"
+  },
+  {
+   "s": "ai-bots",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "ai-bots",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "ai-micro",
+   "t": "ai",
+   "type": "part_of"
+  },
+  {
+   "s": "ai-micro",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "ai-micro",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "ai-micro",
+   "t": "data-match",
+   "type": "related"
+  },
+  {
+   "s": "ai-micro",
+   "t": "pl-notes",
+   "type": "related"
+  },
+  {
+   "s": "ai-batch",
+   "t": "ai",
+   "type": "part_of"
+  },
+  {
+   "s": "ai-batch",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "ai-batch",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "sec",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "sec",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "sec-redteam",
+   "t": "sec",
+   "type": "part_of"
+  },
+  {
+   "s": "sec-redteam",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "sec-redteam",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "sec-redteam",
+   "t": "ai-line",
+   "type": "related"
+  },
+  {
+   "s": "sec-redteam",
+   "t": "ai-whitelabel",
+   "type": "related"
+  },
+  {
+   "s": "sec-packs",
+   "t": "sec",
+   "type": "part_of"
+  },
+  {
+   "s": "sec-packs",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "sec-packs",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "sec-mail",
+   "t": "sec",
+   "type": "part_of"
+  },
+  {
+   "s": "sec-mail",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "sec-mail",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "sec-mail",
+   "t": "web-mail",
+   "type": "related"
+  },
+  {
+   "s": "sec-msp",
+   "t": "sec",
+   "type": "part_of"
+  },
+  {
+   "s": "sec-msp",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "sec-msp",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "sec-msp",
+   "t": "data-leads",
+   "type": "related"
+  },
+  {
+   "s": "sec-awards",
+   "t": "sec",
+   "type": "part_of"
+  },
+  {
+   "s": "sec-awards",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "sec-awards",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "data",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "data",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "data",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "data-leads",
+   "t": "data",
+   "type": "part_of"
+  },
+  {
+   "s": "data-leads",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "data-leads",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "data-leads",
+   "t": "data-crawl",
+   "type": "related"
+  },
+  {
+   "s": "data-crawl",
+   "t": "data",
+   "type": "part_of"
+  },
+  {
+   "s": "data-crawl",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "data-crawl",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "data-research",
+   "t": "data",
+   "type": "part_of"
+  },
+  {
+   "s": "data-research",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "data-research",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "data-match",
+   "t": "data",
+   "type": "part_of"
+  },
+  {
+   "s": "data-match",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "data-match",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "data-prices",
+   "t": "data",
+   "type": "part_of"
+  },
+  {
+   "s": "data-prices",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "data-prices",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "data-traffic",
+   "t": "data",
+   "type": "part_of"
+  },
+  {
+   "s": "data-traffic",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "data-traffic",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "data-events",
+   "t": "data",
+   "type": "part_of"
+  },
+  {
+   "s": "data-events",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "data-events",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "data-events",
+   "t": "cul-calendar",
+   "type": "related"
+  },
+  {
+   "s": "places",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "places",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "pl-page",
+   "t": "places",
+   "type": "part_of"
+  },
+  {
+   "s": "pl-page",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "pl-page",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "pl-notes",
+   "t": "places",
+   "type": "part_of"
+  },
+  {
+   "s": "pl-notes",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "pl-notes",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "pl-notes",
+   "t": "field-call",
+   "type": "related"
+  },
+  {
+   "s": "pl-toilets",
+   "t": "places",
+   "type": "part_of"
+  },
+  {
+   "s": "pl-toilets",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "pl-toilets",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "pl-toilets",
+   "t": "pl-notes",
+   "type": "related"
+  },
+  {
+   "s": "pl-parking",
+   "t": "places",
+   "type": "part_of"
+  },
+  {
+   "s": "pl-parking",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "pl-parking",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "pl-parking",
+   "t": "pl-notes",
+   "type": "related"
+  },
+  {
+   "s": "pl-trades",
+   "t": "places",
+   "type": "part_of"
+  },
+  {
+   "s": "pl-trades",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "pl-trades",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "pl-trades",
+   "t": "field-call",
+   "type": "related"
+  },
+  {
+   "s": "pl-roadworks",
+   "t": "places",
+   "type": "part_of"
+  },
+  {
+   "s": "pl-roadworks",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "pl-roadworks",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "pl-roadworks",
+   "t": "ai-bots",
+   "type": "related"
+  },
+  {
+   "s": "pl-maps",
+   "t": "places",
+   "type": "part_of"
+  },
+  {
+   "s": "pl-maps",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "pl-maps",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "pl-maps",
+   "t": "media-doodles",
+   "type": "related"
+  },
+  {
+   "s": "pl-street",
+   "t": "places",
+   "type": "part_of"
+  },
+  {
+   "s": "pl-street",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "pl-street",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "pl-markets",
+   "t": "places",
+   "type": "part_of"
+  },
+  {
+   "s": "pl-markets",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "pl-markets",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "pl-markets",
+   "t": "media-print",
+   "type": "related"
+  },
+  {
+   "s": "pl-hotels",
+   "t": "places",
+   "type": "part_of"
+  },
+  {
+   "s": "pl-hotels",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "pl-hotels",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "pl-weather",
+   "t": "places",
+   "type": "part_of"
+  },
+  {
+   "s": "pl-weather",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "pl-weather",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "field",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "field",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "field-photos",
+   "t": "field",
+   "type": "part_of"
+  },
+  {
+   "s": "field-photos",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "field-photos",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "field-photos",
+   "t": "pl-page",
+   "type": "related"
+  },
+  {
+   "s": "field-event",
+   "t": "field",
+   "type": "part_of"
+  },
+  {
+   "s": "field-event",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "field-event",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "field-event",
+   "t": "cul-festivals",
+   "type": "related"
+  },
+  {
+   "s": "field-call",
+   "t": "field",
+   "type": "part_of"
+  },
+  {
+   "s": "field-call",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "field-call",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "field-errand",
+   "t": "field",
+   "type": "part_of"
+  },
+  {
+   "s": "field-errand",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "field-errand",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "field-market",
+   "t": "field",
+   "type": "part_of"
+  },
+  {
+   "s": "field-market",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "field-market",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "field-market",
+   "t": "pl-markets",
+   "type": "related"
+  },
+  {
+   "s": "media",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "media",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "media",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "media-graphics",
+   "t": "media",
+   "type": "part_of"
+  },
+  {
+   "s": "media-graphics",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "media-graphics",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "media-graphics",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "media-reels",
+   "t": "media",
+   "type": "part_of"
+  },
+  {
+   "s": "media-reels",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "media-reels",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "media-reels",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "media-doodles",
+   "t": "media",
+   "type": "part_of"
+  },
+  {
+   "s": "media-doodles",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "media-doodles",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "media-doodles",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "media-photoday",
+   "t": "media",
+   "type": "part_of"
+  },
+  {
+   "s": "media-photoday",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "media-photoday",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "media-print",
+   "t": "media",
+   "type": "part_of"
+  },
+  {
+   "s": "media-print",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "media-print",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "media-decks",
+   "t": "media",
+   "type": "part_of"
+  },
+  {
+   "s": "media-decks",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "media-decks",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "media-animation",
+   "t": "media",
+   "type": "part_of"
+  },
+  {
+   "s": "media-animation",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "media-animation",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "words",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "words",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "words",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "words-articles",
+   "t": "words",
+   "type": "part_of"
+  },
+  {
+   "s": "words-articles",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "words-articles",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "words-articles",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "words-newsletter",
+   "t": "words",
+   "type": "part_of"
+  },
+  {
+   "s": "words-newsletter",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "words-newsletter",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "words-social",
+   "t": "words",
+   "type": "part_of"
+  },
+  {
+   "s": "words-social",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "words-social",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "words-social",
+   "t": "sales-groups",
+   "type": "related"
+  },
+  {
+   "s": "words-answers",
+   "t": "words",
+   "type": "part_of"
+  },
+  {
+   "s": "words-answers",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "words-answers",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "words-answers",
+   "t": "visa-answers",
+   "type": "related"
+  },
+  {
+   "s": "words-proposals",
+   "t": "words",
+   "type": "part_of"
+  },
+  {
+   "s": "words-proposals",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "words-proposals",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "words-copy",
+   "t": "words",
+   "type": "part_of"
+  },
+  {
+   "s": "words-copy",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "words-copy",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "sales",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "sales",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "sales-seller",
+   "t": "sales",
+   "type": "part_of"
+  },
+  {
+   "s": "sales-seller",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "sales-seller",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "sales-lister",
+   "t": "sales",
+   "type": "part_of"
+  },
+  {
+   "s": "sales-lister",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "sales-lister",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "sales-lister",
+   "t": "home-homes",
+   "type": "related"
+  },
+  {
+   "s": "sales-lister",
+   "t": "home-help",
+   "type": "related"
+  },
+  {
+   "s": "sales-plans",
+   "t": "sales",
+   "type": "part_of"
+  },
+  {
+   "s": "sales-plans",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "sales-plans",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "sales-plans",
+   "t": "sales-seller",
+   "type": "related"
+  },
+  {
+   "s": "sales-founders",
+   "t": "sales",
+   "type": "part_of"
+  },
+  {
+   "s": "sales-founders",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "sales-founders",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "sales-shop",
+   "t": "sales",
+   "type": "part_of"
+  },
+  {
+   "s": "sales-shop",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "sales-shop",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "sales-groups",
+   "t": "sales",
+   "type": "part_of"
+  },
+  {
+   "s": "sales-groups",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "sales-groups",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "money",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "money",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "money-paybox",
+   "t": "money",
+   "type": "part_of"
+  },
+  {
+   "s": "money-paybox",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "money-paybox",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "money-paybox",
+   "t": "lang-new",
+   "type": "related"
+  },
+  {
+   "s": "money-invoice",
+   "t": "money",
+   "type": "part_of"
+  },
+  {
+   "s": "money-invoice",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "money-invoice",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "money-payouts",
+   "t": "money",
+   "type": "part_of"
+  },
+  {
+   "s": "money-payouts",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "money-payouts",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "money-exchange",
+   "t": "money",
+   "type": "part_of"
+  },
+  {
+   "s": "money-exchange",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "money-exchange",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "trade",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "trade",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "trade-art",
+   "t": "trade",
+   "type": "part_of"
+  },
+  {
+   "s": "trade-art",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "trade-art",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "trade-art",
+   "t": "web-ownpage",
+   "type": "related"
+  },
+  {
+   "s": "trade-meals",
+   "t": "trade",
+   "type": "part_of"
+  },
+  {
+   "s": "trade-meals",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "trade-meals",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "trade-nights",
+   "t": "trade",
+   "type": "part_of"
+  },
+  {
+   "s": "trade-nights",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "trade-nights",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "trade-nights",
+   "t": "pl-hotels",
+   "type": "related"
+  },
+  {
+   "s": "trade-lessons",
+   "t": "trade",
+   "type": "part_of"
+  },
+  {
+   "s": "trade-lessons",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "trade-lessons",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "trade-lessons",
+   "t": "lang-lessons",
+   "type": "related"
+  },
+  {
+   "s": "trade-print",
+   "t": "trade",
+   "type": "part_of"
+  },
+  {
+   "s": "trade-print",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "trade-print",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "trade-print",
+   "t": "media-print",
+   "type": "related"
+  },
+  {
+   "s": "trade-clothes",
+   "t": "trade",
+   "type": "part_of"
+  },
+  {
+   "s": "trade-clothes",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "trade-clothes",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "trade-repairs",
+   "t": "trade",
+   "type": "part_of"
+  },
+  {
+   "s": "trade-repairs",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "trade-repairs",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "trade-repairs",
+   "t": "pl-trades",
+   "type": "related"
+  },
+  {
+   "s": "trade-treatments",
+   "t": "trade",
+   "type": "part_of"
+  },
+  {
+   "s": "trade-treatments",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "trade-treatments",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "trade-posts",
+   "t": "trade",
+   "type": "part_of"
+  },
+  {
+   "s": "trade-posts",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "trade-posts",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "trade-posts",
+   "t": "words-social",
+   "type": "related"
+  },
+  {
+   "s": "trade-costumes",
+   "t": "trade",
+   "type": "part_of"
+  },
+  {
+   "s": "trade-costumes",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "trade-costumes",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "trade-rides",
+   "t": "trade",
+   "type": "part_of"
+  },
+  {
+   "s": "trade-rides",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "trade-rides",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "home",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "home",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "home-help",
+   "t": "home",
+   "type": "part_of"
+  },
+  {
+   "s": "home-help",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "home-help",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "home-homes",
+   "t": "home",
+   "type": "part_of"
+  },
+  {
+   "s": "home-homes",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "home-homes",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "home-longstay",
+   "t": "home",
+   "type": "part_of"
+  },
+  {
+   "s": "home-longstay",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "home-longstay",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "home-match",
+   "t": "home",
+   "type": "part_of"
+  },
+  {
+   "s": "home-match",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "home-match",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "culture",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "culture",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "culture",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "cul-festivals",
+   "t": "culture",
+   "type": "part_of"
+  },
+  {
+   "s": "cul-festivals",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "cul-festivals",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "cul-amulets",
+   "t": "culture",
+   "type": "part_of"
+  },
+  {
+   "s": "cul-amulets",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "cul-amulets",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "cul-amulets",
+   "t": "pl-markets",
+   "type": "related"
+  },
+  {
+   "s": "cul-yant",
+   "t": "culture",
+   "type": "part_of"
+  },
+  {
+   "s": "cul-yant",
+   "t": "hongdam",
+   "type": "answered_by"
+  },
+  {
+   "s": "cul-yant",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "cul-sukhwan",
+   "t": "culture",
+   "type": "part_of"
+  },
+  {
+   "s": "cul-sukhwan",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "cul-sukhwan",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "cul-magic",
+   "t": "culture",
+   "type": "part_of"
+  },
+  {
+   "s": "cul-magic",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "cul-magic",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "cul-calendar",
+   "t": "culture",
+   "type": "part_of"
+  },
+  {
+   "s": "cul-calendar",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "cul-calendar",
+   "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "food",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "food",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "food-coffee",
+   "t": "food",
+   "type": "part_of"
+  },
+  {
+   "s": "food-coffee",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "food-coffee",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "food-pantry",
+   "t": "food",
+   "type": "part_of"
+  },
+  {
+   "s": "food-pantry",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "food-pantry",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "food-menu",
+   "t": "food",
+   "type": "part_of"
+  },
+  {
+   "s": "food-menu",
+   "t": "motdang",
+   "type": "answered_by"
+  },
+  {
+   "s": "food-menu",
+   "t": "both",
+   "type": "done_by"
+  }
+ ]
+}

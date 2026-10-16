@@ -137,3 +137,20 @@ link to a dead domain.
 - `docs/redteam/` calls `functions/api/redteam.js`, which needs the Workers AI binding `AI`
   on the Pages project (optional KV `RT_LIMIT` for a per-address daily cap).
 - Local: `.claude/rt-dev.sh` → http://localhost:8791/redteam (AI calls are remote and billed).
+
+## Tasks — /tasks
+
+A board for work done by people or bots, answered by Mot Dang, Hongdam and Chiang Mai
+Visa Desk. Pages and the API are Pages Functions (`functions/tasks/`, `functions/api/tasks/`,
+shared code in `functions/_tasks.js`) over D1 `hongdam-tasks` (binding `TASKS`,
+schema `migrations/0001_tasks.sql`). Secrets on the Pages project: `TASKS_ADMIN`
+(also `~/.tokens/HONGDAM_TASKS_ADMIN`), `DISCORD_TASKS` (#help-desk forum).
+
+- Kinds of work: `data/tasks/graph.json`, one line per kind. `python3 tools/build_tasks.py`
+  checks it and writes `functions/api/_taskgraph.js`, `docs/tasks/graph.json` and the drawn
+  graph at `docs/tasks/graph/`. `--new` lists kinds posters named that the graph lacks.
+- Our postings and the asks from other sites: `data/tasks/seed.json` → `seed.sql`;
+  `--seed` loads new keys into D1 (existing keys are left alone).
+- Shoup: `functions/_tasks.js` `shoup()` and `catBaht()`; `node tests/shoup.test.mjs`.
+- Answer as one of ours: `POST /api/tasks/<id>/admin {"do":"answer","org":"hongdam","note","baht"}`
+  with `Authorization: Bearer $TASKS_ADMIN`.
