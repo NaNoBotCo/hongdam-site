@@ -81,7 +81,7 @@ function page({ title, desc, path, body, noindex }) {
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${e(title)}</title><meta name="description" content="${e(desc)}">
 <meta property="og:type" content="website"><meta property="og:title" content="${e(title)}"><meta property="og:description" content="${e(desc)}">
-<meta property="og:url" content="${ORIGIN}${e(path)}"><meta property="og:image" content="${ORIGIN}/assets/card.jpg"><meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="${ORIGIN}${e(path)}"><meta property="og:image" content="${ORIGIN}/assets/card.jpg"><meta property="og:image:alt" content="Hongdam หงส์ดำ, Chiang Rai"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/favicon.svg"><link rel="canonical" href="${ORIGIN}${e(path)}">${noindex ? '<meta name="robots" content="noindex">' : ''}
 <link rel="alternate" type="application/json" href="/api/tasks">
 <link rel="stylesheet" href="/assets/rt.css"><style>${CSS}</style></head><body>
