@@ -11,6 +11,10 @@ Writes:
   docs/tasks/graph/index.html   the graph, drawn
   data/tasks/seed.sql           our postings and the asks from elsewhere, by key
 
+data/tasks/fb-groups.json holds job posts copied from Facebook groups by the
+fb-groups reader (~/Developer/claude code projects/fb-groups); they load with the
+asks from elsewhere and close 30 days after the post.
+
 A new kind of work is one line in data/tasks/graph.json; this checks it.
 """
 import html
@@ -239,11 +243,15 @@ def write_seed(g):
                      o["what_th"], o.get("where"), o.get("href"), None, "mirror" if mirror else "shoup",
                      o["baht"], note, o.get("unit"), o.get("slots", 3), "open", SEED_DAY, SEED_DAY,
                      (o["ends"] + "T23:59:59.000Z") if o.get("ends") else None))
+    fb = DATA / "fb-groups.json"
+    s["elsewhere"] += json.loads(fb.read_text()) if fb.exists() else []
     for o in s["elsewhere"]:
         assert o["cat"] in cats, o["key"]
         by = {"both": "either"}.get(o["by"], o["by"])
-        rows.append((o["key"], "elsewhere", None, o["site"], o["cat"], by, o["en"], None, None, None, None,
-                     o["href"], o["site"], "none", None, None, None, 3, "open", SEED_DAY, None, None))
+        at = (o["at"] + "T00:00:00.000Z") if o.get("at") else SEED_DAY
+        rows.append((o["key"], "elsewhere", None, o.get("poster") or o["site"], o["cat"], by, o["en"], o.get("th"),
+                     o.get("what_en"), o.get("what_th"), o.get("where"), o["href"], o["site"], "none", None, None,
+                     None, 3, "open", at, None, (o["ends"] + "T23:59:59.000Z") if o.get("ends") else None))
     sql = ["-- Written by tools/build_tasks.py from data/tasks/seed.json."]
     for r in rows:
         sql.append(f"INSERT OR IGNORE INTO task ({cols}) VALUES ({','.join(q(v) for v in r)});")

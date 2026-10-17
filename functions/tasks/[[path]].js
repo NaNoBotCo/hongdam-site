@@ -144,7 +144,7 @@ function payOf(t, ans, now) {
   }
   if (t.price_kind === 'fixed') return `<div class="pay">${baht(t.baht)}<small>${e(t.unit || 'the job')} · fixed</small></div>`
   if (t.price_kind === 'mirror') { const n = JSON.parse(t.price_note || '{}'); return `<div class="payline">${e(n.en)}<br><span lang="th">${e(n.th)}</span></div>` }
-  if (t.src === 'elsewhere') return `<div class="payline">Asked on ${e(t.site)} · ถามไว้ที่ ${e(t.site)}</div>`
+  if (t.src === 'elsewhere') return `<div class="payline">${seenOn(t)[0]} ${e(t.site)} · ${seenOn(t)[1]} ${e(t.site)}</div>`
   return '<div class="payline">Asks for prices · รอเสนอราคา</div>'
 }
 
@@ -213,7 +213,7 @@ async function kindPage(db, now, id) {
   const sub = group ? `<div class="kinds">${KIDS[id].map((k) => `<a href="/tasks/c/${k.id}">${e(k.en)}<span lang="th">${e(k.th)}</span><i>${(BY[k.by] || BY.either)[0]}</i></a>`).join('')}</div>` : ''
   return page({
     title: `${c.en} · ${c.th} · Hongdam tasks`, path: `/tasks/c/${id}`,
-    desc: `${c.en}: answered by ${c.who.map((o) => ORGS[o].en).join(', ')}. ${rows.length} open.`,
+    desc: `${c.en}${c.who.length ? `: answered by ${c.who.map((o) => ORGS[o].en).join(', ')}` : ''}. ${rows.length} open.`,
     body: `<div class="crumbs"><a href="/tasks">Tasks</a>${parent ? ` › <a href="/tasks/c/${parent.id}">${e(parent.en)}</a>` : ''}</div>
 <h1>${e(c.en)} <span class="sub">${e(c.th)}</span></h1>
 <div class="tags" style="margin:12px 0">${c.who.map((o) => `<span class="org">${e(ORGS[o].en)}</span>`).join('')}<span class="${c.by === 'both' ? '' : c.by}">${(BY[c.by] || BY.either)[0]} · ${(BY[c.by] || BY.either)[1]}</span>${c.href ? `<a href="${e(c.href)}">${e(new URL(c.href).hostname)} ↗</a>` : ''}</div>
@@ -265,7 +265,7 @@ ${t.state === 'held' ? '<p style="margin-top:8px">Waiting for a person to read i
 <label>Note · หมายเหตุ<textarea name="note" maxlength="600"></textarea></label>
 <label>Reach you on (the poster sees this) · ติดต่อทาง (ผู้โพสต์เห็น)<input name="contact" required maxlength="120"></label><div><button>Answer · ตอบ</button></div></form></section>`
   const start = t.src === 'ours' && t.href ? `<a class="btn" href="${e(t.href)}">Start · เริ่ม</a><a class="btn alt" href="#take">I'll do it · รับงาน</a>`
-    : t.src === 'elsewhere' ? `<a class="btn alt" href="${e(t.href)}" rel="nofollow noopener">Asked on ${e(t.site)} ↗</a>` : ''
+    : t.src === 'elsewhere' ? `<a class="btn alt" href="${e(t.href)}" rel="nofollow noopener">${seenOn(t)[0]} ${e(t.site)} ↗</a>` : ''
   return page({
     title: `${t.title} · Hongdam tasks`, path: `/tasks/${t.id}`, noindex: own || t.state === 'held',
     desc: `${c.en}${t.place ? ` · ${t.place}` : ''}. ${(t.what || t.title).slice(0, 140)}`,
@@ -274,7 +274,7 @@ ${flash || ''}${ownBox}
 <h1 style="font-size:clamp(28px,5vw,40px)">${e(t.title)}${t.title_th ? `<span class="sub">${e(t.title_th)}</span>` : ''}</h1>
 <div style="margin:14px 0">${tags(t)}</div>
 ${payOf(t, ans, now)}${shoupBox}
-<p class="payline" style="margin-top:8px">${t.src === 'ours' ? `Posted by ${e(ORGS[t.org].en)}` : t.src === 'elsewhere' ? `Asked on ${e(t.site)}` : `Posted${t.poster ? ` by ${e(t.poster)}` : ''}`} · ${day(t.created_at)}${t.ends_at ? ` · until ${day(t.ends_at)}` : ''}${t.state !== 'open' ? ` · ${e(t.state)}` : ''}</p>
+<p class="payline" style="margin-top:8px">${t.src === 'ours' ? `Posted by ${e(ORGS[t.org].en)}` : t.src === 'elsewhere' ? `${t.poster && t.poster !== t.site ? `${e(t.poster)} · ` : ''}${seenOn(t)[0]} ${e(t.site)}` : `Posted${t.poster ? ` by ${e(t.poster)}` : ''}`} · ${day(t.created_at)}${t.ends_at ? ` · until ${day(t.ends_at)}` : ''}${t.state !== 'open' ? ` · ${e(t.state)}` : ''}</p>
 ${t.what ? `<p class="what">${e(t.what)}</p>` : ''}${t.what_th ? `<p class="what th" lang="th">${e(t.what_th)}</p>` : ''}
 ${layerOf(t.cat) ? `<p class="payline">${e(layerOf(t.cat).about_en)}<br><span lang="th">${e(layerOf(t.cat).about_th)}</span></p>` : ''}
 ${start ? `<div class="go">${start}</div>` : ''}
@@ -288,6 +288,9 @@ const flashOk = (en, th) => `<p class="flash">${e(en)} · <span lang="th">${e(th
 const flashErr = (msg) => `<p class="flash err">${e(msg)}</p>`
 
 // ── routes ────────────────────────────────────────────────────────────────
+// A job ad copied from a Facebook group was posted there; an ask from ask.in.th was asked there.
+const seenOn = (t) => (t.cat || '').startsWith('jobs') ? ['Posted on', 'ลงไว้ที่'] : ['Asked on', 'ถามไว้ที่']
+
 export async function onRequest(ctx) {
   const { request, env, params } = ctx
   const path = [].concat(params.path || [])
