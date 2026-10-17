@@ -7,7 +7,7 @@
  *   /tasks/graph/          static, written by tools/build_tasks.py
  */
 import {
-  CAT, ROOTS, KIDS, ORGS, L, ORIGIN, baht, iso, rungOf, lineUrl, orgSays, shoup, catBaht,
+  CAT, ROOTS, KIDS, ORGS, L, ORIGIN, LAYERS, layerOf, mix, baht, iso, rungOf, lineUrl, orgSays, shoup, catBaht,
   openTasks, answersFor, createTask, createAnswer, ownTask, ownerAct, readBody,
 } from '../_tasks.js'
 
@@ -42,6 +42,8 @@ section.list>h2{margin-bottom:6px} section.list>p{color:var(--cream-dim);font-si
 .tags span,.tags a{border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--cream-dim)}
 .tags .org{color:var(--gold);border-color:var(--gold-deep)}
 .tags .robot{color:var(--jade)} .tags .human{color:var(--verm)}
+.tags .layer{color:var(--lacquer);background:var(--gold);border-color:var(--gold);font-weight:600}
+p.about{max-width:720px;margin:6px 0 18px}
 .pay{font-family:Georgia,serif;font-size:26px;color:var(--gold);line-height:1.1}
 .pay small{font-family:inherit;font-size:14px;color:var(--cream-dim);margin-left:4px}
 .pay .mv{display:block;font-family:"Avenir Next",system-ui,sans-serif;font-size:12px;letter-spacing:.06em;color:var(--jade);margin-top:4px}
@@ -148,7 +150,8 @@ function payOf(t, ans, now) {
 
 function tags(t) {
   const c = CAT[t.cat], b = BY[t.by] || BY.either
-  return `<div class="tags">${t.org ? `<span class="org">${e(ORGS[t.org].en)}</span>` : ''}<a href="/tasks/c/${c.id}">${e(c.en)}</a>${t.cat_new ? `<span>${e(t.cat_new)}</span>` : ''}<span class="${t.by}">${b[0]} · ${b[1]}</span>${t.place ? `<span>${e(t.place)}</span>` : ''}</div>`
+  const lay = layerOf(t.cat)
+  return `<div class="tags">${lay ? `<a class="layer" href="/tasks/c/${lay.id}">${e(lay.en)} · ${e(lay.th)}</a>` : ''}${t.org ? `<span class="org">${e(ORGS[t.org].en)}</span>` : ''}<a href="/tasks/c/${c.id}">${e(c.en)}</a>${t.cat_new ? `<span>${e(t.cat_new)}</span>` : ''}<span class="${t.by}">${b[0]} · ${b[1]}</span>${t.place ? `<span>${e(t.place)}</span>` : ''}</div>`
 }
 
 function card(t, ans, now) {
@@ -174,7 +177,7 @@ const FOLDS = `
 async function board(db, now, flash) {
   const rows = await openTasks(db, now)
   const ans = await answersFor(db, rows.map((t) => t.id))
-  const ours = rows.filter((t) => t.src === 'ours'), people = rows.filter((t) => t.src !== 'ours')
+  const ours = mix(rows.filter((t) => t.src === 'ours')), people = rows.filter((t) => t.src !== 'ours')
   const count = {}
   for (const t of rows) { const r = CAT[t.cat].up || t.cat; count[r] = (count[r] || 0) + 1 }
   const kinds = ROOTS.map((r) => `<a href="/tasks/c/${r.id}">${e(r.en)}<span lang="th">${e(r.th)}</span><i>${KIDS[r.id].length} kinds${count[r.id] ? ` · ${count[r.id]} open` : ''}</i></a>`).join('')
@@ -185,7 +188,7 @@ async function board(db, now, flash) {
     body: `<h1>Tasks <span class="sub">งาน · คนหรือบอท</span></h1>
 <p class="lede">Post work for people or bots. Mot Dang, Hongdam and Chiang Mai Visa Desk answer the ${nKinds} kinds they handle; anyone can answer.<br><span lang="th">ลงงานให้คนหรือบอททำ มดแดง หงส์ดำ และโต๊ะวีซ่าเชียงใหม่ตอบงาน ${nKinds} ประเภทที่รับ ใครก็ตอบได้</span></p>
 ${flash || ''}
-<div class="go"><a class="btn" href="#post">Post a task · ลงงาน</a><a class="btn alt" href="#ours">Take one of ours · รับงานของเรา</a></div>
+<div class="go"><a class="btn" href="#post">Post a task · ลงงาน</a><a class="btn alt" href="#ours">Take one of ours · รับงานของเรา</a>${LAYERS.map((l) => `<a class="btn alt" href="/tasks/c/${l.id}">${e(l.en)} · ${e(l.th)}</a>`).join('')}</div>
 ${postForm()}
 <section class="list" id="ours"><h2>Ours, open now <span>งานของเรา</span></h2><p>${ours.length} postings by Mot Dang, Hongdam and the Visa Desk · ${ours.length} งาน</p>
 <div class="cards">${ours.map((t) => card(t, ans[t.id] || [], now)).join('')}</div></section>
@@ -203,6 +206,7 @@ async function kindPage(db, now, id) {
   const ans = await answersFor(db, rows.map((t) => t.id))
   const b = group ? null : await catBaht(db, id, now)
   const parent = c.up ? CAT[c.up] : null
+  const lay = layerOf(id)
   const rel = (c.rel || []).concat(Object.values(CAT).filter((n) => (n.rel || []).includes(id)).map((n) => n.id))
   const who = c.who.map((o) => `<a class="btn alt" href="${lineUrl(`hongdam.net/tasks/c/${id} · ${c.en}: ${ORGS[o].en}, a question · สอบถาม`)}">${e(ORGS[o].en)} on LINE</a>`).join('')
   const said = group ? '' : c.who.map((o) => { const s = orgSays(o, id, b); return `<li>${e(s.en)} <span lang="th">${e(s.th)}</span></li>` }).join('')
@@ -213,6 +217,7 @@ async function kindPage(db, now, id) {
     body: `<div class="crumbs"><a href="/tasks">Tasks</a>${parent ? ` › <a href="/tasks/c/${parent.id}">${e(parent.en)}</a>` : ''}</div>
 <h1>${e(c.en)} <span class="sub">${e(c.th)}</span></h1>
 <div class="tags" style="margin:12px 0">${c.who.map((o) => `<span class="org">${e(ORGS[o].en)}</span>`).join('')}<span class="${c.by === 'both' ? '' : c.by}">${(BY[c.by] || BY.either)[0]} · ${(BY[c.by] || BY.either)[1]}</span>${c.href ? `<a href="${e(c.href)}">${e(new URL(c.href).hostname)} ↗</a>` : ''}</div>
+${lay ? `<p class="about">${e(lay.about_en)}</p><p class="about" lang="th">${e(lay.about_th)}</p>` : ''}
 ${said ? `<ul class="ans" style="margin:10px 0 16px">${said}</ul>` : ''}
 <div class="go"><a class="btn" href="#post">Post one · ลงงาน</a>${who}</div>
 ${sub}
@@ -271,6 +276,7 @@ ${flash || ''}${ownBox}
 ${payOf(t, ans, now)}${shoupBox}
 <p class="payline" style="margin-top:8px">${t.src === 'ours' ? `Posted by ${e(ORGS[t.org].en)}` : t.src === 'elsewhere' ? `Asked on ${e(t.site)}` : `Posted${t.poster ? ` by ${e(t.poster)}` : ''}`} · ${day(t.created_at)}${t.ends_at ? ` · until ${day(t.ends_at)}` : ''}${t.state !== 'open' ? ` · ${e(t.state)}` : ''}</p>
 ${t.what ? `<p class="what">${e(t.what)}</p>` : ''}${t.what_th ? `<p class="what th" lang="th">${e(t.what_th)}</p>` : ''}
+${layerOf(t.cat) ? `<p class="payline">${e(layerOf(t.cat).about_en)}<br><span lang="th">${e(layerOf(t.cat).about_th)}</span></p>` : ''}
 ${start ? `<div class="go">${start}</div>` : ''}
 ${offer}
 ${ans.length ? `<section class="list"><h2>${t.src === 'ours' ? 'Taking it' : 'Answers'} <span>${t.src === 'ours' ? 'คนรับงาน' : 'คำตอบ'}</span></h2><div class="box">${ans.map((a) => answerRow(t, a, own)).join('')}</div></section>` : ''}

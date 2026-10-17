@@ -168,6 +168,20 @@
     {"id": "food", "en": "Food and coffee", "th": "อาหารและกาแฟ", "who": ["motdang"], "by": "human"},
     {"id": "food-coffee", "up": "food", "en": "Coffee from the farm", "th": "กาแฟจากไร่", "who": ["motdang"], "by": "human", "price": {"quote": true}},
     {"id": "food-pantry", "up": "food", "en": "Food pantry", "th": "ตู้ปันสุข", "who": ["motdang"], "by": "both", "price": {"free": true}},
-    {"id": "food-menu", "up": "food", "en": "Menu pages", "th": "หน้าเมนูร้าน", "who": ["motdang"], "by": "both", "price": {"baht": 300}}
+    {"id": "food-menu", "up": "food", "en": "Menu pages", "th": "หน้าเมนูร้าน", "who": ["motdang"], "by": "both", "price": {"baht": 300}},
+
+    {"id": "impossible", "en": "Impossible", "th": "เป็นไปไม่ได้", "who": [], "by": "both", "layer": true, "about_en": "Problems Chiang Mai has lived with for lifetimes. Open to anyone, anywhere: a person, a team or a bot. The first work that passes a task's test is paid with prayer, nam daeng (the red soda set out at spirit houses), gratitude and $100. It's for humanity.", "about_th": "ปัญหาที่เชียงใหม่อยู่กับมันมาหลายชั่วอายุคน ใครก็ทำได้ ที่ไหนก็ได้ คนเดียว เป็นทีม หรือบอท งานแรกที่ผ่านการทดสอบของโจทย์ได้รับคำอธิษฐาน น้ำแดง ความขอบคุณ และ 100 ดอลลาร์ เพื่อมนุษยชาติ"},
+    {"id": "imp-lights", "up": "impossible", "en": "Traffic lights that read the road", "th": "ไฟจราจรที่อ่านถนนได้", "who": [], "by": "both", "price": {"her": "Prayer, nam daeng, gratitude and $100"}, "rel": ["pl-roadworks", "pl-maps"]},
+    {"id": "imp-smoke", "up": "impossible", "en": "A burning season without the burning", "th": "หน้าเผาที่ไม่ต้องเผา", "who": [], "by": "human", "price": {"her": "Prayer, nam daeng, gratitude and $100"}, "rel": ["pl-weather"]},
+    {"id": "imp-trucks", "up": "impossible", "en": "Every red truck on the map", "th": "รถแดงทุกคันบนแผนที่", "who": [], "by": "both", "price": {"her": "Prayer, nam daeng, gratitude and $100"}, "rel": ["pl-maps"]},
+    {"id": "imp-floods", "up": "impossible", "en": "Which streets flood, a day ahead", "th": "รู้ล่วงหน้าหนึ่งวันว่าถนนไหนจะท่วม", "who": [], "by": "both", "price": {"her": "Prayer, nam daeng, gratitude and $100"}, "rel": ["pl-weather", "pl-maps"]},
+    {"id": "imp-leaves", "up": "impossible", "en": "Read every Lanna palm-leaf manuscript", "th": "อ่านคัมภีร์ใบลานล้านนาทุกผูก", "who": [], "by": "both", "price": {"her": "Prayer, nam daeng, gratitude and $100"}, "rel": ["lang-leaves"]},
+    {"id": "imp-address", "up": "impossible", "en": "An address a stranger can find", "th": "ที่อยู่ที่คนแปลกหน้าหาเจอ", "who": [], "by": "both", "price": {"her": "Prayer, nam daeng, gratitude and $100"}, "rel": ["pl-maps", "pl-page"]},
+    {"id": "imp-open", "up": "impossible", "en": "Know what is open right now", "th": "รู้ว่าร้านไหนเปิดอยู่ตอนนี้", "who": [], "by": "both", "price": {"her": "Prayer, nam daeng, gratitude and $100"}, "rel": ["field-call", "pl-notes"]},
+    {"id": "imp-roads", "up": "impossible", "en": "Half the deaths on the road", "th": "คนตายบนถนนลดลงครึ่งหนึ่ง", "who": [], "by": "human", "price": {"her": "Prayer, nam daeng, gratitude and $100"}, "rel": ["pl-roadworks"]},
+    {"id": "imp-dogs", "up": "impossible", "en": "Someone for every soi dog", "th": "หมาซอยทุกตัวมีคนดูแล", "who": [], "by": "human", "price": {"her": "Prayer, nam daeng, gratitude and $100"}, "rel": ["field-errand"]},
+    {"id": "imp-tap", "up": "impossible", "en": "Water you drink from the tap", "th": "น้ำประปาที่ดื่มได้จากก๊อก", "who": [], "by": "human", "price": {"her": "Prayer, nam daeng, gratitude and $100"}, "rel": ["pl-notes"]},
+    {"id": "imp-ping", "up": "impossible", "en": "A Ping River you can swim in", "th": "แม่น้ำปิงที่ลงว่ายได้", "who": [], "by": "human", "price": {"her": "Prayer, nam daeng, gratitude and $100"}, "rel": ["pl-weather"]},
+    {"id": "imp-coffee", "up": "impossible", "en": "The farmer's share of a cup", "th": "ส่วนของเกษตรกรในกาแฟหนึ่งแก้ว", "who": [], "by": "human", "price": {"her": "Prayer, nam daeng, gratitude and $100"}, "rel": ["food-coffee"]}
   ]
 }

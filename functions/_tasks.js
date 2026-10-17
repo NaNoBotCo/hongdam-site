@@ -26,6 +26,9 @@ export const ORGS = GRAPH.orgs
 export const NODES = GRAPH.nodes
 export const CAT = Object.fromEntries(NODES.map((n) => [n.id, n]))
 export const ROOTS = NODES.filter((n) => !n.up)
+// a layer is a group whose tasks sit among the others on the board (Impossible, her ask 2026-10-17)
+export const LAYERS = ROOTS.filter((n) => n.layer)
+export const layerOf = (cat) => (CAT[cat]?.layer ? CAT[cat] : CAT[CAT[cat]?.up]?.layer ? CAT[CAT[cat].up] : null)
 export const KIDS = Object.fromEntries(ROOTS.map((r) => [r.id, NODES.filter((n) => n.up === r.id)]))
 export const LINE_OA = '@964yxgnk'
 export const ORIGIN = 'https://hongdam.net'
@@ -130,12 +133,24 @@ export async function openTasks(db, now, { cat, src } = {}) {
   return (await db.prepare(`SELECT * FROM task WHERE ${where.join(' AND ')} ORDER BY CASE src WHEN 'ours' THEN 0 ELSE 1 END, CASE src WHEN 'ours' THEN id ELSE -id END LIMIT 300`).bind(...args).all()).results
 }
 
+// One layer task after every `every` others, the rest at the end.
+export function mix(rows, every = 2) {
+  const plain = rows.filter((t) => !layerOf(t.cat)), lay = rows.filter((t) => layerOf(t.cat))
+  const out = []
+  while (plain.length || lay.length) {
+    out.push(...plain.splice(0, every))
+    if (lay.length) out.push(lay.shift())
+  }
+  return out
+}
+
 // Public shape of a task, for pages and JSON. Contacts and tokens stay out.
 export function pub(t, answers, now) {
   const s = shoup(t, answers, now)
   const note = t.price_note ? JSON.parse(t.price_note) : null
   return {
     id: t.id, url: `${ORIGIN}/tasks/${t.id}`, src: t.src, org: t.org, poster: t.poster, cat: t.cat, cat_new: t.cat_new,
+    layer: layerOf(t.cat)?.id || null,
     by: t.by, title: t.title, title_th: t.title_th, what: t.what, what_th: t.what_th, place: t.place, href: t.href, site: t.site,
     price: t.price_kind === 'shoup' ? { kind: 'shoup', baht: s.baht, unit: t.unit, opened: s.opened, floor: s.floor, ceiling: s.ceiling, next_check: s.next, steps: s.steps }
       : t.price_kind === 'fixed' ? { kind: 'fixed', baht: t.baht, unit: t.unit }
