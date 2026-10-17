@@ -1509,6 +1509,136 @@
    "page": "https://hongdam.net/tasks/c/home-match"
   },
   {
+   "id": "jobs",
+   "type": "group",
+   "en": "Jobs",
+   "th": "รับสมัครงาน",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/jobs"
+  },
+  {
+   "id": "jobs-media",
+   "type": "category",
+   "en": "Media, design and marketing",
+   "th": "สื่อ ออกแบบ และการตลาด",
+   "price": {
+    "free": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/jobs-media"
+  },
+  {
+   "id": "jobs-office",
+   "type": "category",
+   "en": "Office and admin",
+   "th": "งานออฟฟิศและธุรการ",
+   "price": {
+    "free": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/jobs-office"
+  },
+  {
+   "id": "jobs-sales",
+   "type": "category",
+   "en": "Sales and customer service",
+   "th": "งานขายและบริการลูกค้า",
+   "price": {
+    "free": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/jobs-sales"
+  },
+  {
+   "id": "jobs-food",
+   "type": "category",
+   "en": "Restaurants, cafes and bars",
+   "th": "ร้านอาหาร คาเฟ่ และบาร์",
+   "price": {
+    "free": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/jobs-food"
+  },
+  {
+   "id": "jobs-hotel",
+   "type": "category",
+   "en": "Hotels and tourism",
+   "th": "โรงแรมและการท่องเที่ยว",
+   "price": {
+    "free": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/jobs-hotel"
+  },
+  {
+   "id": "jobs-teach",
+   "type": "category",
+   "en": "Teaching",
+   "th": "งานสอน",
+   "price": {
+    "free": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/jobs-teach"
+  },
+  {
+   "id": "jobs-tech",
+   "type": "category",
+   "en": "IT and software",
+   "th": "ไอทีและซอฟต์แวร์",
+   "price": {
+    "free": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/jobs-tech"
+  },
+  {
+   "id": "jobs-care",
+   "type": "category",
+   "en": "Health, care and beauty",
+   "th": "สุขภาพ การดูแล และความงาม",
+   "price": {
+    "free": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/jobs-care"
+  },
+  {
+   "id": "jobs-trades",
+   "type": "category",
+   "en": "Building, driving and trades",
+   "th": "ก่อสร้าง ขับรถ และงานช่าง",
+   "price": {
+    "free": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/jobs-trades"
+  },
+  {
+   "id": "jobs-home",
+   "type": "category",
+   "en": "Cleaning and home staff",
+   "th": "แม่บ้านและงานในบ้าน",
+   "price": {
+    "free": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/jobs-home"
+  },
+  {
+   "id": "jobs-other",
+   "type": "category",
+   "en": "Other jobs",
+   "th": "งานอื่น ๆ",
+   "price": {
+    "free": true
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/jobs-other"
+  },
+  {
    "id": "culture",
    "type": "group",
    "en": "Festivals, amulets and ceremonies",
@@ -4036,6 +4166,131 @@
   {
    "s": "home-match",
    "t": "robot",
+   "type": "done_by"
+  },
+  {
+   "s": "jobs",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "jobs-media",
+   "t": "jobs",
+   "type": "part_of"
+  },
+  {
+   "s": "jobs-media",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "jobs-office",
+   "t": "jobs",
+   "type": "part_of"
+  },
+  {
+   "s": "jobs-office",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "jobs-sales",
+   "t": "jobs",
+   "type": "part_of"
+  },
+  {
+   "s": "jobs-sales",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "jobs-food",
+   "t": "jobs",
+   "type": "part_of"
+  },
+  {
+   "s": "jobs-food",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "jobs-hotel",
+   "t": "jobs",
+   "type": "part_of"
+  },
+  {
+   "s": "jobs-hotel",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "jobs-teach",
+   "t": "jobs",
+   "type": "part_of"
+  },
+  {
+   "s": "jobs-teach",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "jobs-teach",
+   "t": "visa-workpermit",
+   "type": "related"
+  },
+  {
+   "s": "jobs-tech",
+   "t": "jobs",
+   "type": "part_of"
+  },
+  {
+   "s": "jobs-tech",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "jobs-care",
+   "t": "jobs",
+   "type": "part_of"
+  },
+  {
+   "s": "jobs-care",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "jobs-trades",
+   "t": "jobs",
+   "type": "part_of"
+  },
+  {
+   "s": "jobs-trades",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "jobs-home",
+   "t": "jobs",
+   "type": "part_of"
+  },
+  {
+   "s": "jobs-home",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "jobs-home",
+   "t": "home-help",
+   "type": "related"
+  },
+  {
+   "s": "jobs-other",
+   "t": "jobs",
+   "type": "part_of"
+  },
+  {
+   "s": "jobs-other",
+   "t": "human",
    "type": "done_by"
   },
   {
