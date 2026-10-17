@@ -1624,6 +1624,147 @@
    },
    "href": null,
    "page": "https://hongdam.net/tasks/c/food-menu"
+  },
+  {
+   "id": "impossible",
+   "type": "group",
+   "en": "Impossible",
+   "th": "เป็นไปไม่ได้",
+   "price": null,
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/impossible"
+  },
+  {
+   "id": "imp-lights",
+   "type": "category",
+   "en": "Traffic lights that read the road",
+   "th": "ไฟจราจรที่อ่านถนนได้",
+   "price": {
+    "her": "Prayer, nam daeng, gratitude and $100"
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/imp-lights"
+  },
+  {
+   "id": "imp-smoke",
+   "type": "category",
+   "en": "A burning season without the burning",
+   "th": "หน้าเผาที่ไม่ต้องเผา",
+   "price": {
+    "her": "Prayer, nam daeng, gratitude and $100"
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/imp-smoke"
+  },
+  {
+   "id": "imp-trucks",
+   "type": "category",
+   "en": "Every red truck on the map",
+   "th": "รถแดงทุกคันบนแผนที่",
+   "price": {
+    "her": "Prayer, nam daeng, gratitude and $100"
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/imp-trucks"
+  },
+  {
+   "id": "imp-floods",
+   "type": "category",
+   "en": "Which streets flood, a day ahead",
+   "th": "รู้ล่วงหน้าหนึ่งวันว่าถนนไหนจะท่วม",
+   "price": {
+    "her": "Prayer, nam daeng, gratitude and $100"
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/imp-floods"
+  },
+  {
+   "id": "imp-leaves",
+   "type": "category",
+   "en": "Read every Lanna palm-leaf manuscript",
+   "th": "อ่านคัมภีร์ใบลานล้านนาทุกผูก",
+   "price": {
+    "her": "Prayer, nam daeng, gratitude and $100"
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/imp-leaves"
+  },
+  {
+   "id": "imp-address",
+   "type": "category",
+   "en": "An address a stranger can find",
+   "th": "ที่อยู่ที่คนแปลกหน้าหาเจอ",
+   "price": {
+    "her": "Prayer, nam daeng, gratitude and $100"
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/imp-address"
+  },
+  {
+   "id": "imp-open",
+   "type": "category",
+   "en": "Know what is open right now",
+   "th": "รู้ว่าร้านไหนเปิดอยู่ตอนนี้",
+   "price": {
+    "her": "Prayer, nam daeng, gratitude and $100"
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/imp-open"
+  },
+  {
+   "id": "imp-roads",
+   "type": "category",
+   "en": "Half the deaths on the road",
+   "th": "คนตายบนถนนลดลงครึ่งหนึ่ง",
+   "price": {
+    "her": "Prayer, nam daeng, gratitude and $100"
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/imp-roads"
+  },
+  {
+   "id": "imp-dogs",
+   "type": "category",
+   "en": "Someone for every soi dog",
+   "th": "หมาซอยทุกตัวมีคนดูแล",
+   "price": {
+    "her": "Prayer, nam daeng, gratitude and $100"
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/imp-dogs"
+  },
+  {
+   "id": "imp-tap",
+   "type": "category",
+   "en": "Water you drink from the tap",
+   "th": "น้ำประปาที่ดื่มได้จากก๊อก",
+   "price": {
+    "her": "Prayer, nam daeng, gratitude and $100"
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/imp-tap"
+  },
+  {
+   "id": "imp-ping",
+   "type": "category",
+   "en": "A Ping River you can swim in",
+   "th": "แม่น้ำปิงที่ลงว่ายได้",
+   "price": {
+    "her": "Prayer, nam daeng, gratitude and $100"
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/imp-ping"
+  },
+  {
+   "id": "imp-coffee",
+   "type": "category",
+   "en": "The farmer's share of a cup",
+   "th": "ส่วนของเกษตรกรในกาแฟหนึ่งแก้ว",
+   "price": {
+    "her": "Prayer, nam daeng, gratitude and $100"
+   },
+   "href": null,
+   "page": "https://hongdam.net/tasks/c/imp-coffee"
   }
  ],
  "edges": [
@@ -4061,6 +4202,211 @@
    "s": "food-menu",
    "t": "both",
    "type": "done_by"
+  },
+  {
+   "s": "impossible",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "imp-lights",
+   "t": "impossible",
+   "type": "part_of"
+  },
+  {
+   "s": "imp-lights",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "imp-lights",
+   "t": "pl-roadworks",
+   "type": "related"
+  },
+  {
+   "s": "imp-lights",
+   "t": "pl-maps",
+   "type": "related"
+  },
+  {
+   "s": "imp-smoke",
+   "t": "impossible",
+   "type": "part_of"
+  },
+  {
+   "s": "imp-smoke",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "imp-smoke",
+   "t": "pl-weather",
+   "type": "related"
+  },
+  {
+   "s": "imp-trucks",
+   "t": "impossible",
+   "type": "part_of"
+  },
+  {
+   "s": "imp-trucks",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "imp-trucks",
+   "t": "pl-maps",
+   "type": "related"
+  },
+  {
+   "s": "imp-floods",
+   "t": "impossible",
+   "type": "part_of"
+  },
+  {
+   "s": "imp-floods",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "imp-floods",
+   "t": "pl-weather",
+   "type": "related"
+  },
+  {
+   "s": "imp-floods",
+   "t": "pl-maps",
+   "type": "related"
+  },
+  {
+   "s": "imp-leaves",
+   "t": "impossible",
+   "type": "part_of"
+  },
+  {
+   "s": "imp-leaves",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "imp-leaves",
+   "t": "lang-leaves",
+   "type": "related"
+  },
+  {
+   "s": "imp-address",
+   "t": "impossible",
+   "type": "part_of"
+  },
+  {
+   "s": "imp-address",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "imp-address",
+   "t": "pl-maps",
+   "type": "related"
+  },
+  {
+   "s": "imp-address",
+   "t": "pl-page",
+   "type": "related"
+  },
+  {
+   "s": "imp-open",
+   "t": "impossible",
+   "type": "part_of"
+  },
+  {
+   "s": "imp-open",
+   "t": "both",
+   "type": "done_by"
+  },
+  {
+   "s": "imp-open",
+   "t": "field-call",
+   "type": "related"
+  },
+  {
+   "s": "imp-open",
+   "t": "pl-notes",
+   "type": "related"
+  },
+  {
+   "s": "imp-roads",
+   "t": "impossible",
+   "type": "part_of"
+  },
+  {
+   "s": "imp-roads",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "imp-roads",
+   "t": "pl-roadworks",
+   "type": "related"
+  },
+  {
+   "s": "imp-dogs",
+   "t": "impossible",
+   "type": "part_of"
+  },
+  {
+   "s": "imp-dogs",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "imp-dogs",
+   "t": "field-errand",
+   "type": "related"
+  },
+  {
+   "s": "imp-tap",
+   "t": "impossible",
+   "type": "part_of"
+  },
+  {
+   "s": "imp-tap",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "imp-tap",
+   "t": "pl-notes",
+   "type": "related"
+  },
+  {
+   "s": "imp-ping",
+   "t": "impossible",
+   "type": "part_of"
+  },
+  {
+   "s": "imp-ping",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "imp-ping",
+   "t": "pl-weather",
+   "type": "related"
+  },
+  {
+   "s": "imp-coffee",
+   "t": "impossible",
+   "type": "part_of"
+  },
+  {
+   "s": "imp-coffee",
+   "t": "human",
+   "type": "done_by"
+  },
+  {
+   "s": "imp-coffee",
+   "t": "food-coffee",
+   "type": "related"
   }
  ]
 }
